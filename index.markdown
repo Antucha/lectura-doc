@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+logo: "/favicon.ico"
 ---
 You can find the source code for Minima at GitHub:
 [jekyll][jekyll-organization] /
