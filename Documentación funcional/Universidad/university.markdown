@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Universidad
-permalink: /Universidad/
+title: Universidad DF
+permalink: /Universidad DF/
 parent: Documentación funcional
 nav_order: 2
 ---

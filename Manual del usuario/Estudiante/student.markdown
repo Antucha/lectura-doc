@@ -1,7 +1,9 @@
 ---
 layout: page
-title: Estudiante
-permalink: /Estudiante/
+title: Estudiante MU
+permalink: /Estudiante MU/
 parent: Manual del usuario
 nav_order: 1
 ---
+
+Manual de usuario
