@@ -114,7 +114,7 @@ group by s.id
 {% endhighlight %}
 
 
-# Colegios de provincia (usil premium)
+# Colegios de provincia (USIL premium)
 
 <!-- En el proyecto de nombre `sandbox-queestudiar`
 Ruta: `{host}/api/career` -->
@@ -136,7 +136,7 @@ Notas:
 * Las fechas y institucion son el mismo formato que las querys anteriores.
 
 
-# Estudiantes usil express
+# Estudiantes USIL express
 
 
 <!-- En el proyecto de nombre `sandbox-queestudiar`
