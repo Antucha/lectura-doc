@@ -8,7 +8,7 @@ nav_order: 0
 
 
 # Ingreso al dashboard de colegios
-- Ingresa a la siguiente dirección para el registro de datos.
+- Ingresa a la siguiente dirección para entrar en sesión.
     <https://school.queestudiar.pe/>
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1007683715415154708/unknown.png)
 - Una vez estando en la página, Para Ingresar a la plataforma e Iniciar Sesión, colocar el correo y la contraseña que se ha creado para cada usuario de colegio y clic en **“INGRESA”**
