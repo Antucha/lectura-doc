@@ -16,13 +16,14 @@ nav_order: 2
 {:toc}
 </details>
 
-# INGRESO AL DASHBOARD DE UNIVERSIDAD
+# Ingreso al dashboard de universidad
 
 1. Ingresa a la siguiente dirección para entrar al Dashboard General Usil
     LINK: <https://usil.queestudiar.la/>
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1010287715893395536/unknown.png)
 
 1. Estando en la página, Para Ingresar a la plataforma e Iniciar Sesión, colocar el correo y la contraseña que se ha creado para cada usuario de colegio y clic en “INGRESA”
+
     **Correo:** spuov@usil.edu.pe
     **Clave:** queestudiarUsil2022**
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1010288189828775946/unknown.png)
@@ -33,7 +34,7 @@ nav_order: 2
     1. Análisis de Instituciones en mente
     1. Test Express
     1. Administrador
-    
+
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1010288598177829045/unknown.png)
 
 1. En el menú “Principal”, se visualizará las métricas de los Procesos OV Premium, de las cuales vas a encontrar lo siguiente:
