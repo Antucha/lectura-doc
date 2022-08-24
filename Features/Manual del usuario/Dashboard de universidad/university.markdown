@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Universidad
-permalink: /Universidad/
+title: Dashboard de universidad
+permalink: /Dashboard de universidad/
 parent: Manual del usuario
 grand_parent: Features
 nav_order: 2

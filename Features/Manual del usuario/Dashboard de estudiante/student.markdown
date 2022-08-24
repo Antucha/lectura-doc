@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Estudiante MU
-permalink: /Estudiante MU/
+title: Dashboard de estudiante
+permalink: /Dashboard de estudiante/
 parent: Manual del usuario
 grand_parent: Features
 nav_order: 1
