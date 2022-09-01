@@ -17,6 +17,89 @@ has_children: true
 {:toc}
 </details>
 
+<!--  -->
+# Cuadro informativo
+
+| Tecnología      | Valor |
+| ----------- | ----------- |
+| Tecnología principal      | Node JS      |
+| Framewok   | Express        |
+| Documentos de trabajo | Typescript |
+
+# Declaración de las variables de entorno
+Las variaibles de entorno se encuentran en los documentos "`.env`". Para que funcionen en un entorno back-end en Node JS se debe seguien el siguiente procedimiento:
+  1. Declarar las variables en el documento `.env`
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013791695671922810/unknown.png)
+  1. Hacer conocer a Node JS la existencia las variables de entorno, esto se hace en el documento en el que se utilizarán las variables.
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013792240067420261/unknown.png)
+  1. Ya podemos utilizar las variables de entorno en cualquier documento `.ts` o `.js`.
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013792103102423050/unknown.png)
+
+El contenido de las variables de entorno se muestran a continuación:
+
+{% highlight .env %}
+    PORT=2000
+MESSAGE=HelloWorldNow
+
+# DATA BASE CONFIGS
+DB_DIALECT=mysql
+DB_NAME=qeestudiar_db
+DB_USER_NAME=juan.bucio
+DB_PASSWORD=347hfopLlm<>f3jj*#4h
+DB_HOST=prodqueestudiar.c5wqshckxtah.us-west-2.rds.amazonaws.com
+
+MODEL_PATH=/core/domain/models
+TOKEN_SECRET=34534345345gdfg234234fd343
+WEB=https://queestudiar.la
+SERVICE_WEB=https://service.qeestudiar.com
+QUEESTUDIAR_ID=2f994bc7-39c1-4d8d-9dfa-d58fdfd9af8
+
+
+# SUPLIERS SERVICES
+# aws
+CONFIG_ACCESS_KEY_ID=AKIA5N2BE72VZC5CA4WB
+CONFIG_SECRET_ACCESS_KEY=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
+CONFIG_REGION=us-west-2
+
+# dynamoDb
+DYNAMO_CHAT=trasienteDB-dev
+DYNAMO_COMUNITY=Community
+BIG_DATA_PROCESS=BigDataProcess
+
+
+# PAYMENTS
+# mercadopago
+MERCADOPAGO_CLIENT_ID=''
+MERCADOPAGO_CLIENT_SECRET=''
+
+{% endhighlight %}
+
+<!--  -->
+
+# Variables de entorno
+
+| Variables                   | Valor                                 | Descripción |
+| -----------                 | -----------                           | ----------- |
+| DB_DIALECT                  | mysql                         | -- |
+| DB_NAME                     | qeestudiar_db           | -- |
+| DB_USER_NAME                | juan.bucio                              | -- |
+| DB_PASSWORD                 | 347hfopLlm<>f3jj*#4h                      | -- |
+| DB_HOST                     | prodqueestudiar.c5wqshckxtah.us-west-2.rds.amazonaws.com         | -- |
+| MODEL_PATH                  | /core/domain/models               | Ruta de la ubicación de los archivos modelo en este proyecto |
+| TOKEN_SECRET                | 34534345345gdfg234234fd343        | -- |
+| WEB                     | https://queestudiar.la        | -- |
+| SERVICE_WEB                | https://service.qeestudiar.com                 | -- |
+| QUEESTUDIAR_ID                   | 2f994bc7-39c1-4d8d-9dfa-d58fdfd9af8 | -- |
+| CONFIG_ACCESS_KEY_ID                   | 2f994bc7-39c1-4d8d-9dfa-d58fdfd9af8 | -- |
+| CONFIG_SECRET_ACCESS_KEY                   | kGR8d9/x4npARDh4vd/kZX8PgCUj6K52Em9p1HQI | -- |
+| CONFIG_REGION                   | us-west-2 | -- |
+| DYNAMO_CHAT                   | trasienteDB-dev | -- |
+| DYNAMO_COMUNITY                   | Community | -- |
+| BIG_DATA_PROCESS                   | BigDataProcess | -- |
+| MERCADOPAGO_CLIENT_ID                   | '' | -- |
+| MERCADOPAGO_CLIENT_SECRET                   | '' | -- |
+
+
 # Ruta principal para acceder a la API
 La ruta en **producción** es la siguiente:
 `https://service.qeestudiar.com/metric`

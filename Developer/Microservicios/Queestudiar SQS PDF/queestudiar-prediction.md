@@ -25,3 +25,16 @@ nav_order: 3
 1. En caso que PDF SERVICE verifique que no existe el PDF, manda el id de estudiante a SQS y lo coloca en cola de ejecución. Para que luego SQS ejecutar el SQS SERVICE (Lambda)  donde le envía cada ID del estudiante y empiece a generar los PDFs.
 1. Todo PDF generado por SQS SERVICE (Lambda) es enviando a un repositorio de S3.
 
+
+# Variables de entorno
+
+| Variables                   | Valor                                 | Descripción |
+| -----------                 | -----------                           | ----------- |
+| AWS_ACCESS_KEY_ID                  | AKIA5N2BE72V4SRBVVS6                                 | -- |
+| AWS_SECRET_ACCESS_KEY                  | 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                                 | -- |
+| NUXT_APP_STAGE                  | "development"                                 | -- |
+| NUXT_APP_GRAPHQL_ENDPOINT                  | "https://graphql-pokemon.now.sh/"                                 | -- |
+| NUXT_APP_VERSION                  | "0.0.1"                                | -- |
+| NUXT_GOOGLE_ANALITYCS                  | "UA-117316408-3"                                 | -- |
+| AWS_SDK_LOAD_CONFIG                  | 1                                | -- |
+
