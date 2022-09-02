@@ -38,3 +38,25 @@ has_children: true
 
 
 
+# Artefactos AWS
+
+| Nombre                   | Símbolo                                 | Descripción |
+| -----------                 | -----------                           | ----------- |
+| Amazon Simple Storage Service                   | S3                         |  Backup de datos, archivos y aplicaciones. |
+| AAWS Lambda                    | --                         |  Permite ejecutar su código sin preocuparse por el aprovisionamiento y el mantenimiento de la infraestructura de backend. |
+| Amazon Relational Database Service                    | --                         |  Usado para alojar la base de datos de queestudiar. |
+| Amazon DynamoDB                    | --                         |  Base de datos noSQL que es utilizado para alojar datos a partir de los cuales se gerera el PDF de resultados de los estudiantes. |
+| Amazon API Gateway                    | --                         |  Control de acceso general para las llamadas de las API's para proteger datos valiosos. |
+| Amazon Route 53                    | --                         |  Conecta de forma efectiva las solicitudes del usuario con la infraestructura en ejecución en AWS. |
+| AmazonCloudWatch                   | --                         |  Recopila datos operativos y de monitoreo en forma de registros, métricas y eventos, y permite su visualización mediante paneles automatizados para obtener una vista unificada de los recursos, las aplicaciones y los servicios de AWS que se ejecutan en AWS y en las instalaciones. |
+|Amazon Simple Queue Service                    | SQS                         |  Para intercambiar información confidencial entre aplicaciones mediante cifrado del lado del servidor (SSE) para cifrar todos los cuerpos de mensajes. |
+
+
+
+
+
+
+
+
+
+
