@@ -15,7 +15,7 @@ has_children: true
   {: .text-delta }
 1. TOC
 {:toc}
-</details>
+</details> 
 
 # Lenguaje moderno no propietario
 Domain Driven Design
