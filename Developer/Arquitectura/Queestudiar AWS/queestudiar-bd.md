@@ -98,7 +98,76 @@ Como ejemplo, crearemos un administrador general para la plataforma, es decir, e
   vocationalGuidanceId  (String)
   {% endhighlight %}
 
+  1. Información general:
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1018934546705690624/unknown.png)
 
+  2. Índices
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1018935171656986776/unknown.png)
+
+### CalendlyNotifcation
+  Esta tabla contiene los siguientes campos:
+
+  {% highlight sql %} 
+  psycologyId (String)
+  timestamp (Number)
+  ?assigned_to (String)
+  answer_1 (String)
+  answer_2 (String)
+  answer_3 (String)
+  answer_4 (String)
+  assigned_to (String)
+  event_end_time (Date)
+  event_start_time (Date)
+  event_type_name  (String)
+  event_type_uuid (String)
+  invitee_email (String)
+  invitee_first_name (String)
+  invitee_last_name (String)
+  invitee_uuid (String)
+  psicologyName (String)
+  text_reminder_number (String)
+  {% endhighlight %}
+
+  1. Información general:
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1018936912351875093/unknown.png)
+
+### MessageNotifcation
+  Esta tabla contiene los siguientes campos:
+
+  {% highlight sql %} 
+  studentId (String)
+  timestamp (Number)
+  institutionId (String)
+  origin (String)
+  phone (String)
+  statusMessage (String)
+  typeTest (String)
+  url (String)
+  {% endhighlight %}
+
+  1. Información general:
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1018937164341456986/unknown.png)
+
+### pdfmanager
+  Esta tabla contiene los siguientes campos:
+
+  {% highlight sql %} 
+  studentId (String)
+  order (String)
+  groupId  (String)
+  name  (String)
+  psychologyId (String)
+  status (Number)
+  year  (Number)
+  {% endhighlight %}
+
+  1. Información general:
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1018937382248140861/unknown.png)
+
+Los pasos finales para importar los datos de a la cuenta amazon son;
+1. Descargar los documentos de datos indicados en la tabla como "Link". La tabla que tenga más de dos o más descargables es por que se particionaron los datos almacenados para el tratamiento más ligero de los mismos.
+1. Luego, se tendrán que cargar esos archivos al servicio S3 de AWS.
+1. A partir de allí, se podrá importar los datos a DynamoDB mediante el servicio de PipeLine de AWS. También puede hacerlo siguiendo las instrucciones de [este video](https://youtu.be/orNOAw3cqts?t=570){:target="_blank"}.
 <!--     
     | BigDataTest           | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/431d29a1-87d1-4957-81e0-6ffe796a137b) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/bb0d3814-3e71-4fee-9ff3-0c0a067cc64e) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/d6a118a6-1dd2-4201-99a5-1330c28c52cc) - [Link4](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/fb33fe43-0e55-4134-9b9d-72b96ad3368c)       |
     | PruebaProcesos        | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/PruebaProcesos/2022-09-09-20-47-44/cb50a291-76f2-4afb-ac7b-107911250ecc)        |
@@ -106,6 +175,16 @@ Como ejemplo, crearemos un administrador general para la plataforma, es decir, e
      | DownloadPdf           | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/DownloadPdf/2022-09-09-20-39-24/43001615-e945-4fbf-9082-a7a87487f1fd) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/DownloadPdf/2022-09-09-20-39-24/8e7e18cc-324f-47e4-9501-169bb7e79c29) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/DownloadPdf/2022-09-09-20-39-24/ac9fb953-3851-4442-8035-bb59ce6af095)        | -->
 
 
-Como muestra importaremos los datos de la tabla "TestManual", para ello dubiremos los descargables.
 
-## Descargar todos los archivos con los datos para cada tabla.
+
+
+
+
+
+
+
+
+
+
+
+
