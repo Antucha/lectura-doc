@@ -39,7 +39,7 @@ A continuación se muestra el diagrama Entidad Relación de la base de datos.
 
 Considerando que la base de datos contiene una cantidad considerable de tablas y la relación que existe entre ellas es amplia, se optó por mostra solo un pequeño sector del diagrama, y dejar el [Link del descargable](https://cdn.discordapp.com/attachments/955522800918085686/983482231651717211/Dyagram_ER.mwb)
 
-# Importación de datos desde un script
+# Importación dela estructura de la base datos desde un script
 
 ## Requisitos
 
@@ -47,8 +47,9 @@ Debe tener instalado los siguientes programas:
 
   1. MySQL
   1. MySQL WOrkbench
-<!-- Además, se debe descargar el arrchivo queestudiar_db.sql almacenado en el siguiente drive: [Link del descargable](https://drive.google.com/drive/folders/1glzulQhp71g_m70aHn0Y9-37mcLMz1dz?usp=sharing)%7B:target=%22_blank%22%7D
- -->
+  2. 
+Además, se debe descargar el arrchivo queestudiar_db.sql almacenado en el siguiente drive: [Link del descargable](https://drive.google.com/drive/u/1/folders/1ic4DbbsbsRyqGfzcb6WPVh89JdMgM05O){:target="_blank"}
+
 ## Importación
 
   1. Abrir el programa MySQL Workbench.
@@ -61,8 +62,4 @@ Debe tener instalado los siguientes programas:
   5. Seleccionamos el archivo y click en Start Import.
   6. El proceso de importación demorará un tiempo considerable, luego tendremos un mensaje exitoso que lucirá de la siguiente manera.
     ![](https://cdn.discordapp.com/attachments/955522800918085686/1017513761407516672/unknown.png)
-Imagen
-Imagen
-Imagen
-Imagen
 
