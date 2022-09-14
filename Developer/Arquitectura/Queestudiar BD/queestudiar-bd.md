@@ -48,7 +48,7 @@ Debe tener instalado los siguientes programas:
   1. MySQL
   1. MySQL WOrkbench
   2. 
-Además, se debe descargar el arrchivo queestudiar_db.sql almacenado en el siguiente drive: [Link del descargable](https://drive.google.com/drive/u/1/folders/1ic4DbbsbsRyqGfzcb6WPVh89JdMgM05O){:target="_blank"}
+Además, se debe descargar el arrchivo queestudiar_db.sql almacenado en el siguiente drive: [Link del descargable](https://drive.google.com/drive/u/1/folders/1ic4DbbsbsRyqGfzcb6WPVh89JdMgM05O){:target="_blank"} Pueda que no tengan acceso, por ende necesitamos que lo soliciten para poder aceptarlo.
 
 ## Importación
 
