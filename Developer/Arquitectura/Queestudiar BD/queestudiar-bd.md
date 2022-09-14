@@ -37,7 +37,6 @@ A continuación se muestra el diagrama Entidad Relación de la base de datos.
 
 (Debido a que la base de datos contiene una cantidad considerable de tablas y la relación que existe entre ellas es amplia, se optó por mostra solo un pequeño sector del diagrama, y dejar el [Link del descargable](https://cdn.discordapp.com/attachments/955522800918085686/983482231651717211/Dyagram_ER.mwb))
 
-Considerando que la base de datos contiene una cantidad considerable de tablas y la relación que existe entre ellas es amplia, se optó por mostra solo un pequeño sector del diagrama, y dejar el [Link del descargable](https://cdn.discordapp.com/attachments/955522800918085686/983482231651717211/Dyagram_ER.mwb)
 
 # Importación dela estructura de la base datos desde un script
 
