@@ -20,7 +20,7 @@ has_children: true
 # Estructura
 La estructura general de la base de datos está organizada en la siguiente tabla:
 
-![](https://cdn.discordapp.com/attachments/955522800918085686/983476697632473108/unknown.png)
+![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085686/983476697632473108/unknown.png)
 
 - Consta de 24 tablas enlistadas secuencialmente.
 - No se utilizan las expresiones de llave primaria o llave foránea(sí existe el `id` de un registro, sin embarg no está predefinido como llave primaria ), con la intención de dar agilidad en la selección de datos.

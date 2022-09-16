@@ -175,11 +175,108 @@ Los pasos finales para importar los datos de a la cuenta amazon son;
      | DownloadPdf           | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/DownloadPdf/2022-09-09-20-39-24/43001615-e945-4fbf-9082-a7a87487f1fd) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/DownloadPdf/2022-09-09-20-39-24/8e7e18cc-324f-47e4-9501-169bb7e79c29) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/DownloadPdf/2022-09-09-20-39-24/ac9fb953-3851-4442-8035-bb59ce6af095)        | -->
 
 
+# Bucket S3 
+## Propiedades
+1. La configuración de queestudiar será de acceso público.
+1. Registro de acceso del servidor: Deshabilitada
+1. Amazon EventBridge: Desactivado
+1. Aceleración de transferencia: Deshabilitada
+1. Bloqueo de objetos: Deshabilitada
+1. Pago por solicitante: Deshabilitada
+1. Alojamiento de sitios web estáticos: Deshabilitada
+
+### Información general sobre el bucket
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1020407181536919642/unknown.png)
 
 
+### Control de versiones de buckets
+1. Control de versiones de buckets: Deshabilitada
+1. Eliminación de Multi-Factor Authentication (MFA): Deshabilitada
+
+### Cifrado predeterminado
+1. Cifrado predeterminado: Deshabilitada
 
 
+## Permisos
+1. Información general sobre los permisos:  Acceso Público
+1. Bloquear acceso público (configuración del bucket): Desactivado
+1. Política de bucket: 
 
+  {% highlight json %} 
+  {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "1",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:ListBucket",
+                "s3:PutObject",
+                "s3:PutObjectAcl",
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::queestudiar",
+                "arn:aws:s3:::queestudiar/*"
+            ]
+        },
+        {
+            "Sid": "AmazonML_s3:ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "machinelearning.amazonaws.com"
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::queestudiar",
+            "Condition": {
+                "StringLike": {
+                    "s3:prefix": "personalidad.csv*"
+                }
+            }
+        },
+        {
+            "Sid": "AmazonML_s3:GetObject",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "machinelearning.amazonaws.com"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::queestudiar/personalidad.csv*"
+        },
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::queestudiar/*"
+        }
+    ]
+  }
+  {% endhighlight %}
+
+1. Lista de control de acceso (ACL)
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1020411074283061299/unknown.png)
+
+1. Uso compartido de recursos entre orígenes (CORS)
+
+  {% highlight json %} 
+    [
+      {
+          "AllowedHeaders": [
+              "*"
+          ],
+          "AllowedMethods": [
+              "GET",
+              "HEAD"
+          ],
+          "AllowedOrigins": [
+              "*"
+          ],
+          "ExposeHeaders": []
+      }
+    ]
+  {% endhighlight %}
 
 
 
