@@ -35,6 +35,5 @@ nav_order: 3
 | NUXT_APP_STAGE                  | "development"                                 | -- |
 | NUXT_APP_GRAPHQL_ENDPOINT                  | "https://graphql-pokemon.now.sh/"                                 | -- |
 | NUXT_APP_VERSION                  | "0.0.1"                                | -- |
-| NUXT_GOOGLE_ANALITYCS                  | "UA-117316408-3"                                 | -- |
 | AWS_SDK_LOAD_CONFIG                  | 1                                | -- |
 
