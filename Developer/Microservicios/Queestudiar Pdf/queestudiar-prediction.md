@@ -28,7 +28,7 @@ nav_order: 2
 # Declaración de las variables de entorno
 Las variaibles de entorno se encuentran en los documentos "`.env`". Para que funcionen en un entorno back-end en Node JS se debe seguien el siguiente procedimiento:
   1. Declarar las variables en el documento `.env`
-    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013791695671922810/unknown.png)
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1022156594936565811/unknown.png)
   1. Hacer conocer a Node JS la existencia las variables de entorno, esto se hace en el documento en el que se utilizarán las variables.
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013792240067420261/unknown.png)
   1. Ya podemos utilizar las variables de entorno en cualquier documento `.ts` o `.js`.
@@ -43,28 +43,28 @@ MESSAGE=HelloWorldNow
 
 # DATA BASE CONFIGS
 DB_DIALECT=mysql
-DB_NAME=queestudiar_local
-DB_USER_NAME=root
-DB_PASSWORD=1234
+DB_NAME=XXXX-XXXX-XXXX
+DB_USER_NAME=XXXX-XXXX-XXXX
+DB_PASSWORD=XXXX-XXXX-XXXX
 DB_HOST=localhost
 
 MODEL_PATH=/core/domain/models
-TOKEN_SECRET=appkj55kjfglk4j5lkjfg$fgkj4{}[f]df
+TOKEN_SECRET=XXXX-XXXX-XXXX
 WEB=http://localhost:3000
 SERVICE_WEB=https://service.qeestudiar.com
-QUEESTUDIAR_ID=2f994bc7-39c1-4d8d-9dfa-d58fdfd9af8
+QUEESTUDIAR_ID=XXXX-XXXX-XXXX
 
 
 
 # SUPLIERS SERVICES
 # aws
-CONFIG_ACCESS_KEY_ID=AKIA5N2BE72V7ABXFZGD
-CONFIG_SECRET_ACCESS_KEY=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
+CONFIG_ACCESS_KEY_ID=XXXX-XXXX-XXXX
+CONFIG_SECRET_ACCESS_KEY=XXXX-XXXX-XXXX
 CONFIG_REGION=us-west-2
 
 # dynamoDb
-DYNAMO_CHAT=trasienteDB-dev
-DYNAMO_COMUNITY=Community  
+DYNAMO_CHAT=XXXX-XXXX-XXXX
+DYNAMO_COMUNITY=XXXX-XXXX-XXXX  
 
 {% endhighlight %}
 
@@ -76,21 +76,21 @@ DYNAMO_COMUNITY=Community
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
 | DB_DIALECT                  | mysql                         | -- |
-| DB_NAME                     | qeestudiar_db           | -- |
-| DB_USER_NAME                | root                              | -- |
-| DB_PASSWORD                 | 1234                      | -- |
-| DB_HOST                     | prodqueestudiar.c5wqshckxtah.us-west-2.rds.amazonaws.com         | -- |
+| DB_NAME                     | XXXX-XXXX-XXXX           | -- |
+| DB_USER_NAME                | XXXX-XXXX-XXXX                              | -- |
+| DB_PASSWORD                 | XXXX-XXXX-XXXX                      | -- |
+| DB_HOST                     | XXXX-XXXX-XXXX         | -- |
 | MODEL_PATH                  | /core/domain/models               | Ruta de la ubicación de los archivos modelo en este proyecto |
-| TOKEN_SECRET                | appkj55kjfglk4j5lkjfg$fgkj4{}[f]df        | -- |
+| TOKEN_SECRET                | XXXX-XXXX-XXXX        | -- |
 | WEB                     | http://localhost:3000        | -- |
 | SERVICE_WEB                | https://service.qeestudiar.com                 | -- |
-| QUEESTUDIAR_ID                   | 2f994bc7-39c1-4d8d-9dfa-d58fdfd9af8 | -- |
-| CONFIG_ACCESS_KEY_ID                   | AKIA5N2BE72V7ABXFZGD | -- |
-| CONFIG_SECRET_ACCESS_KEY                   | 6rUjt7FB1zhTs4rG16BhEXvypaTs9i85Zt5rMZ1JK | -- |
+| QUEESTUDIAR_ID                   | XXXX-XXXX-XXXX | -- |
+| CONFIG_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | -- |
+| CONFIG_SECRET_ACCESS_KEY                   | 6XXXX-XXXX-XXXX | -- |
 | CONFIG_REGION                   | us-west-2 | -- |
-| DYNAMO_CHAT                   | trasienteDB-dev | -- |
-| DYNAMO_COMUNITY                   | Community | -- |
-| BIG_DATA_PROCESS                   | BigDataTest | -- |
+| DYNAMO_CHAT                   | XXXX-XXXX-XXXX | -- |
+| DYNAMO_COMUNITY                   | XXXX-XXXX-XXXX | -- |
+| BIG_DATA_PROCESS                   | XXXX-XXXX-XXXX | -- |
 | MERCADOPAGO_CLIENT_ID                   | '' | -- |
 | MERCADOPAGO_CLIENT_SECRET                   | '' | -- |
 

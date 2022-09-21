@@ -37,8 +37,8 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
 El contenido de las variables de entorno se muestran a continuación:
 
 {% highlight .env %}
-AWS_ACCESS_KEY_ID=AKIA5N2BE72V4SRBVVS6
-AWS_SECRET_ACCESS_KEY=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
+AWS_ACCESS_KEY_ID=XXXX-XXXX-XXXX
+AWS_SECRET_ACCESS_KEY=XXXX-XXXX-XXXX78FLb
 
 
 # HTTP_BASE PARAMETERS

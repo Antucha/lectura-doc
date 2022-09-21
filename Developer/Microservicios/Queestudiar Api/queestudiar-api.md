@@ -29,7 +29,7 @@ has_children: true
 # Declaración de las variables de entorno
 Las variaibles de entorno se encuentran en los documentos "`.env`". Para que funcionen en un entorno back-end en Node JS se debe seguien el siguiente procedimiento:
   1. Declarar las variables en el documento `.env`
-    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013791695671922810/unknown.png)
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1022156594936565811/unknown.png)
   1. Hacer conocer a Node JS la existencia las variables de entorno, esto se hace en el documento en el que se utilizarán las variables.
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013792240067420261/unknown.png)
   1. Ya podemos utilizar las variables de entorno en cualquier documento `.ts` o `.js`.
@@ -43,16 +43,16 @@ El contenido de las variables de entorno se muestran a continuación:
 
     # DATA BASE CONFIGS
     DB_DIALECT=mysql
-    DB_NAME=qeestudiar_db
-    DB_USER_NAME=jbmarflo
-    DB_PASSWORD=f0und3r5$<>hfh48232jhdfjsh32
-    DB_HOST=prodqueestudiar.c5wqshckxtah.us-west-2.rds.amazonaws.com
+    DB_NAME=XXXX-XXXX-XXXX
+    DB_USER_NAME=XXXX-XXXX-XXXX
+    DB_PASSWORD=XXXX-XXXX-XXXX
+    DB_HOST=XXXX-XXXX-XXXX
 
     MODEL_PATH=/core/domain/models
-    TOKEN_SECRET=appkj55kjfglk4j5lkjfg$fgkj4{}[f]df
+    TOKEN_SECRET=XXXX-XXXX-XXXX
     WEB=https://queestudiar.la
     SERVICE_WEB=http://localhost:2300
-    QUEESTUDIAR_ID=2f994bc7-39c1-4d8d-9dfa-d58fdfd9af8
+    QUEESTUDIAR_ID=XXXX-XXXX-XXXX
 
 
     # SUPLIERS SERVICES
@@ -62,9 +62,9 @@ El contenido de las variables de entorno se muestran a continuación:
     USIL_SERVICE_WEB=https://paneldigital.usil.edu.pe
 
     # twilio
-    TWILIO_ACCOUNT_SID=AC4d52aefe4a8f1a90303a44568867bf39
-    TWILIO_AUTH_TOKEN=c269bb629eeb18fdd6d29a2b6a4ea795
-    TWILIO_PHONE=+12029522287
+    TWILIO_ACCOUNT_SID=XXXX-XXXX-XXXX
+    TWILIO_AUTH_TOKEN=XXXX-XXXX-XXXX
+    TWILIO_PHONE=XXXX-XXXX-XXXX
 
     # activeCampaign
     COMPAIGN_AUTHORIZATION_VALUE=1014f73aedf1c6d4e34e74170127e8791aea3cb093879d6ca40946d3be05d85b873de714
@@ -72,11 +72,11 @@ El contenido de las variables de entorno se muestran a continuación:
     COMPAIGN_SERVICE_WEB=https://lazarosmayra76669.api-us1.com
 
     # aws
-    SNS_ACCESS_ID=AKIA5N2BE72V53GEQ44B
-    SNS_SECRET_ACCESS_KEY=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
+    SNS_ACCESS_ID=XXXX-XXXX-XXXX
+    SNS_SECRET_ACCESS_KEY=XXXX-XXXX-XXXX
     SNS_REGION=us-west-2
-    SES_ACCESS_ID=AKIA5N2BE72V4DRMRCVL
-    SES_SECRET_ACCESS_KEY=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
+    SES_ACCESS_ID=XXXX-XXXX-XXXX
+    SES_SECRET_ACCESS_KEY=XXXX-XXXX-XXXX
     SES_REGION=us-west-2
     SES_EMAIL=admin@queestudiar.la
 
@@ -89,8 +89,8 @@ El contenido de las variables de entorno se muestran a continuación:
 
     # PAYMENTS
     # mercadopago
-    MERCADOPAGO_CLIENT_ID=7201972069293933
-    MERCADOPAGO_CLIENT_SECRET=6C6CeiYZqYo7J6GEQLn8jJC16sx3Dn9o
+    MERCADOPAGO_CLIENT_ID=XXXX-XXXX-XXXX
+    MERCADOPAGO_CLIENT_SECRET=XXXX-XXXX-XXXX
 
 {% endhighlight %}
 
@@ -101,35 +101,35 @@ El contenido de las variables de entorno se muestran a continuación:
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
 | DB_DIALECT                  | mysql                         | -- |
-| DB_NAME                     | qeestudiar_db           | -- |
-| DB_USER_NAME                | jbmarflo                              | -- |
-| DB_PASSWORD                 | f0und3r5$<>hfh48232jhdfjsh32                      | -- |
-| DB_HOST                     | prodqueestudiar.c5wqshckxtah.us-west-2.rds.amazonaws.com         | -- |
+| DB_NAME                     | XXXX-XXXX-XXXX           | -- |
+| DB_USER_NAME                | XXXX-XXXX-XXXX                              | -- |
+| DB_PASSWORD                 | XXXX-XXXX-XXXX                      | -- |
+| DB_HOST                     | XXXX-XXXX-XXXX         | -- |
 | MODEL_PATH                  | /core/domain/models               | Ruta de la ubicación de los archivos modelo en este proyecto |
-| TOKEN_SECRET                | appkj55kjfglk4j5lkjfg$fgkj4{}[f]df        | -- |
+| TOKEN_SECRET                | XXXX-XXXX-XXXX        | -- |
 | WEB                     | https://queestudiar.la        | -- |
 | SERVICE_WEB                | http://localhost:2300                 | -- |
-| QUEESTUDIAR_ID                   | 2f994bc7-39c1-4d8d-9dfa-d58fdfd9af8 | -- |
+| QUEESTUDIAR_ID                   | XXXX-XXXX-XXXX | -- |
 | USIL_AUTHORIZATION_VALUE                   | eShVmYq3t6w9y$B&E)H@McQfTjWnZr4u7x!A%C*F-JaNdRgUkXp2s5v8y/B?E(G+ | -- |
 | USIL_AUTHORIZATION_KEY                   | X-API-KEY | -- |
 | USIL_SERVICE_WEB                   | https://paneldigital.usil.edu.pe | -- |
-| TWILIO_ACCOUNT_SID                   | AC4d52aefe4a8f1a90303a44568867bf39 | -- |
-| TWILIO_AUTH_TOKEN                   | c269bb629eeb18fdd6d29a2b6a4ea795 | -- |
-| TWILIO_PHONE                   | +12029522287 | -- |
+| TWILIO_ACCOUNT_SID                   | XXXX-XXXX-XXXX | -- |
+| TWILIO_AUTH_TOKEN                   | XXXX-XXXX-XXXX | -- |
+| TWILIO_PHONE                   | XXXX-XXXX-XXXX | -- |
 | COMPAIGN_AUTHORIZATION_VALUE                   | 1014f73aedf1c6d4e34e74170127e8791aea3cb093879d6ca40946d3be05d85b873de714 | -- |
 | COMPAIGN_AUTHORIZATION_KEY                   | Api-Token | -- |
 | COMPAIGN_SERVICE_WEB                   | https://lazarosmayra76669.api-us1.com | -- |
-| SNS_ACCESS_ID                   | AKIA5N2BE72V53GEQ44B | -- |
-| SNS_SECRET_ACCESS_KEY                   | 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 | -- |
+| SNS_ACCESS_ID                   | XXXX-XXXX-XXXX | -- |
+| SNS_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | -- |
 | SNS_REGION                   | us-west-2 | -- |
-| SES_ACCESS_ID                   | AKIA5N2BE72V4DRMRCVL | -- |
-| SES_SECRET_ACCESS_KEY                   | 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 | -- |
+| SES_ACCESS_ID                   | XXXX-XXXX-XXXX | -- |
+| SES_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | -- |
 | SES_REGION                   | us-west-2 | -- |
 | SES_EMAIL                   | admin@queestudiar.la | -- |
 | FACEBOOK_SERVICE_WEB                   | https://graph.facebook.com | -- |
 | GOOGLE_SERVICE_WEB                   | https://www.googleapis.com | -- |
-| MERCADOPAGO_CLIENT_ID                   | 7201972069293933 | -- |
-| MERCADOPAGO_CLIENT_SECRET                   | 6C6CeiYZqYo7J6GEQLn8jJC16sx3Dn9o | -- |
+| MERCADOPAGO_CLIENT_ID                   | XXXX-XXXX-XXXX | -- |
+| MERCADOPAGO_CLIENT_SECRET                   | XXXX-XXXX-XXXX | -- |
 
 # CONSULTAS
 

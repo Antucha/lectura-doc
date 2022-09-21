@@ -27,7 +27,7 @@ nav_order: 5
 # Declaración de las variables de entorno
 Las variaibles de entorno se encuentran en los documentos "`.env`". Para que funcionen en un entorno back-end en Node JS se debe seguien el siguiente procedimiento:
   1. Declarar las variables en el documento `.env`
-    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013791695671922810/unknown.png)
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1022156594936565811/unknown.png)
   1. Hacer conocer a Node JS la existencia las variables de entorno, esto se hace en el documento en el que se utilizarán las variables.
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013792240067420261/unknown.png)
   1. Ya podemos utilizar las variables de entorno en cualquier documento `.ts` o `.js`.
@@ -41,37 +41,37 @@ MESSAGE=HelloWorldNow
 
 # DATA BASE CONFIGS
 DB_DIALECT=mysql
-DB_NAME=qeestudiar_db
-DB_USER_NAME=juan.bucio
-DB_PASSWORD=347hfopLlm<>f3jj*#4h
-DB_HOST=prodqueestudiar.c5wqshckxtah.us-west-2.rds.amazonaws.com
+DB_NAME=XXXX-XXXX-XXXX
+DB_USER_NAME=XXXX-XXXX-XXXX
+DB_PASSWORD=XXXX-XXXX-XXXX
+DB_HOST=XXXX-XXXX-XXXX
 
 MODEL_PATH=/core/domain/models
 TOKEN_SECRET=34534345345gdfg234234fd343
 WEB=https://queestudiar.la
 SERVICE_WEB=https://service.qeestudiar.com
-QUEESTUDIAR_ID=2f994bc7-39c1-4d8d-9dfa-d58fdfd9af8
+QUEESTUDIAR_ID=XXXX-XXXX-XXXX
 
 
 # SUPLIERS SERVICES
 # aws
-CONFIG_ACCESS_KEY_ID=AKIA5N2BE72VYNEIR445
-CONFIG_SECRET_ACCESS_KEY=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
+CONFIG_ACCESS_KEY_ID=XXXX-XXXX-XXXX
+CONFIG_SECRET_ACCESS_KEY=XXXX-XXXX-XXXX
 CONFIG_REGION=us-west-2
 
 # dynamoDb
-DYNAMO_CHAT=trasienteDB-dev
-DYNAMO_COMUNITY=Community
-BYNAMO_BIG_DATA=BigDataTest
+DYNAMO_CHAT=XXXX-XXXX-XXXX
+DYNAMO_COMUNITY=XXXX-XXXX-XXXX
+BYNAMO_BIG_DATA=XXXX-XXXX-XXXX
 
 # twilio
-TWILIO_SID=AC36591f835de012f136676899aad5fe75
-TWILIO_TOKEN=313d3fc537517e01e92331966f6a421d
+TWILIO_SID=XXXX-XXXX-XXXX
+TWILIO_TOKEN=XXXX-XXXX-XXXX
 
 # PAYMENTS
 # mercadopago
-MERCADOPAGO_CLIENT_ID=7201972069293933
-MERCADOPAGO_CLIENT_SECRET=6C6CeiYZqYo7J6GEQLn8jJC16sx3Dn9o
+MERCADOPAGO_CLIENT_ID=XXXX-XXXX-XXXX
+MERCADOPAGO_CLIENT_SECRET=XXXX-XXXX-XXXX
 
 
 
@@ -85,23 +85,23 @@ MERCADOPAGO_CLIENT_SECRET=6C6CeiYZqYo7J6GEQLn8jJC16sx3Dn9o
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
 | DB_DIALECT                  | mysql                         | -- |
-| DB_NAME                     | qeestudiar_db           | -- |
-| DB_USER_NAME                | juan.bucio                              | -- |
-| DB_PASSWORD                 | 347hfopLlm<>f3jj*#4h                      | -- |
-| DB_HOST                     | prodqueestudiar.c5wqshckxtah.us-west-2.rds.amazonaws.com         | -- |
+| DB_NAME                     | XXXX-XXXX-XXXX           | -- |
+| DB_USER_NAME                | XXXX-XXXX-XXXX                              | -- |
+| DB_PASSWORD                 | XXXX-XXXX-XXXX                      | -- |
+| DB_HOST                     | XXXX-XXXX-XXXX         | -- |
 | MODEL_PATH                  | /core/domain/models               | Ruta de la ubicación de los archivos modelo en este proyecto |
 | TOKEN_SECRET                | 34534345345gdfg234234fd343        | -- |
 | WEB                     | https://queestudiar.la        | -- |
 | SERVICE_WEB                | https://service.qeestudiar.com                 | -- |
-| QUEESTUDIAR_ID                   | 2f994bc7-39c1-4d8d-9dfa-d58fdfd9af8 | -- |
-| CONFIG_ACCESS_KEY_ID                   | AKIA5N2BE72VYNEIR445 | -- |
-| CONFIG_SECRET_ACCESS_KEY                   | 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 | -- |
+| QUEESTUDIAR_ID                   | XXXX-XXXX-XXXX | -- |
+| CONFIG_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | -- |
+| CONFIG_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | -- |
 | CONFIG_REGION                   | us-west-2 | -- |
-| DYNAMO_CHAT                   | trasienteDB-dev | -- |
-| DYNAMO_COMUNITY                   | Community | -- |
-| BIG_DATA_PROCESS                   | BigDataTest | -- |
-| TWILIO_SID | AC36591f835de012f136676899aad5fe75 | -- |
-| TWILIO_TOKEN |313d3fc537517e01e92331966f6a421d  | -- |
+| DYNAMO_CHAT                   | XXXX-XXXX-XXXX | -- |
+| DYNAMO_COMUNITY                   | XXXX-XXXX-XXXX | -- |
+| BIG_DATA_PROCESS                   | XXXX-XXXX-XXXX | -- |
+| TWILIO_SID | XXXX-XXXX-XXXX | -- |
+| TWILIO_TOKEN |XXXX-XXXX-XXXX  | -- |
 | MERCADOPAGO_CLIENT_ID                   | '' | -- |
 | MERCADOPAGO_CLIENT_SECRET                   | '' | -- |
 

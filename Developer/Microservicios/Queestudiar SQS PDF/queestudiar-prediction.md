@@ -30,8 +30,8 @@ nav_order: 3
 
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
-| AWS_ACCESS_KEY_ID                  | AKIA5N2BE72V4SRBVVS6                                 | -- |
-| AWS_SECRET_ACCESS_KEY                  | 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                                 | -- |
+| AWS_ACCESS_KEY_ID                  | XXXX-XXXX-XXXX                                 | -- |
+| AWS_SECRET_ACCESS_KEY                  | XXXX-XXXX-XXXX78FLb                                 | -- |
 | NUXT_APP_STAGE                  | "development"                                 | -- |
 | NUXT_APP_GRAPHQL_ENDPOINT                  | "https://graphql-pokemon.now.sh/"                                 | -- |
 | NUXT_APP_VERSION                  | "0.0.1"                                | -- |

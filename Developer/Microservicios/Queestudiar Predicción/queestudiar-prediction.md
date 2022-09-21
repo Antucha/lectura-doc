@@ -21,9 +21,9 @@ nav_order: 3
 
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
-| AWS_SHARED_CREDENTIALS_FILE                  | credential_aws                                 | -- |
-| aws_access_key_id                  | AKIA5N2BE72V7ABXFZGD                                 | -- |
-| aws_secret_access_key                  | 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                                 | -- |
+| AWS_SHARED_CREDENTIALS_FILE                  | XXXX-XXXX-XXXX                                 | -- |
+| aws_access_key_id                  | XXXX-XXXX-XXXX                                 | -- |
+| aws_secret_access_key                  | XXXX-XXXX-XXXX                                 | -- |
 
 # Generar predicción [POST]
 Ruta: `{host}/predict/personality`
