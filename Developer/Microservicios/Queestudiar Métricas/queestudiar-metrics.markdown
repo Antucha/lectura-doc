@@ -34,7 +34,7 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013792240067420261/unknown.png)
   1. Ya podemos utilizar las variables de entorno en cualquier documento `.ts` o `.js`.
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013792103102423050/unknown.png)
-
+<!-- 
 El contenido de las variables de entorno se muestran a continuación:
 
 {% highlight .env %}
@@ -72,7 +72,7 @@ BIG_DATA_PROCESS=XXXX-XXXX-XXXX
 MERCADOPAGO_CLIENT_ID=''
 MERCADOPAGO_CLIENT_SECRET=''
 
-{% endhighlight %}
+{% endhighlight %} -->
 
 <!--  -->
 
@@ -80,24 +80,17 @@ MERCADOPAGO_CLIENT_SECRET=''
 
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
-| DB_DIALECT                  | mysql                         | -- |
-| DB_NAME                     | XXXX-XXXX-XXXX           | -- |
-| DB_USER_NAME                | XXXX-XXXX-XXXX                              | -- |
-| DB_PASSWORD                 | XXXX-XXXX-XXXX                      | -- |
-| DB_HOST                     | XXXX-XXXX-XXXX         | -- |
-| MODEL_PATH                  | /core/domain/models               | Ruta de la ubicación de los archivos modelo en este proyecto |
-| TOKEN_SECRET                | 34534345345gdfg234234fd343        | -- |
-| WEB                     | https://queestudiar.la        | -- |
-| SERVICE_WEB                | https://service.qeestudiar.com                 | -- |
-| QUEESTUDIAR_ID                   | XXXX-XXXX-XXXX | -- |
-| CONFIG_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | -- |
-| CONFIG_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | -- |
-| CONFIG_REGION                   | us-west-2 | -- |
-| DYNAMO_CHAT                   | XXXX-XXXX-XXXX | -- |
-| DYNAMO_COMUNITY                   | XXXX-XXXX-XXXX | -- |
-| BIG_DATA_PROCESS                   | XXXX-XXXX-XXXX | -- |
-| MERCADOPAGO_CLIENT_ID                   | '' | -- |
-| MERCADOPAGO_CLIENT_SECRET                   | '' | -- |
+| PORT                  | 2000 (generalmente)                         | Puerto localhost en modo de dearrollo |
+| DB_DIALECT                  | mysql                         | Motor de la base de datos utilizado |
+| DB_NAME                     | XXXX-XXXX-XXXX           | Nombre de la base de datos |
+| DB_USER_NAME                | XXXX-XXXX-XXXX                              | Nombre de usuario de BD |
+| DB_PASSWORD                 | XXXX-XXXX-XXXX                      | Contraseña de la BD |
+| DB_HOST                     | XXXX-XXXX-XXXX         | Host de la BD |
+| TOKEN_SECRET                | 34534345345gdfg234234fd343        | id para armar el token de los usuarios desde backend |
+| CONFIG_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
+| CONFIG_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
+| CONFIG_REGION                   | XXXX-XXXX-XXXX | Ubicación de servicio de AWS |
+| BIG_DATA_PROCESS                   | BigDataProcess | Nombre de la tabla BigDataProcess de DynamoDB |
 
 
 # Ruta principal para acceder a la API
