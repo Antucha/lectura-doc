@@ -80,7 +80,7 @@ MERCADOPAGO_CLIENT_SECRET=''
 
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
-| PORT                  | 2000 (generalmente)                         | Puerto localhost en modo de dearrollo |
+| PORT                  | 2400 (generalmente)                         | Puerto localhost en modo de dearrollo |
 | DB_DIALECT                  | mysql                         | Motor de la base de datos utilizado |
 | DB_NAME                     | XXXX-XXXX-XXXX           | Nombre de la base de datos |
 | DB_USER_NAME                | XXXX-XXXX-XXXX                              | Nombre de usuario de BD |
