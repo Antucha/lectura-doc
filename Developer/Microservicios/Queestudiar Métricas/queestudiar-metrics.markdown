@@ -86,7 +86,6 @@ MERCADOPAGO_CLIENT_SECRET=''
 | DB_USER_NAME                | XXXX-XXXX-XXXX                              | Nombre de usuario de BD |
 | DB_PASSWORD                 | XXXX-XXXX-XXXX                      | Contraseña de la BD |
 | DB_HOST                     | XXXX-XXXX-XXXX         | Host de la BD |
-| TOKEN_SECRET                | 34534345345gdfg234234fd343        | id para armar el token de los usuarios desde backend |
 | CONFIG_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
 | CONFIG_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
 | CONFIG_REGION                   | XXXX-XXXX-XXXX | Ubicación de servicio de AWS |
