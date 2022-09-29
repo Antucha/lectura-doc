@@ -34,50 +34,15 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
   1. Ya podemos utilizar las variables de entorno en cualquier documento `.vue` o `.js`.
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013781700922327150/unknown.png)
 
-El contenido de las variables de entorno se muestran a continuación:
-
-{% highlight .env %}
-AWS_ACCESS_KEY_ID=XXXX-XXXX-XXXX
-AWS_SECRET_ACCESS_KEY=XXXX-XXXX-XXXX78FLb
-
-# HTTP_BASE PARAMETERS
-# loginSession
-LOGIN_SESSION=schoolSession
-# institutionsSelectedSession
-INSTITUTIONS_SELECTED_SESSION=institutionsSelectedSession
-# urlModalSession
-URL_MODAL_SESSION=urlModal
-# sessionUrl
-SESSION_URL=.queestudiar.pe
-# url
-URL=https://school.queestudiar.pe
-# baseUrlDev
-BASE_URL_DEV=https://service.qeestudiar.com
-# baseUrl
-BASE_URL=https://service.qeestudiar.com
-# baseUrlLocal
-BASE_URL_LOCAL=http://localhost:2000
-# assetsURL
-ASSETS_URL=https://d10kixcrv010ns.cloudfront.net
-
-# GOOGLE MAPS
-GOOGLE_MAPS_KEY=AIzaSyAamVCoyQ4AuvBpxVRMs9P-HFkfPVQj0Kw
-GOOGLE_MAPS_LIBRARIES=places
-{% endhighlight %}
-
-# VARIALES
+# VARIALES DE ENTORNO
 
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
-| loginSession                | schoolSession                           | -- |
-| institutionsSelectedSession | institutionsSelectedSession                      | -- |
-| urlModalSession             | urlModal                              | -- |
-| sessionUrl                  | .queestudiar.pe                       | Nombre del dominio donde se guardará la sesión iniciada. |
-| url                         | https://school.queestudiar.pe           | URL de la web creada- |
-| urlWeb                      | https://queestudiar.la/               | Dominio de la landing page |
-| baseUrlDev                  | https://service.qeestudiar.com        | Link del servicio a consumir |
-| baseUrl                     | https://service.qeestudiar.com        | Link del servicio a consumir en esta web |
-| baseUrlLocal                | http://localhost:2000                 | Link en ambiente local |
+| LOGIN_SESSION                | schoolSession                           | NOmbre de la variable de la sesión como cookie |
+| sessionUrl                  | .queestudiar.pe                       | Nombre del dominio donde se guardará la sesión iniciada. (Cambiará según el deploy de USIL)|
+| url                         | https://school.queestudiar.pe           | URL de la web creada. (Cambiará según el deploy de USIL) |
+| baseUrl                     | XXXXX-XXXXX-XXXXX      | Link del servicio a consumir en esta web. (Link de la API Principal) |
+| baseUrlLocal                | http://localhost:2000                 | Link de API en ambiente local |
 | assetsURL                   | https://d10kixcrv010ns.cloudfront.net | -- |
 
 

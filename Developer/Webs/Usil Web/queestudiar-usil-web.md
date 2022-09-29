@@ -34,52 +34,16 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
   1. Ya podemos utilizar las variables de entorno en cualquier documento `.vue` o `.js`.
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013781700922327150/unknown.png)
 
-El contenido de las variables de entorno se muestran a continuación:
 
-{% highlight .env %}
-AWS_ACCESS_KEY_ID=XXXX-XXXX-XXXX
-AWS_SECRET_ACCESS_KEY=XXXX-XXXX-XXXX78FLb
-
-NODE_ENV=local
-
-# HTTP_BASE PARAMETERS
-# loginSession
-LOGIN_SESSION=schoolSession
-# institutionsSelectedSession
-INSTITUTIONS_SELECTED_SESSION=institutionsSelectedSession
-# urlModalSession
-URL_MODAL_SESSION=urlModal
-# sessionUrl
-SESSION_URL=.queestudiar.pe
-# url
-URL=https://school.queestudiar.pe
-# baseUrlDev
-BASE_URL_DEV=https://service.qeestudiar.com
-# baseUrl
-BASE_URL=https://service.qeestudiar.com
-# baseUrlLocal
-BASE_URL_LOCAL=http://localhost:2000
-# assetsURL
-ASSETS_URL=https://d10kixcrv010ns.cloudfront.net
-
-# GOOGLE MAPS
-GOOGLE_MAPS_KEY=AIzaSyBC9dI5E129t41vuxU9n_t4c0PD7xJxtiY
-GOOGLE_MAPS_LIBRARIES=places
-{% endhighlight %}
-
-# VARIALES
+# VARIALES DE ENTORNO
 
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
-| loginSession                | schoolSession                           | -- |
-| institutionsSelectedSession | institutionsSelectedSession           | -- |
-| urlModalSession             | urlModal                              | -- |
-| sessionUrl                  | .queestudiar.la                       | Nombre del dominio donde se guardará la sesión iniciada. |
-| url                         | https://school.queestudiar.pe           | URL de la web creada- |
-| baseUrlDev                  | https://service.qeestudiar.com        | Link del servicio a consumir |
-| baseUrl                     | https://service.qeestudiar.com        | Link del servicio a consumir en esta web |
-| baseUrlLocal                | http://localhost:2000                 | Link en ambiente local |
-| assetsURL                   | https://d10kixcrv010ns.cloudfront.net | -- |
-| GOOGLE_MAPS_KEY                   | AIzaSyBC9dI5E129t41vuxU9n_t4c0PD7xJxtiY | -- |
+| LOGIN_SESSION                | userSession                           | Nombre de la variable de sesión almacenada como cookie |
+| SESSION_URL                  | .queestudiar.la                       | Nombre del dominio donde se guardará la sesión iniciada. |
+| BASE_URL                     | https://service.qeestudiar.com        | Link del servicio a consumir en esta web |
+| BASE_URL_LOCAL                | http://localhost:2000                 | Link en ambiente local |
+| ASSETS_URL                   | https://d10kixcrv010ns.cloudfront.net | -- |
+| GOOGLE_MAPS_KEY                   | XXXX-XXXX-XXXX | Key del servicio de google maps |
 | GOOGLE_MAPS_LIBRARIES                   | places | -- |
 

@@ -34,7 +34,7 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013792240067420261/unknown.png)
   1. Ya podemos utilizar las variables de entorno en cualquier documento `.ts` o `.js`.
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013792103102423050/unknown.png)
-
+<!-- 
 El contenido de las variables de entorno se muestran a continuación:
 
 {% highlight .env %}
@@ -93,43 +93,86 @@ El contenido de las variables de entorno se muestran a continuación:
     MERCADOPAGO_CLIENT_SECRET=XXXX-XXXX-XXXX
 
 {% endhighlight %}
-
+ -->
 <!--  -->
 
 # Variables de entorno
 
+## Variables de entorno del sistema queestudiar
+
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
-| DB_DIALECT                  | mysql                         | -- |
-| DB_NAME                     | XXXX-XXXX-XXXX           | -- |
-| DB_USER_NAME                | XXXX-XXXX-XXXX                              | -- |
-| DB_PASSWORD                 | XXXX-XXXX-XXXX                      | -- |
-| DB_HOST                     | XXXX-XXXX-XXXX         | -- |
+| DB_DIALECT                  | mysql                         | Motor de la base de datos utilizado |
+| DB_NAME                     | XXXX-XXXX-XXXX           | Nombre de la base de datos |
+| DB_USER_NAME                | XXXX-XXXX-XXXX                              | Nombre de usuario de BD |
+| DB_PASSWORD                 | XXXX-XXXX-XXXX                      | Contraseña de la BD |
+| DB_HOST                     | XXXX-XXXX-XXXX         | Host de la BD |
 | MODEL_PATH                  | /core/domain/models               | Ruta de la ubicación de los archivos modelo en este proyecto |
-| TOKEN_SECRET                | XXXX-XXXX-XXXX        | -- |
-| WEB                     | https://queestudiar.la        | -- |
-| SERVICE_WEB                | http://localhost:2300                 | -- |
-| QUEESTUDIAR_ID                   | XXXX-XXXX-XXXX | -- |
-| USIL_AUTHORIZATION_VALUE                   | eShVmYq3t6w9y$B&E)H@McQfTjWnZr4u7x!A%C*F-JaNdRgUkXp2s5v8y/B?E(G+ | -- |
-| USIL_AUTHORIZATION_KEY                   | X-API-KEY | -- |
-| USIL_SERVICE_WEB                   | https://paneldigital.usil.edu.pe | -- |
-| TWILIO_ACCOUNT_SID                   | XXXX-XXXX-XXXX | -- |
-| TWILIO_AUTH_TOKEN                   | XXXX-XXXX-XXXX | -- |
-| TWILIO_PHONE                   | XXXX-XXXX-XXXX | -- |
+| TOKEN_SECRET                | appkj55kjfglk4j5lkjfg$fgkj4{}[f]df        | Código de JWT |
+| WEB                     | https://queestudiar.la  (Dependiendo de la url actual de la web)       | Web de queestudiar |
+| SERVICE_WEB                | http://localhost:2300 (dependendo de la url local)                 | URL localhost |
+| QUEESTUDIAR_ID                   | 2f994bc7-39c1-4d8d-9dfa-d58fdfd9af8 | ID de configuración de queestudiar |
+| USIL_AUTHORIZATION_VALUE                   | eShVmYq3t6w9y$B&E)H@McQfTjWnZr4u7x!A%C*F-JaNdRgUkXp2s5v8y/B?E(G+ | Valor de configuración con USIL |
+| USIL_AUTHORIZATION_KEY                   | X-API-KEY | Valor de configuración con USIL |
+| USIL_SERVICE_WEB                   | https://paneldigital.usil.edu.pe | Valor de configuración con USIL |
+| TWILIO_ACCOUNT_SID                   | XXXX-XXXX-XXXX | SID del servicio de Twilio |
+| TWILIO_AUTH_TOKEN                   | XXXX-XXXX-XXXX | Token del servicio de Twilio|
+| TWILIO_PHONE                   | XXXX-XXXX-XXXX | Teléfono del servicio de Twilio |
 | COMPAIGN_AUTHORIZATION_VALUE                   | 1014f73aedf1c6d4e34e74170127e8791aea3cb093879d6ca40946d3be05d85b873de714 | -- |
 | COMPAIGN_AUTHORIZATION_KEY                   | Api-Token | -- |
 | COMPAIGN_SERVICE_WEB                   | https://lazarosmayra76669.api-us1.com | -- |
-| SNS_ACCESS_ID                   | XXXX-XXXX-XXXX | -- |
-| SNS_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | -- |
-| SNS_REGION                   | us-west-2 | -- |
-| SES_ACCESS_ID                   | XXXX-XXXX-XXXX | -- |
-| SES_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | -- |
-| SES_REGION                   | us-west-2 | -- |
-| SES_EMAIL                   | admin@queestudiar.la | -- |
+| SNS_ACCESS_ID                   | XXXX-XXXX-XXXX | Configuración SNS de AWS |
+| SNS_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | Configuración SNS de AWS |
+| SNS_REGION                   | us-west-2 | Configuración SNS de AWS |
+| SES_ACCESS_ID                   | XXXX-XXXX-XXXX | Configuración SES de AWS |
+| SES_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | Configuración SES de AWS |
+| SES_REGION                   | us-west-2 | Configuración SES de AWS |
+| SES_EMAIL                   | admin@queestudiar.la | Configuración SES de AWS |
 | FACEBOOK_SERVICE_WEB                   | https://graph.facebook.com | -- |
 | GOOGLE_SERVICE_WEB                   | https://www.googleapis.com | -- |
-| MERCADOPAGO_CLIENT_ID                   | XXXX-XXXX-XXXX | -- |
-| MERCADOPAGO_CLIENT_SECRET                   | XXXX-XXXX-XXXX | -- |
+| MERCADOPAGO_CLIENT_ID                   | XXXX-XXXX-XXXX | Configuración de acceso a mercadopago |
+| MERCADOPAGO_CLIENT_SECRET                   | XXXX-XXXX-XXXX | Configuración de acceso a mercadopago |
+
+
+## Variables de entorno para el CRM con USIL
+
+
+| Variables                   | Valor                                 |
+| -----------                 | -----------                           |
+| ID_CAMPANA_CRM_EXPRESS_USIL                  | 625                         |
+| HUB_CPROGRAMA_CRM_EXPRESS_USIL                  | 1                         |
+| INTEGRACION_CRM_EXPRESS_USIL                  | 1                         |
+| CAMPO_2_CRM_EXPRESS_USIL                  | 1337                         |
+| CAMPO_3_CRM_EXPRESS_USIL                  | TTCP-1                         |
+| CAMPO_4_CRM_EXPRESS_USIL                  | 'TCP pauta'                         |
+| DOWNLOADED_CRM_EXPRESS_USIL                  | 0                         |
+| TEXTO_2_CRM_EXPRESS_USIL                  | confirmado                         |
+| VERIFIED_PHONE_CRM_EXPRESS_USIL                  | 1                         |
+| REFERENCE_STATE_CRM_EXPRESS_USIL                  | 1                         |
+
+| ID_CAMPANA_CRM_EXPRESS_USIL_PARAGUAY                  | 849                         |
+| HUB_CPROGRAMA_CRM_EXPRESS_USIL_PARAGUAY                  | 243                         |
+| INTEGRACION_HUB_CRM_EXPRESS_USIL_PARAGUAY                  | 1                         |
+| INTEGRACION_CRM_EXPRESS_USIL_PARAGUAY                  | 1                         |
+| CAMPO_2_CRM_EXPRESS_USIL_PARAGUAY                  | ''                         |
+| CAMPO_3_CRM_EXPRESS_USIL_PARAGUAY                  | ''                         |
+| CAMPO_4_CRM_EXPRESS_USIL_PARAGUAY                  | ''                         |
+| DOWNLOADED_CRM_EXPRESS_USIL_PARAGUAY                  | 0                         |
+| TEXTO_2_CRM_EXPRESS_USIL_PARAGUAY                  | confirmado                         |
+| VERIFIED_PHONE_CRM_EXPRESS_USIL_PARAGUAY                  | 1                         |
+| REFERENCE_STATE_CRM_EXPRESS_USIL_PARAGUAY                  | 1                         |
+
+| ID_CAMPANA_CRM_PREMIUM_USIL                  | 683                         |
+| INSTITUCION_PROCEDENCIA_CAMPANA_CRM_USIL                  | QUEESTUDIAR                         |
+| HUB_CPROGRAMA_CRM_PREMIUM_USIL                  | 1                         |
+| INTEGRACION_CRM_PREMIUM_USIL                  | 1                         |
+| TEXTO_2_CRM_PREMIUM_USIL                  | ''                         |
+| CAMPO_2_CRM_PREMIUM_USIL                  | 1285                         |
+| CAMPO_3_CRM_PREMIUM_USIL                  | 'TQE Colegios 2022-01'                         |
+| CAMPO_4_CRM_PREMIUM_USIL                  | 'QE Colegios 2022'                         |
+| DOWNLOADED_CRM_PREMIUM_USIL                  | 0                         |
+| UTM_CONTENT_CRM_COMPLETED                  | TEST-COMPLETADO                         |
+| UTM_CONTENT_CRM_INCOMPLETED                  | TEST-INCOMPLETO                         |
 
 # CONSULTAS
 

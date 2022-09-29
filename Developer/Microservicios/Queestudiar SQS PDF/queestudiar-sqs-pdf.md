@@ -30,10 +30,10 @@ nav_order: 3
 
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
-| AWS_ACCESS_KEY_ID                  | XXXX-XXXX-XXXX                                 | -- |
-| AWS_SECRET_ACCESS_KEY                  | XXXX-XXXX-XXXX78FLb                                 | -- |
-| NUXT_APP_STAGE                  | "development"                                 | -- |
-| NUXT_APP_GRAPHQL_ENDPOINT                  | "https://graphql-pokemon.now.sh/"                                 | -- |
-| NUXT_APP_VERSION                  | "0.0.1"                                | -- |
-| AWS_SDK_LOAD_CONFIG                  | 1                                | -- |
-
+| DB_DIALECT                  | mysql                         | Motor de la base de datos utilizado |
+| DB_NAME                     | XXXX-XXXX-XXXX           | Nombre de la base de datos |
+| DB_USER_NAME                | XXXX-XXXX-XXXX                              | Nombre de usuario de BD |
+| DB_PASSWORD                 | XXXX-XXXX-XXXX                      | Contraseña de la BD |
+| DB_HOST                     | XXXX-XXXX-XXXX         | Host de la BD |
+| AWS_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
+| AWS_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |

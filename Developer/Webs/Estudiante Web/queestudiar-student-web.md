@@ -34,61 +34,18 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
   1. Ya podemos utilizar las variables de entorno en cualquier documento `.vue` o `.js`.
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013781700922327150/unknown.png)
 
-El contenido de las variables de entorno se muestran a continuación:
-
-{% highlight .env %}
-AWS_ACCESS_KEY_ID=XXXX-XXXX-XXXX
-AWS_SECRET_ACCESS_KEY=XXXX-XXXX-XXXX78FLb
-
-
-# HTTP_BASE PARAMETERS
-# loginSession
-LOGIN_SESSION=userSession
-# trackingCampaign
-TRACKING_CAMPAIGN=trackingCampaign
-# searchSessionMain
-SEARCH_SESSION_MAIN=searchSessionMain
-# institutionsSelectedSession
-INSTITUTIONS_SELECTED_SESSION=institutionsSelectedSession
-# urlModalSession
-URL_MODAL_SESSION=urlModal
-# sessionUrl
-SESSION_URL=.queestudiar.la
-# url
-URL=https://blog.queestudiar.la
-# urlWeb
-URL_WEB=https://queestudiar.la/
-# baseUrlDev
-BASE_URL_DEV=https://service.qeestudiar.com
-# baseUrl
-BASE_URL=https://service.qeestudiar.com
-# baseUrlLocal
-BASE_URL_LOCAL=http://localhost:2000
-# assetsURL
-ASSETS_URL=https://d10kixcrv010ns.cloudfront.net
-
-
-
-# GOOGLE MAPS
-GOOGLE_MAPS_KEY=AIzaSyAamVCoyQ4AuvBpxVRMs9P-HFkfPVQj0Kw
-GOOGLE_MAPS_LIBRARIES=places
-
-{% endhighlight %}
-
-
-# VARIALES
+# VARIALES DE ENTORNO
 
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
-| loginSession                | userSession                           | -- |
-| trackingCampaign            | trackingCampaign                      | -- |
-| searchSessionMain           | searchSessionMain                     | -- |
-| institutionsSelectedSession | institutionsSelectedSession           | -- |
-| urlModalSession             | urlModal                              | -- |
-| sessionUrl                  | .queestudiar.la                       | Nombre del dominio donde se guardará la sesión iniciada. |
-| url                         | https://blog.queestudiar.la           | URL de la web creada- |
-| urlWeb                      | https://queestudiar.la/               | Dominio de la landing page |
-| baseUrlDev                  | https://service.qeestudiar.com        | Link del servicio a consumir |
-| baseUrl                     | https://service.qeestudiar.com        | Link del servicio a consumir en esta web |
-| baseUrlLocal                | http://localhost:2000                 | Link en ambiente local |
-| assetsURL                   | https://d10kixcrv010ns.cloudfront.net | -- |
+| LOGIN_SESSION                | userSession                           | Nombre de la variable de sesión almacenada como cookie |
+| TRACKING_COMPAIGN            | trackingCampaign                      | Nombre de la compañía almacenada como cookie |
+| SEARCH_SESSION_MAIN           | searchSessionMain                     | NOmbre de la sesión prinipal almacenada como cookie |
+| INSTITUTIONS_SELECTED_SESSION | institutionsSelectedSession           | Variable de la institución almacenada como cookie |
+| SESSION_URL                  | .queestudiar.la                       | Nombre del dominio donde se guardará la sesión iniciada. |
+| URL                         | https://blog.queestudiar.la           | URL de la web creada- |
+| URL_WEB                      | https://queestudiar.la/               | Dominio de la landing page |
+| BASE_URL_DEV                  | https://service.qeestudiar.com        | Link del servicio a consumir |
+| BASE_URL                     | https://service.qeestudiar.com        | Link del servicio a consumir en esta web |
+| BASE_URL_LOCAL                | http://localhost:2000                 | Link en ambiente local |
+| ASSETS_URL                   | https://d10kixcrv010ns.cloudfront.net | -- |

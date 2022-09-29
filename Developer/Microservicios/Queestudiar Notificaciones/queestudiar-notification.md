@@ -79,6 +79,9 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
 | CONFIG_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
 | CONFIG_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
 | CONFIG_REGION                   | XXXX-XXXX-XXXX | Ubicación de servicio de AWS |
+| URL_S3_PDF_SERVICE                   | https://queestudiar.s3-us-west-2.amazonaws.com/pdfs | Ubicación de la carpeta de pdfs en el servicio S3 de AWS, cambioa según la configuración del administrador. |
+| URL_LINK_MESSAGE                   | "https://descubre.usil.edu.pe/test/que-estudiar-2021/registro.php?msg=ok&utm_term=Undefined&reference" | Link del servicio de mensajería de USIL |
+| WSP_PHONE_DATA                   | 'whatsapp:+16013006718' | Ubicación de servicio de AWS |
 | BIG_DATA_PROCESS                   | BigDataTest | Nombre de la tabla BigDataTest de DynamoDB |
 | TWILIO_SID | XXXX-XXXX-XXXX | Id del servicio de twilio |
 | TWILIO_TOKEN |XXXX-XXXX-XXXX  | Token del servicio de twilio |
