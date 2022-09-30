@@ -21,9 +21,14 @@ nav_order: 3
 
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
-| AWS_SHARED_CREDENTIALS_FILE                  | credential_aws                                 | Configuración para encontrar las varuables de entorno. |
-| aws_access_key_id                  | XXXX-XXXX-XXXX                                 | AccessKeyId de AWS |
-| aws_secret_access_key                  | XXXX-XXXX-XXXX                                 | SecretAccessKeyId de AWS |
+| DIRECTORY_PERSONALITY_CSV                  | ./lib/data/personalidad.csv                                 | personalidad.csv  |
+| DIRECTORY_PERSONALITY_3_CSV                  | ./lib/data/personalidad3.csv                                 | personalidad3.csv  |
+| DIRECTORY_VOCATION_3                  | ./lib/data/vocacion3.csv                                 | vocacion3.csv  |
+| DIRECTORY_VOCATION_2                  | ./lib/data/vocacion2.csv                                 | vocacion2.csv  |
+| DIRECTORY_PERSONALITY_PLK                  | lib/models/personality.pkl                                 | personality.pkl  |
+| DIRECTORY_VOCATION_PLK                  | lib/models/vocation.pkl                                 | vocation.pkl |
+| DATA_PERSONALITY_PLK                  | lib/models/dataStandardizePersonality.pkl                                 | dataStandardizePersonality.pkl   |
+| DATA_VOCATION_PLK                  | lib/models/dataStandardizeVocation.pkl                                 | dataStandardizeVocation.pkl  |
 
 # Generar predicción [POST]
 Ruta: `{host}/predict/personality`
