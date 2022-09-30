@@ -22,7 +22,7 @@ nav_order: 3
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
 | AWS_SHARED_CREDENTIALS_FILE                  | credential_aws                                 | Configuración para encontrar las varuables de entorno. |
-| aws_access_key_id                  | XXXX-XXXX-XXXX                                 | ccessKeyId de AWS |
+| aws_access_key_id                  | XXXX-XXXX-XXXX                                 | AccessKeyId de AWS |
 | aws_secret_access_key                  | XXXX-XXXX-XXXX                                 | SecretAccessKeyId de AWS |
 
 # Generar predicción [POST]
