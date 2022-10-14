@@ -299,6 +299,9 @@ El control o límite mensajería está detallado en la tabla `BalanceNotificatio
   - En la columna messages va el número límite de mensajes que puede enviar una institución, se irá reduciendo conforme se vaya consumiendo.
   - En la columna messagesInit va el número de mensajes que ya se han enviado hasta la fecha.
 
+En el proyecto de notificaciones, en el documento `SendMessageDynamoDb.ts`. en la función `async sendMessage(studentId, statusMessage, institutionId, typeTest, reference, message, phone)` valida que aún queden cupos en la base de datos.
+La línea sombreada en la images es la que realiza la validavión. Si se desea quitar esa validación, solo se debe comentar esa condicional y dejar el contenido que tiene dentro.
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085686/1030496415035686952/unknown.png)
 
 
 
