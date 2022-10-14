@@ -302,8 +302,16 @@ El control o límite mensajería está detallado en la tabla `BalanceNotificatio
 En el proyecto de notificaciones, en el documento `SendMessageDynamoDb.ts`. en la función `async sendMessage(studentId, statusMessage, institutionId, typeTest, reference, message, phone)` valida que aún queden cupos en la base de datos.
 La línea sombreada en la images es la que realiza la validavión. Si se desea quitar esa validación, solo se debe comentar esa condicional y dejar el contenido que tiene dentro.
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085686/1030496415035686952/unknown.png)
+  
+El mensaje predeterminado es el siguiente:
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/905940010019213402/1030506759812550696/unknown.png)
 
 
+Los mensajes de notificación están implementados en las aplicaciones de:
+* Estudiantes WEB Premium
+Puede modificar el mensaje en el documento: `src/orientacion/components/results/ResultCareers.vue` en la línea 962
 
+* Estudiantes WEB Express
+Puede modificar el mensaje en el documento: `/src/orientacion/components/my_vocation/InterestResultReference.vue` en la línea 693
 
 
