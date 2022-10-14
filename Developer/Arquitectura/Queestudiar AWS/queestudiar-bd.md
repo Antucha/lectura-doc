@@ -295,7 +295,7 @@ Como ejemplo, crearemos un administrador general para la plataforma, es decir, e
 El control o límite mensajería está detallado en la tabla `BalanceNotification`
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085686/1030492521861759076/unknown.png)
 
-  - En columna InstitutionId va el ID de la intitución.
+  - En columna InstitutionId va el ID de la intitución (Instituto o Universidad emisor de mensajes).
   - En la columna messages va el número límite de mensajes que puede enviar una institución, se irá reduciendo conforme se vaya consumiendo.
   - En la columna messagesInit va el número de mensajes que ya se han enviado hasta la fecha.
 
