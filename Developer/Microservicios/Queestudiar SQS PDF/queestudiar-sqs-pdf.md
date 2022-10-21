@@ -37,3 +37,24 @@ nav_order: 3
 | DB_HOST                     | XXXX-XXXX-XXXX         | Host de la BD |
 | AWS_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
 | AWS_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
+| S3_BUCKET_NAME                   | queestudiar | Nombre del bucket en S3 |
+| S3_SUFFIX_NAME                   | pdfs | Nombre del sufijo en S3 |
+| PDF_MANAGER_TABLE                   | pdfs | Nombre del almacén de pdfs |
+
+# Lambda 
+
+Se utilizará el servicio de Funciones de Lambda de AWS. La función será nombrada: `queestudiar-sqs-pdf-prod-handlerSQS`.
+
+Se debe generar un desencadenador a Lambda y enlasar a `PDF_QUEUE` mediante la siguiente configuración:
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1032731135563792424/unknown.png)
+
+
+# Amazon SQS
+
+También se utilizará el servicio de colas de Amazon SQS y será nombrado `PDF_QUEUE`.
+La configuración general del proyecto debe ser la siguiente:
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1032715097967177748/unknown.png)
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1032715515635961927/unknown.png)
+
+
+
