@@ -288,6 +288,18 @@ Como ejemplo, crearemos un administrador general para la plataforma, es decir, e
     ]
   {% endhighlight %}
 
+# POLÍTICAS DE ACCESO AWS
+
+Las políticas acceso con las que cuenta la empresa son las siguientes:
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/905940010019213402/1033049695293022319/unknown.png)
+
+Cabe mensionar que las políticas de acceso mínimas son las que permiten realizar operaciones de lectura y escritura en los servicios de DynamoDB y S3.
+
+<div markdown="span" class="alert alert-info" role="alert">
+<i class="fa fa-info-circle"></i> <b>Nota:</b> Los permisos y políticas de acceso son determinadas por cada compañía limitando los mismos a lo relevante y necesario.
+{{ include.content }}
+</div>
+
 
 
 # CONTROL DE MENSAJERÍA (TWILIO)
