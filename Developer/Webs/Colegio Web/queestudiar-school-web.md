@@ -39,11 +39,15 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
 | LOGIN_SESSION                | schoolSession                           | NOmbre de la variable de la sesión como cookie |
-| sessionUrl                  | .queestudiar.pe                       | Nombre del dominio donde se guardará la sesión iniciada. (Cambiará según el deploy de USIL)|
-| url                         | https://school.queestudiar.pe           | URL de la web creada. (Cambiará según el deploy de USIL) |
-| baseUrl                     | XXXXX-XXXXX-XXXXX      | Link del servicio a consumir en esta web. (Link de la API Principal) |
-| baseUrlLocal                | http://localhost:2000                 | Link de API en ambiente local |
-| assetsURL                   | https://d10kixcrv010ns.cloudfront.net | -- |
-
+| SESSION_URL                  | .queestudiar.pe                       | Nombre del dominio donde se guardará la sesión iniciada. (Cambiará según el deploy de USIL)|
+| URL                         | https://school.queestudiar.pe           | URL de la web creada. (Cambiará según el deploy de USIL) |
+| BASE_URL                     | http://queestudiar-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com      | Link del servicio a consumir en esta web. (Link de la API Principal) |
+| BASE_URL_METRIC                     | http://queestudiar-metricas-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com     | Link de la API de métricas |
+| BASE_URL_PDF                     | http://queestudiar-generador-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com      | Link de la API de generador de PDF |
+| BASE_URL_LOCAL                | http://localhost:5000                 | Link de API en ambiente local |
+| ASSETS_URL                   | https://d10kixcrv010ns.cloudfront.net | -- |
+| GOOGLE_MAPS_KEY                   | AIzaSyAamVCoyQ4AuvBpxVRMs9P-HFkfPVQj0Kw | -- |
+| GOOGLE_MAPS_LIBRARIES                   | places | -- |
+| PORT                   | 3500 | -- |
 
 

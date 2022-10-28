@@ -80,11 +80,14 @@ DYNAMO_COMUNITY=XXXX-XXXX-XXXX
 | DB_USER_NAME                | XXXX-XXXX-XXXX                              | Nombre de usuario de BD |
 | DB_PASSWORD                 | XXXX-XXXX-XXXX                      | Contraseña de la BD |
 | DB_HOST                     | XXXX-XXXX-XXXX         | Host de la BD |
+| URL_SERVICE                     | http://queestudiar-prediccion-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com         | URL Api principal |
 | CONFIG_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
 | CONFIG_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
 | CONFIG_REGION                   | XXXX-XXXX-XXXX | Ubicación de servicio de AWS |
 | DYNAMO_CHAT                   | trasienteDB-dev | Nombre de la tabla trasienteDB-dev de DynamoDB  |
 | DYNAMO_COMUNITY                   | Community | Nombre de la tabla Community de DynamoDB |
+| QUEUE_URL                   | https://sqs.us-west-2.amazonaws.com/923017739947/TEST_QUEUE | Url de la función TEST_QUEUE en SQS |
+| QUEUE_EAST_URL                   | https://sqs.us-east-1.amazonaws.com/923017739947/TEST_QUEUE_EAST | Url de la función QUEUE_EAST_URL en SQS |
 
 # Crear pdf [POST]
 Ruta: `{host}/api/pdf/create`
