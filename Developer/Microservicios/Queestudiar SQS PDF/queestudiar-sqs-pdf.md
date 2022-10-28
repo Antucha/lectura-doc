@@ -43,7 +43,7 @@ nav_order: 3
 | S3_SUFFIX_NAME                   | pdfs | Nombre del sufijo en S3 |
 | PDF_MANAGER_TABLE                   | pdfs | Nombre del almacén de pdfs |
 | URL_CHARACTERS                   | XXXX-XXXX-XXXX | Directorio de S3 de la carpeta professionalvalue |
-| URL_INTELLIGENT                   | pdfs | Nombre del almacén de pdfs |
+| URL_INTELLIGENT                   | XXXX-XXXX-XXXX | Directorio de S3 de la carpeta intelligence |
 | BASE_SERVICE                   | Url de la api principal | Url de la api principal |
 | CHROMIUM_LOCATION                   | ./node_modules/puppeteer/.local-chromium/mac-674921/chrome-mac/Chromium.app/Contents/MacOS/Chromium | Ubicación de chromium en node_modules |
 | INSTITUTION_ID                   | ba346110-5c59-474a-8504-093d3a7c91e4 | Id de USIL en la bd de queestudiar |
