@@ -155,7 +155,8 @@ Como ejemplo, crearemos un administrador general para la plataforma, es decir, e
 
   1. Información general:
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1018937164341456986/unknown.png)
-
+  
+  1. Descargables con data: [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/431d29a1-87d1-4957-81e0-6ffe796a137b) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/bb0d3814-3e71-4fee-9ff3-0c0a067cc64e) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/d6a118a6-1dd2-4201-99a5-1330c28c52cc) - [Link4](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/fb33fe43-0e55-4134-9b9d-72b96ad3368c) - [Link5](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/_SUCCESS) - [Link6](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/manifest)
 ### pdfmanager
   Esta tabla contiene los siguientes campos:
 
@@ -178,12 +179,11 @@ Como ejemplo, crearemos un administrador general para la plataforma, es decir, e
 1. A partir de allí, se podrá importar los datos a DynamoDB mediante el servicio de PipeLine de AWS. También puede hacerlo siguiendo las instrucciones de [este video](https://youtu.be/orNOAw3cqts?t=570){:target="_blank"}.
  -->
 
-<!--     
-    | XXXX-XXXX-XXXX           | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/431d29a1-87d1-4957-81e0-6ffe796a137b) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/bb0d3814-3e71-4fee-9ff3-0c0a067cc64e) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/d6a118a6-1dd2-4201-99a5-1330c28c52cc) - [Link4](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/fb33fe43-0e55-4134-9b9d-72b96ad3368c)       |
-    | PruebaProcesos        | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/PruebaProcesos/2022-09-09-20-47-44/cb50a291-76f2-4afb-ac7b-107911250ecc)        |
-    | TestManual            | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/TestManual/2022-09-09-20-46-06/3c684ab1-0cc3-41ae-8226-6d7d96962ab4) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/TestManual/2022-09-09-20-46-06/3fd7d3ef-921d-42f8-8a93-22a1734611b4) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/TestManual/2022-09-09-20-46-06/dc744388-b56d-41c6-88f4-ebf826a7abf3) - [Link4](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/TestManual/2022-09-09-20-46-06/dd4455f2-a3ba-4cef-bb01-e6b35855212e)       |
-     | DownloadPdf           | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/DownloadPdf/2022-09-09-20-39-24/43001615-e945-4fbf-9082-a7a87487f1fd) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/DownloadPdf/2022-09-09-20-39-24/8e7e18cc-324f-47e4-9501-169bb7e79c29) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/DownloadPdf/2022-09-09-20-39-24/ac9fb953-3851-4442-8035-bb59ce6af095)        | -->
-
+  <!-- | XXXX-XXXX-XXXX           | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/431d29a1-87d1-4957-81e0-6ffe796a137b) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/bb0d3814-3e71-4fee-9ff3-0c0a067cc64e) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/d6a118a6-1dd2-4201-99a5-1330c28c52cc) - [Link4](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/MessageNotifcation/2022-09-09-20-40-51/fb33fe43-0e55-4134-9b9d-72b96ad3368c)       |
+  | PruebaProcesos        | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/PruebaProcesos/2022-09-09-20-47-44/cb50a291-76f2-4afb-ac7b-107911250ecc)        |
+  | TestManual            | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/TestManual/2022-09-09-20-46-06/3c684ab1-0cc3-41ae-8226-6d7d96962ab4) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/TestManual/2022-09-09-20-46-06/3fd7d3ef-921d-42f8-8a93-22a1734611b4) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/TestManual/2022-09-09-20-46-06/dc744388-b56d-41c6-88f4-ebf826a7abf3) - [Link4](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/TestManual/2022-09-09-20-46-06/dd4455f2-a3ba-4cef-bb01-e6b35855212e)       |
+    | DownloadPdf           | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/DownloadPdf/2022-09-09-20-39-24/43001615-e945-4fbf-9082-a7a87487f1fd) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/DownloadPdf/2022-09-09-20-39-24/8e7e18cc-324f-47e4-9501-169bb7e79c29) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/DownloadPdf/2022-09-09-20-39-24/ac9fb953-3851-4442-8035-bb59ce6af095)        | 
+ -->
 
 # Bucket S3 
 ## Propiedades
