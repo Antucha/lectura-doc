@@ -29,17 +29,61 @@ nav_order: 3
 1. El proyecto sqs será desplegado mediante serverless. Las instrucciones serverless que funcionaban en queestudiar están en el archivo `serverless.yml` dentro del proyecto. Dentro de ese archivo se debe cambiar las configuraciones por las de USIL, es decir, en general, deben reemplazarse por las credenciales de cada empresa.
 1. Se puede [automatizar](https://aws.amazon.com/blogs/devops/building-a-serverless-jenkins-environment-on-aws-fargate/){:target="_blank"} el despliegue del proyecto con la documentación indicada.
 
-Lo primero a realizar es crear una función en lambda de AWS.
-
-# Lambda
 
 ### Paso 1
 
-Se utilizará el servicio de Funciones de Lambda de AWS. La función será nombrada: `queestudiar-sqs-pdf-prod-handlerSQS`.
+Dentro del archivo `.env` en el proyecto crear las siguientes variables de entorno.
+
+| Variables                   | Valor                                 | Descripción |
+| -----------                 | -----------                           | ----------- |
+| AWS_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
+| AWS_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | 
+
 
 ### Paso 2
+#### Amazon SQS
 
-Dentro de Lambda crearemos las variables de entorno variables de entorno, damos click en "Editar", y dentro, creamos las variables de entorno:
+Se utilizará el servicio de colas de Amazon SQS y será nombrado `PDF_QUEUE`
+La configuración general de la cola debe ser la siguiente:
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039665552102277140/image.png)
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1032715515635961927/unknown.png)
+
+### Paso 3
+
+Se debe deplegar el proyecto con severless, para ello:
+
+1. [Creamos](https://qe-docs.herokuapp.com/Queestudiar%20AWS/#downloadpdf){:target="_blank"}  una tabla `DownloadPdf` en DynamoDB.
+2. Al haber creado la tabla, vamos a la información de la tabla y tendremos un Nombre de recurso de Amazon (ARN):
+   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039929509341835264/image.png)
+3. Copiaremos eso en el documento `serverless.yml`:
+   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039930285292265523/image.png)
+4. También será necesario configurar correctamente la región utilizada por la empresa y ponerla en el documento `serverless.yml`.
+5. Copiar el ARN de la cola de SQS:
+   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039937366258876496/image.png)
+6. Pegar el ARN en `serverless.yml`:
+   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039937767280480276/image.png)
+7. Las dependencias y las instrucciones finales (instalar serverless y los comandos de despliegue) de despliegue de serverless las encuentra en la [documentación](https://itnext.io/serverless-application-development-with-node-js-on-aws-platform-using-serverless-framework-63e79fcf9409){:target="_blank"}.
+
+### Paso 4
+
+#### Lambda
+
+Se utilizará el servicio de Funciones de Lambda de AWS. La función será nombrada: `queestudiar-sqs-pdf-prod-handlerSQS`, o similar, eso dependerá del nombre del servicio especificado en `serverless.yml`:
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1040023428905836594/image.png)
+
+Esta función se creará de forma automática al hacer el despliegue de la aplicación.
+
+En lambda verificar la función creada automáticamente y, además, deberá tener un desencadenador a la cola de SQS `PDF_QUEUE`:
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039667177025966180/image.png)
+
+
+La configuración del desencadenador debe tener la siguiente configuración:
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039668395571937430/image.png)
+  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1032731135563792424/unknown.png)
+
+### Paso 5
+
+Dentro de Lambda, en la función creada de forma automática, se deben crear las variables de entorno, damos click en "Editar", y dentro, creamos las variables de entorno:
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039662792011153468/image.png)
 
 Las variables de entorno son las siguientes:
@@ -65,48 +109,11 @@ Las variables de entorno son las siguientes:
 | INSTITUTION_ID                   | ba346110-5c59-474a-8504-093d3a7c91e4 | Id de USIL en la bd de queestudiar |
 | SCHOOL_WEB_URL                   | <https://school.queestudiar.pe> | Url de la plataforma de colegios |
 
-### Paso 3
-
-Seguidamente crearemos una cola en SQS.
-
-# Amazon SQS
-
-También se utilizará el servicio de colas de Amazon SQS y será nombrado `PDF_QUEUE`
-La configuración general de la cola debe ser la siguiente:
-  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039665552102277140/image.png)
-  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1032715515635961927/unknown.png)
-
-### Paso 4
-
-Volvemos a Lambda y en la función creada anteriormente se agregará un desencadenador a la cola de SQS `PDF_QUEUE` dando click en "Añadir desencadenador".
-  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039667177025966180/image.png)
-
-Y seleccionar "SQS"
-  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039667490814435479/image.png)
-
-La configuración del desencadenador debe tener la siguiente configuración:
-  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039668395571937430/image.png)
-  ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1032731135563792424/unknown.png)
+### Paso 6
 
 Finalmente, la cola de sqs tendrá una URL, eso se colocará como variable de entorno en el proyecto de API-GENERADOR.
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039669151469416459/image.png)
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039939645267525702/unknown.png)
-
-### Paso 5
-
-Una vez realizado todo lo necesario, ahora sí se debe deplegar el proyecto con severless, para ello:
-
-1. [Creamos](https://qe-docs.herokuapp.com/Queestudiar%20AWS/#downloadpdf){:target="_blank"}  una tabla `DownloadPdf` en DynamoDB.
-2. Al haber creado la tabla, vamos a la información de la tabla y tendremos un Nombre de recurso de Amazon (ARN):
-   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039929509341835264/image.png)
-3. copiaremos eso en el documento `serverless.yml`:
-   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039930285292265523/image.png)
-4. También será necesario configurar correctamente la región utilizada por la empresa.
-5. Copiar el ARN de la cola de SQS:
-   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039937366258876496/image.png)
-6. Pegar el ARN en `serverless.yml`:
-   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039937767280480276/image.png)
-7. Las dependencias y las instrucciones finales (instalar serverless y los comandos de despliegue) de despliegue de serverless las encuentra en la [documentación](https://itnext.io/serverless-application-development-with-node-js-on-aws-platform-using-serverless-framework-63e79fcf9409){:target="_blank"}.
 
 # AWS S3
 
