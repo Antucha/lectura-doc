@@ -60,6 +60,7 @@ Como ejemplo, crearemos un administrador general para la plataforma, es decir, e
     | CalendlyNotifcation   | -        |
     | MessageNotifcation    | -        |
     | pdfmanager            | -        |
+    | DownloadPdf            | -        |
 
    
 <!--     | Nombre                | Description | Descargable |
@@ -172,6 +173,20 @@ Como ejemplo, crearemos un administrador general para la plataforma, es decir, e
 
   1. Información general:
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1018937382248140861/unknown.png)
+
+### DownloadPdf
+  Esta tabla contiene los siguientes campos:
+
+  {% highlight sql %} 
+  psychologyId (String)
+  date (String)
+  groupId  (String)
+  status (Number)
+  studentId  (String)
+  {% endhighlight %}
+
+  1. Información general:
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039925691338199130/image.png)
 
 <!-- Los pasos finales para importar los datos de a la cuenta amazon son;
 1. Descargar los documentos de datos indicados en la tabla como "Link". La tabla que tenga más de dos o más descargables es por que se particionaron los datos almacenados para el tratamiento más ligero de los mismos.
