@@ -29,18 +29,7 @@ nav_order: 3
 1. El proyecto sqs será desplegado mediante serverless. Las instrucciones serverless que funcionaban en queestudiar están en el archivo `serverless.yml` dentro del proyecto. Dentro de ese archivo se debe cambiar las configuraciones por las de USIL, es decir, en general, deben reemplazarse por las credenciales de cada empresa.
 1. Se puede [automatizar](https://aws.amazon.com/blogs/devops/building-a-serverless-jenkins-environment-on-aws-fargate/){:target="_blank"} el despliegue del proyecto con la documentación indicada.
 
-
 ### Paso 1
-
-Dentro del archivo `.env` en el proyecto crear las siguientes variables de entorno.
-
-| Variables                   | Valor                                 | Descripción |
-| -----------                 | -----------                           | ----------- |
-| AWS_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
-| AWS_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | 
-
-
-### Paso 2
 #### Amazon SQS
 
 Se utilizará el servicio de colas de Amazon SQS y será nombrado `PDF_QUEUE`
@@ -48,23 +37,35 @@ La configuración general de la cola debe ser la siguiente:
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039665552102277140/image.png)
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1032715515635961927/unknown.png)
 
-### Paso 3
+### Paso 2
 
 Se debe deplegar el proyecto con severless, para ello:
 
 1. [Creamos](https://qe-docs.herokuapp.com/Queestudiar%20AWS/#downloadpdf){:target="_blank"}  una tabla `DownloadPdf` en DynamoDB.
-2. Al haber creado la tabla, vamos a la información de la tabla y tendremos un Nombre de recurso de Amazon (ARN):
-   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039929509341835264/image.png)
-3. Copiaremos eso en el documento `serverless.yml`:
-   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039930285292265523/image.png)
-4. También será necesario configurar correctamente la región utilizada por la empresa y ponerla en el documento `serverless.yml`.
-5. Copiar el ARN de la cola de SQS:
+2. Al haber creado la tabla, vamos a la información de la tabla y tendremos un Nombre de recurso de Amazon (ARN) el cual copiaremos como valor de la variable DYMANO_DOWNLOAD_PDF_TABLE_ARN.
+3. También será necesario configurar correctamente la región utilizada por la empresa y ponerla en el documento `serverless.yml`.
+4. Copiar el ARN de la cola de SQS:
    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039937366258876496/image.png)
-6. Pegar el ARN en `serverless.yml`:
-   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039937767280480276/image.png)
-7. Las dependencias y las instrucciones finales (instalar serverless y los comandos de despliegue) de despliegue de serverless las encuentra en la [documentación](https://itnext.io/serverless-application-development-with-node-js-on-aws-platform-using-serverless-framework-63e79fcf9409){:target="_blank"}.
+5. Pegar el ARN en el documento `.env` como valor de la variable SQS_PDF_QUEUE_ARN.
+6. Colocar las siguientes variables de entorno en el documento `.env`:
 
-### Paso 4
+    | Variables                   | Valor                                 | Descripción |
+    | -----------                 | -----------                           | ----------- |
+    | AWS_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
+    | AWS_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
+    | AWS_REGION                   | XXXX-XXXX-XXXX | Region de AWS |
+    | DYMANO_DOWNLOAD_PDF_TABLE_ARN                   | XXXX-XXXX-XXXX | ARN de la tabla DownloadPdf |
+    | SQS_PDF_QUEUE_ARN                   | XXXX-XXXX-XXXX | ARN de la cola PDF_QUEUE |
+
+7. Se debe [instalar node js](https://www.youtube.com/watch?v=ipmhBYqIP44&ab_channel=UskoKruM2010){:target="_blank"} y seguidamente, en el directorio de la aplicción, los siguientes comandos de instalación:
+   1. Para instalar las dependencias del proyecto, ejecutar `npm install`.
+   2. Para instalar serverless ejecutar `npm install -g serverless`.
+   3. Para verificar, ejecutar `serverless --version` y eso debe arrojar la versión de serverless instalada.
+   4. Una vez inataladas todas las dependencias, ejecutatr el comando de despliegue: `serverless deploy`
+8. Si el despliegue se realizó de forma correcta, se debe tener la siguiente salida en la consola:
+   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1040705088034975834/image.png)
+
+### Paso 3
 
 #### Lambda
 
@@ -76,12 +77,11 @@ Esta función se creará de forma automática al hacer el despliegue de la aplic
 En lambda verificar la función creada automáticamente y, además, deberá tener un desencadenador a la cola de SQS `PDF_QUEUE`:
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039667177025966180/image.png)
 
-
 La configuración del desencadenador debe tener la siguiente configuración:
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039668395571937430/image.png)
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085683/1032731135563792424/unknown.png)
 
-### Paso 5
+### Paso 4
 
 Dentro de Lambda, en la función creada de forma automática, se deben crear las variables de entorno, damos click en "Editar", y dentro, creamos las variables de entorno:
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039662792011153468/image.png)
@@ -109,7 +109,7 @@ Las variables de entorno son las siguientes:
 | INSTITUTION_ID                   | ba346110-5c59-474a-8504-093d3a7c91e4 | Id de USIL en la bd de queestudiar |
 | SCHOOL_WEB_URL                   | <https://school.queestudiar.pe> | Url de la plataforma de colegios |
 
-### Paso 6
+### Paso 5
 
 Finalmente, la cola de sqs tendrá una URL, eso se colocará como variable de entorno en el proyecto de API-GENERADOR.
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039669151469416459/image.png)
