@@ -57,6 +57,10 @@ Se debe deplegar el proyecto con severless, para ello:
     | DYMANO_DOWNLOAD_PDF_TABLE_ARN                   | XXXX-XXXX-XXXX | ARN de la tabla DownloadPdf |
     | SQS_PDF_QUEUE_ARN                   | XXXX-XXXX-XXXX | ARN de la cola PDF_QUEUE |
 
+    El usuario con esas credenciales debería tener configurado las siguientes políticas:
+   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1040727120537714729/unknown.png)
+
+
 7. Se debe [instalar node js](https://www.youtube.com/watch?v=ipmhBYqIP44&ab_channel=UskoKruM2010){:target="_blank"} y seguidamente, en el directorio de la aplicción, los siguientes comandos de instalación:
    1. Para instalar las dependencias del proyecto, ejecutar `npm install`.
    2. Para instalar serverless ejecutar `npm install -g serverless`.
