@@ -121,5 +121,6 @@ Este proyecto y otros más necesitan recursos de AWS S3, para ello necesitamos s
 
 1. Crear un bucket para el proyecto queestudiar con el nombre `queestudiar`, si ya lo tiene, contunúe al siguiente paso.
 2. Descomprimir e importar los siguientes [archivos](https://drive.google.com/file/d/1R3ykcBoYh6R2PanPsuDZyfQwSKzndnFQ/view?usp=sharing){:target="_blank"} dentro del directorio principal del Bucket `queestudiar`.
+3. También se debe crear, dentro del bucket de `queestudiar`, una carpeta llamada `pdfs`, esta carpeta es una variable de entorno.
 
 NOTA: De preferencia configurar estos recursos con acceso público ya que otros proyectos también lo requerirán.
