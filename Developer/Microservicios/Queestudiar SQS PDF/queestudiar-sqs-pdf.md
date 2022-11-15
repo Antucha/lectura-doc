@@ -135,7 +135,7 @@ NOTA: De preferencia configurar estos recursos con acceso público ya que otros 
 Esta forma de automatización es automática ya que:
 
 1. El archivo `serverless.yml` creará automáticamente la tabla `DownloadPdf` en DynamoDB.
-2. La cola `PDF_QUEUE` creará de forma automática.
+2. La cola `PDF_QUEUE` se creará de forma automática.
 3. La función `queestudiar-sqs-pdf-prod-handlerSQS` en lambda se creará de forma automática.
 
 ### Pasos
