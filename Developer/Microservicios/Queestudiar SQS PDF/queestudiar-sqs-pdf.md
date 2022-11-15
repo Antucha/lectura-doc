@@ -99,9 +99,6 @@ Las variables de entorno son las siguientes:
 | DB_USER_NAME                | XXXX-XXXX-XXXX                              | Nombre de usuario de BD |
 | DB_PASSWORD                 | XXXX-XXXX-XXXX                      | Contraseña de la BD |
 | DB_HOST                     | XXXX-XXXX-XXXX         | Host de la BD |
-| AWS_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
-| AWS_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
-| AWS_REGION                   | XXXX-XXXX-XXXX | Región del servidor de AWS |
 | S3_BASE_URL                   | XXXXX-XXXX-XXXX | Url del bucket base de S3. Ejm: <https://queestudiar.s3-us-east-1.amazonaws.com> |
 | S3_BUCKET_NAME                   | queestudiar | Nombre del bucket en S3 |
 | S3_SUFFIX_NAME                   | pdfs | Nombre del sufijo en S3 |
@@ -128,3 +125,105 @@ Este proyecto y otros más necesitan recursos de AWS S3, para ello necesitamos s
 3. También se debe crear, dentro del bucket de `queestudiar`, una carpeta llamada `pdfs`, esta carpeta es una variable de entorno.
 
 NOTA: De preferencia configurar estos recursos con acceso público ya que otros proyectos también lo requerirán.
+
+
+
+# Forma de despliegue automática
+
+## Generalidades
+
+Esta forma de automatización es automática ya que:
+
+1. El archivo `serverless.yml` creará automáticamente la tabla `DownloadPdf` en DynamoDB.
+2. La cola `PDF_QUEUE` creará de forma automática.
+3. La función `queestudiar-sqs-pdf-prod-handlerSQS` en lambda se creará de forma automática.
+
+### Pasos
+
+  1. Hacer pull del código a un entorno local.
+  2. Allí encontrará un archivo `serverless.yml`, reemplazar todo su contenido por el siguiente:
+      {% highlight sql %}
+        service: queestudiar-sqs-pdf-test4
+        useDotenv: true
+        provider:
+          name: aws
+          runtime: nodejs16.x
+          stage: prod
+          region: ${env:AWS_REGION}
+          iam:
+            role:
+              statements:
+                - Effect: Allow
+                  Action:
+                    - dynamodb:*
+                    - s3:*
+                  Resource:
+                    - arn:aws:dynamodb:${env:AWS_REGION}:${env:AWS_ACCOUNT_ID}:table/DownloadPdf
+        functions:
+          handlerSQS:
+            handler: handler.handler
+            events:
+              - sqs:
+                  arn:
+                    Fn::GetAtt:
+                      - PDF_QUEUE
+                      - Arn
+        resources:
+          Resources:
+            PDF_QUEUE:
+              Type: AWS::SQS::Queue
+              Properties:
+                DelaySeconds: 0
+                MaximumMessageSize: 1024
+                MessageRetentionPeriod: 60
+                QueueName: "PDF_QUEUE"
+            DownloadPdf:
+              Type: "AWS::DynamoDB::Table"
+              Properties:
+                TableName: DownloadPdf
+                AttributeDefinitions:
+                  - AttributeName: psychologyId
+                    AttributeType: S
+                  - AttributeName: date
+                    AttributeType: S
+                KeySchema:
+                  - AttributeName: psychologyId
+                    KeyType: HASH
+                  - AttributeName: date
+                    KeyType: RANGE
+                ProvisionedThroughput:
+                  ReadCapacityUnits: 1
+                  WriteCapacityUnits: 1
+      {% endhighlight %}
+  3. Crear un archivo `.env` y dentro crear las siguientes variables de entorno:
+
+    | AWS_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
+    | AWS_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
+    | AWS_REGION                   | XXXX-XXXX-XXXX | Region de AWS |
+    | AWS_ACCOUNT_ID                   | XXXX-XXXX-XXXX | ID de la cuenta de AWS:, es un número. Ejm: 923017734157 |
+    | DYMANO_DOWNLOAD_PDF_TABLE_ARN                   | XXXX-XXXX-XXXX | ARN de la tabla DownloadPdf |
+    | SQS_PDF_QUEUE_ARN                   | XXXX-XXXX-XXXX | ARN de la cola PDF_QUEUE |
+    | DB_DIALECT                  | mysql                         | Motor de la base de datos utilizado |
+    | DB_NAME                     | XXXX-XXXX-XXXX           | Nombre de la base de datos |
+    | DB_USER_NAME                | XXXX-XXXX-XXXX                              | Nombre de usuario de BD |
+    | DB_PASSWORD                 | XXXX-XXXX-XXXX                      | Contraseña de la BD |
+    | DB_HOST                     | XXXX-XXXX-XXXX         | Host de la BD |
+    | S3_BASE_URL                   | XXXXX-XXXX-XXXX | Url del bucket base de S3. Ejm: <https://queestudiar.s3-us-east-1.amazonaws.com> |
+    | S3_BUCKET_NAME                   | queestudiar | Nombre del bucket en S3 |
+    | S3_SUFFIX_NAME                   | pdfs | Nombre del sufijo en S3 |
+    | PDF_MANAGER_TABLE                   | pdfs | Nombre del almacén de pdfs |
+    | URL_CHARACTERS                   | XXXX-XXXX-XXXX | Directorio de S3 de la carpeta professionalvalue |
+    | URL_INTELLIGENT                   | XXXX-XXXX-XXXX | Directorio de S3 de la carpeta intelligence |
+    | BASE_SERVICE                   | Url de la api principal | Url de la api principal |
+    | CHROMIUM_LOCATION                   | ./node_modules/puppeteer/.local-chromium/mac-674921/chrome-mac/Chromium.app/Contents/MacOS/Chromium | Ubicación de chromium en node_modules |
+    | INSTITUTION_ID                   | ba346110-5c59-474a-8504-093d3a7c91e4 | Id de USIL en la bd de queestudiar |
+    | SCHOOL_WEB_URL                   | <https://school.queestudiar.pe> | Url de la plataforma de colegios |
+
+  4. El proyecto requiere tener instalado Node JS.
+  5. Para instalar las dependencias del proyecto, ejecutar `npm install`
+  6. Para instalar serverless ejecutar `npm install -g serverless`.
+  7. Para verificar, ejecutar `serverless --version` y eso debe arrojar la versión de serverless instalada.
+  8. Una vez inStaladas todas las dependencias, ejecutatr el comando de despliegue: `serverless deploy`
+  9. Luego verificar que se hayan creado la cola `pdfQueue` en SQS, la función `queestudiar-sqs-pdf-prod-handlerSQS` en lambda y la tabla `DownloadPdf` en dynamoDB.
+  10. Poner la url del sqs creado en las variables de entorno del proyecto api-generator.
+
