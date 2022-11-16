@@ -55,6 +55,7 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
 | BASE_URL_NOTIFICATION                   | http://queestudiar-notificacion-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com | Url de la api de notificaciones|
 | BASE_URL_LOCAL                   | http://localhost:5000 | Url de la api principal en local |
 | ASSETS_URL                   | https://d10kixcrv010ns.cloudfront.net | Url de los assest|
+| S3_BUCKET_URL                   | https://usil-queestudiar.s3.amazonaws.com | Url de los assest|
 
 
 # ACCIONES NECESARIAS
