@@ -81,6 +81,7 @@ DYNAMO_COMUNITY=XXXX-XXXX-XXXX
 | DB_PASSWORD                 | XXXX-XXXX-XXXX                      | Contraseña de la BD |
 | DB_HOST                     | XXXX-XXXX-XXXX         | Host de la BD |
 | URL_SERVICE                     | http://queestudiar-prediccion-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com         | URL Api principal |
+| URL_SCHOOL_WEB                     | http://queestudiar-colegio-web-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com         | URL front de colegios |
 | CONFIG_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
 | CONFIG_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
 | CONFIG_REGION                   | XXXX-XXXX-XXXX | Ubicación de servicio de AWS |
