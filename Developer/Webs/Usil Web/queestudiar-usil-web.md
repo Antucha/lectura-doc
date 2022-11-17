@@ -34,7 +34,6 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
   1. Ya podemos utilizar las variables de entorno en cualquier documento `.vue` o `.js`.
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1013781700922327150/unknown.png)
 
-
 # VARIALES DE ENTORNO
 
 | Variables                   | Valor                                 | Descripción |
@@ -46,4 +45,5 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
 | ASSETS_URL                   | https://d10kixcrv010ns.cloudfront.net | -- |
 | GOOGLE_MAPS_KEY                   | XXXX-XXXX-XXXX | Key del servicio de google maps |
 | GOOGLE_MAPS_LIBRARIES                   | places | -- |
+| S3_BUCKET_URL                   | https://usil-queestudiar.s3.amazonaws.com | url del bucket de s3 |
 

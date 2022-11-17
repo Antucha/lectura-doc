@@ -49,5 +49,6 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
 | GOOGLE_MAPS_KEY                   | AIzaSyAamVCoyQ4AuvBpxVRMs9P-HFkfPVQj0Kw | -- |
 | GOOGLE_MAPS_LIBRARIES                   | places | -- |
 | PORT                   | 3500 | -- |
+| S3_BUCKET_URL                   | https://usil-queestudiar.s3.amazonaws.com | url del bucket de s3 |
 
 
