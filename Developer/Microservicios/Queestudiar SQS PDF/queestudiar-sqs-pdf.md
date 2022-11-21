@@ -26,8 +26,8 @@ nav_order: 3
 1. En caso que PDF SERVICE verifique que no existe el PDF, manda el id de estudiante a SQS y lo coloca en cola de ejecución para que luego SQS ejecute el SQS SERVICE (Lambda)  donde le envía cada ID del estudiante y empiece a generar los PDFs.
 1. Todo PDF generado por SQS SERVICE (Lambda) es enviando a un repositorio de S3.
 1. El código del proyecto está subido al repositorio `https://git-codecommit.us-east-1.amazonaws.com/v1/repos/queestudiar-queue`.
-1. El proyecto sqs será desplegado mediante serverless. Las instrucciones serverless que funcionaban en queestudiar están en el archivo `serverless.yml` dentro del proyecto. Dentro de ese archivo se debe cambiar las configuraciones por las de USIL, es decir, en general, deben reemplazarse por las credenciales de cada empresa.
-<!-- 1. Se puede [automatizar](https://aws.amazon.com/blogs/devops/building-a-serverless-jenkins-environment-on-aws-fargate/){:target="_blank"} el despliegue del proyecto con la documentación indicada. -->
+<!-- 1. El proyecto sqs será desplegado mediante serverless. Las instrucciones serverless que funcionaban en queestudiar están en el archivo `serverless.yml` dentro del proyecto. Dentro de ese archivo se debe cambiar las configuraciones por las de USIL, es decir, en general, deben reemplazarse por las credenciales de cada empresa.
+1. Se puede [automatizar](https://aws.amazon.com/blogs/devops/building-a-serverless-jenkins-environment-on-aws-fargate/){:target="_blank"} el despliegue del proyecto con la documentación indicada. -->
 
 <!-- ### Paso 1
 #### Amazon SQS
