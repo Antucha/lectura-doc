@@ -216,7 +216,7 @@ Esta forma de automatización es automática ya que:
   11. Se debe verificar que las configuraciones de la función `queestudiar-sqs-pdf-prod-handlerSQS` sea de la siguiente manera, sino, realizarlo manualmente.
    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1044283303886323732/image.png)
 
-   Además, se deben colocar las siguientes variables de entorno:
+   Además, se deben colocar las siguientes variables de entorno en la función de lambda:
 
   | Variables                   | Valor                                 | Descripción |
   | -----------                 | -----------                           | ----------- |
