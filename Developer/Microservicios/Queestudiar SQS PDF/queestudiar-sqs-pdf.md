@@ -29,7 +29,7 @@ nav_order: 3
 1. El proyecto sqs será desplegado mediante serverless. Las instrucciones serverless que funcionaban en queestudiar están en el archivo `serverless.yml` dentro del proyecto. Dentro de ese archivo se debe cambiar las configuraciones por las de USIL, es decir, en general, deben reemplazarse por las credenciales de cada empresa.
 1. Se puede [automatizar](https://aws.amazon.com/blogs/devops/building-a-serverless-jenkins-environment-on-aws-fargate/){:target="_blank"} el despliegue del proyecto con la documentación indicada.
 
-### Paso 1
+<!-- ### Paso 1
 #### Amazon SQS
 
 Se utilizará el servicio de colas de Amazon SQS y será nombrado `PDF_QUEUE`
@@ -115,7 +115,7 @@ Las variables de entorno son las siguientes:
 Finalmente, la cola de sqs tendrá una URL, eso se colocará como variable de entorno en el proyecto de API-GENERADOR.
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039669151469416459/image.png)
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039939645267525702/unknown.png)
-
+ -->
 # AWS S3
 
 Este proyecto y otros más necesitan recursos de AWS S3, para ello necesitamos subir esos recursos (imágenes) a un bucket de S3 realizando los siguientes pasos.
@@ -135,13 +135,13 @@ NOTA: De preferencia configurar estos recursos con acceso público ya que otros 
 Esta forma de automatización es automática ya que:
 
 1. El archivo `serverless.yml` creará automáticamente la tabla `DownloadPdf` en DynamoDB.
-2. La cola `PDF_QUEUE` se creará de forma automática.
+2. La cola `pdfQueue` se creará de forma automática.
 3. La función `queestudiar-sqs-pdf-prod-handlerSQS` en lambda se creará de forma automática.
 
 ### Pasos
 
   1. Hacer pull del código a un entorno local.
-  2. Allí encontrará un archivo `serverless.yml`, reemplazar todo su contenido por el siguiente:
+  2. Allí encontrará un archivo `serverless.yml`, alí encontrará el sigiuente contenido:
       {% highlight sql %}
         service: queestudiar-sqs-pdf-test4
         useDotenv: true
@@ -197,33 +197,57 @@ Esta forma de automatización es automática ya que:
       {% endhighlight %}
   3. Crear un archivo `.env` y dentro crear las siguientes variables de entorno:
 
-    | AWS_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
-    | AWS_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
-    | AWS_REGION                   | XXXX-XXXX-XXXX | Region de AWS |
-    | AWS_ACCOUNT_ID                   | XXXX-XXXX-XXXX | ID de la cuenta de AWS:, es un número. Ejm: 923017734157 |
-    | DYMANO_DOWNLOAD_PDF_TABLE_ARN                   | XXXX-XXXX-XXXX | ARN de la tabla DownloadPdf |
-    | SQS_PDF_QUEUE_ARN                   | XXXX-XXXX-XXXX | ARN de la cola PDF_QUEUE |
-    | DB_DIALECT                  | mysql                         | Motor de la base de datos utilizado |
-    | DB_NAME                     | XXXX-XXXX-XXXX           | Nombre de la base de datos |
-    | DB_USER_NAME                | XXXX-XXXX-XXXX                              | Nombre de usuario de BD |
-    | DB_PASSWORD                 | XXXX-XXXX-XXXX                      | Contraseña de la BD |
-    | DB_HOST                     | XXXX-XXXX-XXXX         | Host de la BD |
-    | S3_BASE_URL                   | XXXXX-XXXX-XXXX | Url del bucket base de S3. Ejm: <https://queestudiar.s3-us-east-1.amazonaws.com> |
-    | S3_BUCKET_NAME                   | queestudiar | Nombre del bucket en S3 |
-    | S3_SUFFIX_NAME                   | pdfs | Nombre del sufijo en S3 |
-    | PDF_MANAGER_TABLE                   | pdfs | Nombre del almacén de pdfs |
-    | URL_CHARACTERS                   | XXXX-XXXX-XXXX | Directorio de S3 de la carpeta professionalvalue |
-    | URL_INTELLIGENT                   | XXXX-XXXX-XXXX | Directorio de S3 de la carpeta intelligence |
-    | BASE_SERVICE                   | Url de la api principal | Url de la api principal |
-    | CHROMIUM_LOCATION                   | ./node_modules/puppeteer/.local-chromium/mac-674921/chrome-mac/Chromium.app/Contents/MacOS/Chromium | Ubicación de chromium en node_modules |
-    | INSTITUTION_ID                   | ba346110-5c59-474a-8504-093d3a7c91e4 | Id de USIL en la bd de queestudiar |
-    | SCHOOL_WEB_URL                   | <https://school.queestudiar.pe> | Url de la plataforma de colegios |
+  | Variables                   | Valor                                 | Descripción |
+  | -----------                 | -----------                           | ----------- |
+  | AWS_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
+  | AWS_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
+  | AWS_REGION                   | XXXX-XXXX-XXXX | Region de AWS |
+  | AWS_ACCOUNT_ID                   | XXXX-XXXX-XXXX | ID de la cuenta de AWS:, es un número. Ejm: 923017734157 |
 
   4. El proyecto requiere tener instalado Node JS.
   5. Para instalar las dependencias del proyecto, ejecutar `npm install`
   6. Para instalar serverless ejecutar `npm install -g serverless`.
   7. Para verificar, ejecutar `serverless --version` y eso debe arrojar la versión de serverless instalada.
-  8. Una vez inStaladas todas las dependencias, ejecutatr el comando de despliegue: `serverless deploy`
-  9. Luego verificar que se hayan creado la cola `pdfQueue` en SQS, la función `queestudiar-sqs-pdf-prod-handlerSQS` en lambda y la tabla `DownloadPdf` en dynamoDB.
-  10. Poner la url del sqs creado en las variables de entorno del proyecto api-generator.
+  8. Una vez instaladas todas las dependencias, ejecutatr el comando de despliegue: `serverless deploy`
+  9. Luego, verificar que se hayan creado la cola `pdfQueue` en SQS, la función `queestudiar-sqs-pdf-prod-handlerSQS` en lambda y la tabla `DownloadPdf` en dynamoDB.
+  10. Se debe verificar que las configuraciones de la cola `pdfQueue` sea de la siguiente manera, sino, realizarlo manualmente.
+   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1044282705308819556/image.png)
+
+  11. Se debe verificar que las configuraciones de la función `queestudiar-sqs-pdf-prod-handlerSQS` sea de la siguiente manera, sino, realizarlo manualmente.
+   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1044283303886323732/image.png)
+
+   Además, se deben colocar las siguientes variables de entorno:
+
+  | Variables                   | Valor                                 | Descripción |
+  | -----------                 | -----------                           | ----------- |
+  | DB_DIALECT                  | mysql                         | Motor de la base de datos utilizado |
+  | DB_NAME                     | XXXX-XXXX-XXXX           | Nombre de la base de datos |
+  | DB_USER_NAME                | XXXX-XXXX-XXXX                              | Nombre de usuario de BD |
+  | DB_PASSWORD                 | XXXX-XXXX-XXXX                      | Contraseña de la BD |
+  | DB_HOST                     | XXXX-XXXX-XXXX         | Host de la BD |
+  | S3_BASE_URL                   | <https://usil-queestudiar.s3.amazonaws.com> | Url del bucket base de S3. Ejm: <https://queestudiar.s3-us-east-1.amazonaws.com> |
+  | S3_BUCKET_NAME                   | usil-queestudiar | Nombre del bucket en S3 |
+  | S3_SUFFIX_NAME                   | pdfs | Nombre del sufijo en S3 |
+  | PDF_MANAGER_TABLE                   | DownloadPdf | Nombre del almacén de pdfs |
+  | URL_CHARACTERS                   | <https://usil-queestudiar.s3.amazonaws.com/assets/images/vocation/professionalvalue> | Directorio de S3 de la carpeta professionalvalue |
+  | URL_INTELLIGENT                   | <https://usil-queestudiar.s3.amazonaws.com/assets/images/vocation/intelligence/> | Directorio de S3 de la carpeta intelligence |
+  | BASE_SERVICE                   | <http://queestudiar-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com> | Url de la api principal (sin '/' final)|
+  | CHROMIUM_LOCATION                   | ./node_modules/puppeteer/.local-chromium/mac-674921/chrome-mac/Chromium.app/Contents/MacOS/Chromium | Ubicación de chromium en node_modules |
+  | INSTITUTION_ID                   | ba346110-5c59-474a-8504-093d3a7c91e4 | Id de USIL en la bd de queestudiar |
+  | SCHOOL_WEB_URL                   | <http://queestudiar-colegio-web-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com> | Url de la plataforma de colegios |
+
+
+  1.  Se debe verificar que las configuraciones de la tabla `DownloadPdf` sea de la siguiente manera, sino, realizarlo manualmente.
+   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1044284753811079238/image.png)
+  2.  Finalmente, la cola de sqs tendrá una URL, eso se colocará como variable de entorno en el proyecto de API-GENERADOR.
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039669151469416459/image.png)
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039939645267525702/unknown.png)
+  3. Se debe [instalar node js](https://www.youtube.com/watch?v=ipmhBYqIP44&ab_channel=UskoKruM2010){:target="_blank"} y seguidamente, en el directorio de la aplicción, los siguientes comandos de instalación:
+      1. Para instalar las dependencias del proyecto, ejecutar `npm install`.
+      2. Para instalar serverless ejecutar `npm install -g serverless`.
+      3. Para verificar, ejecutar `serverless --version` y eso debe arrojar la versión de serverless instalada.
+      4. Una vez inataladas todas las dependencias, ejecutatr el comando de despliegue: `serverless deploy`
+  4. Si el despliegue se realizó de forma correcta, se debe tener la siguiente salida en la consola:
+   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1040705088034975834/image.png)
+
 
