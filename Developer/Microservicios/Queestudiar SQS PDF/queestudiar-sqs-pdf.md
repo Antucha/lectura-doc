@@ -204,12 +204,15 @@ Esta forma de automatización es automática ya que:
   | AWS_REGION                   | XXXX-XXXX-XXXX | Region de AWS |
   | AWS_ACCOUNT_ID                   | XXXX-XXXX-XXXX | ID de la cuenta de AWS:, es un número. Ejm: 923017734157 |
 
-  4. El proyecto requiere tener instalado Node JS.
-  5. Para instalar las dependencias del proyecto, ejecutar `npm install`
-  6. Para instalar serverless ejecutar `npm install -g serverless`.
-  7. Para verificar, ejecutar `serverless --version` y eso debe arrojar la versión de serverless instalada.
-  8. Una vez instaladas todas las dependencias, ejecutatr el comando de despliegue: `serverless deploy`
-  9. Luego, verificar que se hayan creado la cola `pdfQueue` en SQS, la función `queestudiar-sqs-pdf-prod-handlerSQS` en lambda y la tabla `DownloadPdf` en dynamoDB.
+  4. Se debe [instalar node js](https://www.youtube.com/watch?v=ipmhBYqIP44&ab_channel=UskoKruM2010){:target="_blank"} y seguidamente, en el directorio de la aplicción, los siguientes comandos de instalación:
+      1. Para instalar las dependencias del proyecto, ejecutar `npm install`.
+      2. Para instalar serverless ejecutar `npm install -g serverless`.
+      3. Para verificar, ejecutar `serverless --version` y eso debe arrojar la versión de serverless instalada.
+      4. Una vez inataladas todas las dependencias, ejecutatr el comando de despliegue: `serverless deploy`
+  5. Si el despliegue se realizó de forma correcta, se debe tener la siguiente salida en la consola:
+   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1040705088034975834/image.png)
+  
+  6. Luego, verificar que se hayan creado la cola `pdfQueue` en SQS, la función `queestudiar-sqs-pdf-prod-handlerSQS` en lambda y la tabla `DownloadPdf` en dynamoDB.
   10. Se debe verificar que las configuraciones de la cola `pdfQueue` sea de la siguiente manera, sino, realizarlo manualmente.
    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1044282705308819556/image.png)
 
@@ -238,14 +241,6 @@ Esta forma de automatización es automática ya que:
 
   12.  Se debe verificar que las configuraciones de la tabla `DownloadPdf` sea de la siguiente manera, sino, realizarlo manualmente.
    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1044284753811079238/image.png)
-  14. Se debe [instalar node js](https://www.youtube.com/watch?v=ipmhBYqIP44&ab_channel=UskoKruM2010){:target="_blank"} y seguidamente, en el directorio de la aplicción, los siguientes comandos de instalación:
-      1. Para instalar las dependencias del proyecto, ejecutar `npm install`.
-      2. Para instalar serverless ejecutar `npm install -g serverless`.
-      3. Para verificar, ejecutar `serverless --version` y eso debe arrojar la versión de serverless instalada.
-      4. Una vez inataladas todas las dependencias, ejecutatr el comando de despliegue: `serverless deploy`
-  15. Si el despliegue se realizó de forma correcta, se debe tener la siguiente salida en la consola:
-   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1040705088034975834/image.png)
-  
   16.  Finalmente, la cola de sqs tendrá una URL, eso se colocará como variable de entorno en el proyecto de API-GENERADOR.
    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039669151469416459/image.png)
    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039939645267525702/unknown.png)
