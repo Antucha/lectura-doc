@@ -143,11 +143,11 @@ Esta forma de automatización es automática ya que:
   1. Hacer pull del código a un entorno local.
   2. Allí encontrará un archivo `serverless.yml`, alí encontrará el sigiuente contenido:
       {% highlight sql %}
-        service: queestudiar-sqs-pdf-test4
+        service: queestudiar-sqs-pdf-test-8
         useDotenv: true
         provider:
           name: aws
-          runtime: nodejs16.x
+          runtime: nodejs12.x
           stage: prod
           region: ${env:AWS_REGION}
           iam:
@@ -159,6 +159,14 @@ Esta forma de automatización es automática ya que:
                     - s3:*
                   Resource:
                     - arn:aws:dynamodb:${env:AWS_REGION}:${env:AWS_ACCOUNT_ID}:table/DownloadPdf
+                    - arn:aws:dynamodb:${env:AWS_REGION}:${env:AWS_ACCOUNT_ID}:table/DownloadPdf/index/*
+                    - arn:aws:dynamodb:${env:AWS_REGION}:${env:AWS_ACCOUNT_ID}:table/pdfs
+                    - arn:aws:dynamodb:${env:AWS_REGION}:${env:AWS_ACCOUNT_ID}:table/pdfs/index/*
+                - Effect: Allow
+                  Action:
+                    - dynamodb:*
+                    - s3:*
+                  Resource: "arn:aws:dynamodb:${env:AWS_REGION}:${env:AWS_ACCOUNT_ID}:table/DownloadPdf/index/*"
         functions:
           handlerSQS:
             handler: handler.handler
@@ -166,34 +174,34 @@ Esta forma de automatización es automática ya que:
               - sqs:
                   arn:
                     Fn::GetAtt:
-                      - PDF_QUEUE
+                      - pdfQueue
                       - Arn
         resources:
           Resources:
-            PDF_QUEUE:
+            pdfQueue:
               Type: AWS::SQS::Queue
               Properties:
                 DelaySeconds: 0
                 MaximumMessageSize: 1024
                 MessageRetentionPeriod: 60
-                QueueName: "PDF_QUEUE"
+                QueueName: "pdfQueue"
             DownloadPdf:
               Type: "AWS::DynamoDB::Table"
               Properties:
                 TableName: DownloadPdf
                 AttributeDefinitions:
-                  - AttributeName: psychologyId
+                  - AttributeName: studentId
                     AttributeType: S
-                  - AttributeName: date
-                    AttributeType: S
+                  - AttributeName: order
+                    AttributeType: N
                 KeySchema:
-                  - AttributeName: psychologyId
+                  - AttributeName: studentId
                     KeyType: HASH
-                  - AttributeName: date
+                  - AttributeName: order
                     KeyType: RANGE
                 ProvisionedThroughput:
                   ReadCapacityUnits: 1
-                  WriteCapacityUnits: 1
+                  WriteCapacityUnits: 1        
       {% endhighlight %}
   3. Crear un archivo `.env` y dentro crear las siguientes variables de entorno:
 
