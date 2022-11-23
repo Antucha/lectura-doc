@@ -122,7 +122,10 @@ Este proyecto y otros más necesitan recursos de AWS S3, para ello necesitamos s
 
 1. Crear un bucket para el proyecto queestudiar con el nombre `queestudiar`, si ya lo tiene, contunúe al siguiente paso.
 2. Descomprimir e importar los siguientes [archivos](https://drive.google.com/file/d/1R3ykcBoYh6R2PanPsuDZyfQwSKzndnFQ/view?usp=sharing){:target="_blank"} dentro del directorio principal del Bucket `queestudiar`.
-3. También se debe crear, dentro del bucket de `queestudiar`, una carpeta llamada `pdfs`, esta carpeta es una variable de entorno.
+   1. Descomprimir el archivo `image.tar.gz`, descomprimirlo, dentro hay una carpeta `image`, subir esa carpeta al bucket `usil-queestudiar` de S3.
+   2. Descomprimir el archivo `assets.zip`, descomprimirlo, dentro hay una carpeta `assets`, subir esa carpeta al bucket `usil-queestudiar` de S3.
+   3. Descomprimir el archivo `assets-hbs.tar.gz`, descomprimirlo, dentro hay una carpeta `assets-hbs`, subir esa carpeta al bucket `usil-queestudiar` de S3.
+3. También se debe crear, dentro del bucket de `usil-queestudiar`, una carpeta llamada `pdfs`, esta carpeta es una variable de entorno.
 
 NOTA: De preferencia configurar estos recursos con acceso público ya que otros proyectos también lo requerirán.
 
@@ -239,7 +242,7 @@ Esta forma de automatización es automática ya que:
     | S3_BUCKET_NAME                   | usil-queestudiar | Nombre del bucket en S3 |
     | S3_SUFFIX_NAME                   | pdfs | Nombre del sufijo en S3 |
     | PDF_MANAGER_TABLE                   | DownloadPdf | Nombre del almacén de pdfs |
-    | URL_CHARACTERS                   | <https://usil-queestudiar.s3.amazonaws.com/assets/images/vocation/professionalvalue> | Directorio de S3 de la carpeta professionalvalue |
+    | URL_CHARACTERS                   | <https://usil-queestudiar.s3.amazonaws.com/assets/images/vocation/professionalvalue/> | Directorio de S3 de la carpeta professionalvalue |
     | URL_INTELLIGENT                   | <https://usil-queestudiar.s3.amazonaws.com/assets/images/vocation/intelligence/> | Directorio de S3 de la carpeta intelligence |
     | BASE_SERVICE                   | <http://queestudiar-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com> | Url de la api principal (sin '/' final)|
     | CHROMIUM_LOCATION                   | ./node_modules/puppeteer/.local-chromium/mac-674921/chrome-mac/Chromium.app/Contents/MacOS/Chromium | Ubicación de chromium en node_modules |
