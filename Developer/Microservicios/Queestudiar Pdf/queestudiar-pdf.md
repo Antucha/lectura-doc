@@ -89,6 +89,7 @@ DYNAMO_COMUNITY=XXXX-XXXX-XXXX
 | DYNAMO_COMUNITY                   | Community | Nombre de la tabla Community de DynamoDB |
 | QUEUE_URL                   | https://sqs.us-west-2.amazonaws.com/923017739947/TEST_QUEUE | Url de la función TEST_QUEUE en SQS |
 | QUEUE_EAST_URL                   | https://sqs.us-east-1.amazonaws.com/923017739947/TEST_QUEUE_EAST | Url de la función QUEUE_EAST_URL en SQS |
+| S3_BUCKET_NAME                   | usil-queestudiar | Nombre del bucket de s3 |
 
 # Crear pdf [POST]
 Ruta: `{host}/api/pdf/create`
