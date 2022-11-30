@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Plataforma Talento
-permalink: /Plataforma Talento/
+permalink: /DEV Plataforma Talento/
 parent: Webs
 grand_parent: Developer
 nav_order: 5

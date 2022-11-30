@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Plataforma Talento
-permalink: /Plataforma Talento/
+permalink: /MU Plataforma Talento/
 parent: Manual del usuario
 grand_parent: Features
 nav_order: 4
