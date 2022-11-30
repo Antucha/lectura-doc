@@ -17,10 +17,8 @@ nav_order: 4
 {:toc}
 </details>
 
-# Ingreso al dashboard de universidad
 
-1. Ingresa a la siguiente dirección para entrar al Dashboard General USIL
-    LINK: <https://usil.queestudiar.la/>
+1. Ingresa al siguiente [link](https://talento-qe.herokuapp.com/){:target="_blank"} para entrar test de talento:
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085689/1047285515348606976/image.png)
 
 2. Si no tiene registro en la plataforma, debe dar click en "¡Empecemos! 🙌", allí debe registrar su correo y una contraseña
