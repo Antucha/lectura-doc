@@ -58,7 +58,7 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
 | S3_BUCKET_URL                   | https://usil-queestudiar.s3.amazonaws.com | Url de los assest|
 
 
-# ACCIONES NECESARIAS
+<!-- # ACCIONES NECESARIAS
 
 Como el proyecto requiere de recursos del bucket de S3, se tendrá que cambiar la ruta de todos los lugares en donce se utilicen estor recursos, para ello, en el editor de código que utilice, copiar el texto `https://queestudiar.s3.us-west-2` en el buscador, de la siguiente manera:
 
@@ -73,3 +73,4 @@ Y finalmente dar click en el botón de "Replace all":
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1041743856108060832/image.png)
 
 Eso remplazará todas las url del bucket de la empresa queestudiar por el link del bucket que USIL asignó al proyecto de queestudiar en su cuenta de AWS.
+ -->
