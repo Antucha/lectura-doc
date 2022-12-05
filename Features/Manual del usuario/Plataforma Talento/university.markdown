@@ -17,7 +17,6 @@ nav_order: 4
 {:toc}
 </details>
 
-
 1. Ingresa al siguiente [link](https://talento-qe.herokuapp.com/){:target="_blank"} para entrar test de talento:
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085689/1047285515348606976/image.png)
 
