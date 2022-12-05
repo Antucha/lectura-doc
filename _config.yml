@@ -29,7 +29,7 @@ baseurl: lectura-doc # the subpath of your site, e.g. /blog
 url: Antucha.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
-# color_scheme: dark
+# color_scheme: dark 
 
 remote_theme: just-the-docs/just-the-docs
 # Build settings
