@@ -1,0 +1,1627 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  
+
+  
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+  
+  <script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Queestudiar Api | Documentación Queestudiar</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Queestudiar Api" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/Queestudiar%20Api/" />
+<meta property="og:url" content="http://localhost:4000/Queestudiar%20Api/" />
+<meta property="og:site_name" content="Documentación Queestudiar" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Queestudiar Api" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Queestudiar Api","url":"http://localhost:4000/Queestudiar%20Api/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="http://localhost:4000/" class="site-title lh-tight">
+  Documentación Queestudiar
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      
+        <ul class="nav-list"><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="http://localhost:4000/Features/" class="nav-list-link">Features</a><ul class="nav-list "><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="http://localhost:4000/Manual%20del%20usuario/" class="nav-list-link">Manual del usuario</a><ul class="nav-list"><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Dashboard%20de%20colegio/" class="nav-list-link">Dashboard de colegio</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Dashboard%20de%20estudiante/" class="nav-list-link">Dashboard de estudiante</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Dashboard%20de%20universidad/" class="nav-list-link">Dashboard de universidad</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/MU%20Test%20Express/" class="nav-list-link">Test Express</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/MU%20Plataforma%20Talento/" class="nav-list-link">Plataforma Talento</a>
+                  </li></ul></li><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="http://localhost:4000/Documentaci%C3%B3n%20funcional/" class="nav-list-link">Documentación funcional</a><ul class="nav-list"><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Query%20SQL/" class="nav-list-link">Query SQL</a>
+                  </li></ul></li></ul></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="http://localhost:4000/Developer/" class="nav-list-link">Developer</a><ul class="nav-list "><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="http://localhost:4000/Arquitectura/" class="nav-list-link">Arquitectura</a><ul class="nav-list"><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Queestudiar%20BD/" class="nav-list-link">Queestudiar BD</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Artefactos/" class="nav-list-link">Artefactos</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Detalles%20de%20arquitectura/" class="nav-list-link">Detalles de arquitectura</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Queestudiar%20AWS/" class="nav-list-link">Queestudiar AWS</a>
+                  </li></ul></li><li class="nav-list-item  active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="http://localhost:4000/Microservicios/" class="nav-list-link">Microservicios</a><ul class="nav-list"><li class="nav-list-item  active">
+                    <a href="http://localhost:4000/Queestudiar%20Api/" class="nav-list-link active">Queestudiar Api</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Queestudiar%20Pdf/" class="nav-list-link">Queestudiar Pdf</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Queestudiar%20Predicci%C3%B3n/" class="nav-list-link">Queestudiar Predicción</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Queestudiar%20SQS%20PDF/" class="nav-list-link">Queestudiar SQS PDF</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Queestudiar%20M%C3%A9tricas/" class="nav-list-link">Queestudiar Métricas</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Queestudiar%20Notificaciones/" class="nav-list-link">Queestudiar Notificaciones</a>
+                  </li></ul></li><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="http://localhost:4000/Webs/" class="nav-list-link">Webs</a><ul class="nav-list"><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Usil%20Web/" class="nav-list-link">Usil Web</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Estudiante%20Web/" class="nav-list-link">Estudiante Web</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Colegio%20Web/" class="nav-list-link">Colegio Web</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/Test%20Express/" class="nav-list-link">Test Express</a>
+                  </li><li class="nav-list-item ">
+                    <a href="http://localhost:4000/DEV%20Plataforma%20Talento/" class="nav-list-link">Plataforma Talento</a>
+                  </li></ul></li></ul></li><li class="nav-list-item"><a href="http://localhost:4000/about/" class="nav-list-link">About</a></li></ul>
+
+      
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Documentación Queestudiar" aria-label="Search Documentación Queestudiar" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+      
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="http://localhost:4000/Developer/">Developer</a></li>
+                <li class="breadcrumb-nav-list-item"><a href="http://localhost:4000/Microservicios/">Microservicios</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>Queestudiar Api</span></li>
+            </ol>
+          </nav>
+        
+      
+      <div id="main-content" class="main-content" role="main">
+        
+          <details open="">
+  <summary class="text-delta">
+    Índice:
+  </summary>
+<ol id="markdown-toc">
+  <li><a href="#cuadro-informativo" id="markdown-toc-cuadro-informativo">Cuadro informativo</a></li>
+  <li><a href="#declaración-de-las-variables-de-entorno" id="markdown-toc-declaración-de-las-variables-de-entorno">Declaración de las variables de entorno</a></li>
+  <li><a href="#variables-de-entorno" id="markdown-toc-variables-de-entorno">Variables de entorno</a>    <ol>
+      <li><a href="#variables-de-entorno-del-sistema-queestudiar" id="markdown-toc-variables-de-entorno-del-sistema-queestudiar">Variables de entorno del sistema queestudiar</a></li>
+      <li><a href="#variables-de-entorno-para-el-crm-con-usil" id="markdown-toc-variables-de-entorno-para-el-crm-con-usil">Variables de entorno para el CRM con USIL</a></li>
+    </ol>
+  </li>
+  <li><a href="#consultas" id="markdown-toc-consultas">CONSULTAS</a>    <ol>
+      <li><a href="#loguin-post" id="markdown-toc-loguin-post">Loguin [POST]</a></li>
+      <li><a href="#loguin-post-1" id="markdown-toc-loguin-post-1">Loguin [POST]</a></li>
+      <li><a href="#registro-post" id="markdown-toc-registro-post">Registro [POST]</a></li>
+      <li><a href="#verificar-número-de-celular-post" id="markdown-toc-verificar-número-de-celular-post">Verificar número de celular [POST]</a></li>
+      <li><a href="#guardar-contraseña-post" id="markdown-toc-guardar-contraseña-post">Guardar contraseña [POST]</a></li>
+      <li><a href="#extraer-contraseña-get" id="markdown-toc-extraer-contraseña-get">Extraer contraseña [GET]</a></li>
+      <li><a href="#verificar-contraseña-post" id="markdown-toc-verificar-contraseña-post">Verificar contraseña [POST]</a></li>
+      <li><a href="#loguin-social-post" id="markdown-toc-loguin-social-post">Loguin social [POST]</a></li>
+      <li><a href="#register-v2-post" id="markdown-toc-register-v2-post">Register V2 [POST]</a></li>
+      <li><a href="#extraer-atributos-de-un-estudiante-get" id="markdown-toc-extraer-atributos-de-un-estudiante-get">Extraer atributos de un estudiante [GET]</a></li>
+      <li><a href="#extraer-carreras-filtradas-get" id="markdown-toc-extraer-carreras-filtradas-get">Extraer carreras filtradas [GET]</a></li>
+      <li><a href="#enroll-post" id="markdown-toc-enroll-post">Enroll [POST]</a></li>
+      <li><a href="#enroll-get" id="markdown-toc-enroll-get">Enroll [GET]</a></li>
+      <li><a href="#ectraer-perfil-de-un-estudiante-post" id="markdown-toc-ectraer-perfil-de-un-estudiante-post">Ectraer perfil de un estudiante [POST]</a></li>
+      <li><a href="#actualizar-data-de-un-estudiante-put" id="markdown-toc-actualizar-data-de-un-estudiante-put">Actualizar data de un estudiante [PUT]</a></li>
+      <li><a href="#agregar-atributo-a-un-estudiante-post" id="markdown-toc-agregar-atributo-a-un-estudiante-post">Agregar atributo a un estudiante [POST]</a></li>
+      <li><a href="#extraer-la-guía-vocacional-get" id="markdown-toc-extraer-la-guía-vocacional-get">Extraer la guía vocacional [GET]</a></li>
+      <li><a href="#extraer-todos-los-atributos-get" id="markdown-toc-extraer-todos-los-atributos-get">Extraer todos los atributos [GET]</a></li>
+      <li><a href="#buscar-institución-get" id="markdown-toc-buscar-institución-get">Buscar institución [GET]</a></li>
+      <li><a href="#extraer-personalidad-get" id="markdown-toc-extraer-personalidad-get">Extraer personalidad [GET]</a></li>
+      <li><a href="#extraer-inteligencia-get" id="markdown-toc-extraer-inteligencia-get">Extraer inteligencia [GET]</a></li>
+      <li><a href="#extraer-preguntas-de-personalidad-get" id="markdown-toc-extraer-preguntas-de-personalidad-get">Extraer preguntas de personalidad [GET]</a></li>
+      <li><a href="#extraer-último-resultado-get" id="markdown-toc-extraer-último-resultado-get">Extraer último resultado [GET]</a></li>
+      <li><a href="#extraer-último-resultado-de-talento-get" id="markdown-toc-extraer-último-resultado-de-talento-get">Extraer último resultado de talento [GET]</a></li>
+      <li><a href="#extraer-preguntas-get" id="markdown-toc-extraer-preguntas-get">Extraer preguntas [GET]</a></li>
+      <li><a href="#extraer-resultados-de-progreso-get" id="markdown-toc-extraer-resultados-de-progreso-get">Extraer resultados de progreso [GET]</a></li>
+      <li><a href="#actualizar-referencia-completa-get" id="markdown-toc-actualizar-referencia-completa-get">Actualizar referencia completa [GET]</a></li>
+      <li><a href="#actualizar-progreso-vocacional-complero-get" id="markdown-toc-actualizar-progreso-vocacional-complero-get">Actualizar progreso vocacional complero [GET]</a></li>
+      <li><a href="#extraer-datos-personales-de-progreso-institucional-get" id="markdown-toc-extraer-datos-personales-de-progreso-institucional-get">Extraer datos personales de progreso institucional [GET]</a></li>
+      <li><a href="#extraer-datos-de-progreso-get" id="markdown-toc-extraer-datos-de-progreso-get">Extraer datos de progreso [GET]</a></li>
+      <li><a href="#extraer-datos-de-progreso--personalget" id="markdown-toc-extraer-datos-de-progreso--personalget">Extraer datos de progreso  personal[GET]</a></li>
+      <li><a href="#extraer-atributo-vovacional-get" id="markdown-toc-extraer-atributo-vovacional-get">Extraer atributo vovacional [GET]</a></li>
+      <li><a href="#extraer-progreso-get" id="markdown-toc-extraer-progreso-get">Extraer progreso [GET]</a></li>
+      <li><a href="#enviar-información-post" id="markdown-toc-enviar-información-post">Enviar información [POST]</a></li>
+      <li><a href="#activar-membresías-de-escuelas-get" id="markdown-toc-activar-membresías-de-escuelas-get">Activar membresías de escuelas [GET]</a></li>
+      <li><a href="#verificar-código-de-colegio-get" id="markdown-toc-verificar-código-de-colegio-get">Verificar código de colegio [GET]</a></li>
+      <li><a href="#actualizar-estudiante-post" id="markdown-toc-actualizar-estudiante-post">Actualizar estudiante [POST]</a></li>
+      <li><a href="#extraer-lista-get" id="markdown-toc-extraer-lista-get">Extraer lista [GET]</a></li>
+      <li><a href="#validar-alianza-get" id="markdown-toc-validar-alianza-get">Validar alianza [GET]</a></li>
+      <li><a href="#buscar-estudiante-get" id="markdown-toc-buscar-estudiante-get">Buscar estudiante [GET]</a></li>
+      <li><a href="#configuraciónvocacional-put" id="markdown-toc-configuraciónvocacional-put">Configuraciónvocacional [PUT]</a></li>
+      <li><a href="#extraer-último-resultado-get-1" id="markdown-toc-extraer-último-resultado-get-1">Extraer último resultado [GET]</a></li>
+      <li><a href="#extraer-dashborad-de-institución-get" id="markdown-toc-extraer-dashborad-de-institución-get">Extraer dashborad de institución [GET]</a></li>
+      <li><a href="#extraer-dashboard-de-carreras-get" id="markdown-toc-extraer-dashboard-de-carreras-get">Extraer dashboard de carreras [GET]</a></li>
+      <li><a href="#lista-de-usuarios-get" id="markdown-toc-lista-de-usuarios-get">Lista de usuarios [GET]</a></li>
+      <li><a href="#crear-usuario-post" id="markdown-toc-crear-usuario-post">Crear usuario [POST]</a></li>
+      <li><a href="#crear-código-de-escuelas-post" id="markdown-toc-crear-código-de-escuelas-post">Crear código de escuelas [POST]</a></li>
+      <li><a href="#buscar-institución-get-1" id="markdown-toc-buscar-institución-get-1">Buscar institución [GET]</a></li>
+      <li><a href="#buscar-estudiante-get-1" id="markdown-toc-buscar-estudiante-get-1">Buscar estudiante [GET]</a></li>
+      <li><a href="#extraer-carreras-de-instituciones-get" id="markdown-toc-extraer-carreras-de-instituciones-get">Extraer carreras de instituciones [GET]</a></li>
+      <li><a href="#extraer-carreras-get" id="markdown-toc-extraer-carreras-get">Extraer carreras [GET]</a></li>
+      <li><a href="#actualizar-institución-put" id="markdown-toc-actualizar-institución-put">Actualizar institución [PUT]</a></li>
+      <li><a href="#agregar-carreras-post" id="markdown-toc-agregar-carreras-post">Agregar carreras [POST]</a></li>
+      <li><a href="#actualizar-carreras-put" id="markdown-toc-actualizar-carreras-put">Actualizar carreras [PUT]</a></li>
+      <li><a href="#borrar-carreras-delete" id="markdown-toc-borrar-carreras-delete">Borrar carreras [DELETE]</a></li>
+      <li><a href="#extraer-carreras-get-1" id="markdown-toc-extraer-carreras-get-1">Extraer carreras [GET]</a></li>
+      <li><a href="#agregar-curriculum-de-carrera-por-institución-post" id="markdown-toc-agregar-curriculum-de-carrera-por-institución-post">Agregar curriculum de carrera por institución [POST]</a></li>
+      <li><a href="#extraer-curriculum-de-carrera-por-institución-get" id="markdown-toc-extraer-curriculum-de-carrera-por-institución-get">Extraer curriculum de carrera por institución [GET]</a></li>
+      <li><a href="#eliminar-curriculum-de-carrera-delete" id="markdown-toc-eliminar-curriculum-de-carrera-delete">Eliminar curriculum de carrera [DELETE]</a></li>
+      <li><a href="#agregar-modalidad-post" id="markdown-toc-agregar-modalidad-post">Agregar modalidad [POST]</a></li>
+      <li><a href="#borrar-modalidad-delete" id="markdown-toc-borrar-modalidad-delete">Borrar modalidad [DELETE]</a></li>
+      <li><a href="#borrar-localización-get" id="markdown-toc-borrar-localización-get">Borrar localización [GET]</a></li>
+      <li><a href="#agregar-localización-post" id="markdown-toc-agregar-localización-post">Agregar localización [POST]</a></li>
+      <li><a href="#extraer-inscripción-get" id="markdown-toc-extraer-inscripción-get">Extraer inscripción [GET]</a></li>
+      <li><a href="#exytaer-inscrición-a-conferencia-get" id="markdown-toc-exytaer-inscrición-a-conferencia-get">Exytaer inscrición a conferencia [GET]</a></li>
+      <li><a href="#extraer-detalles-de-modalidad-get" id="markdown-toc-extraer-detalles-de-modalidad-get">Extraer detalles de modalidad [GET]</a></li>
+      <li><a href="#extraer-perfil-get" id="markdown-toc-extraer-perfil-get">Extraer perfil [GET]</a></li>
+      <li><a href="#extraer-localización-get" id="markdown-toc-extraer-localización-get">Extraer localización [GET]</a></li>
+      <li><a href="#extraer-carreras-get-2" id="markdown-toc-extraer-carreras-get-2">Extraer carreras [GET]</a></li>
+      <li><a href="#extraer-modalidad-get" id="markdown-toc-extraer-modalidad-get">Extraer modalidad [GET]</a></li>
+      <li><a href="#extraer-modalidad-por-id-get" id="markdown-toc-extraer-modalidad-por-id-get">Extraer modalidad por id [GET]</a></li>
+      <li><a href="#enviar-notificaciones-express-post" id="markdown-toc-enviar-notificaciones-express-post">Enviar notificaciones express [POST]</a></li>
+      <li><a href="#enviar-notificaciones-sms-post" id="markdown-toc-enviar-notificaciones-sms-post">Enviar notificaciones SMS [POST]</a></li>
+      <li><a href="#estado-de-las-notificaciones-get" id="markdown-toc-estado-de-las-notificaciones-get">Estado de las notificaciones [GET]</a></li>
+      <li><a href="#validar-código-de-teléfono-get" id="markdown-toc-validar-código-de-teléfono-get">Validar código de teléfono [GET]</a></li>
+      <li><a href="#extraer-todas-las-referencias-get" id="markdown-toc-extraer-todas-las-referencias-get">Extraer todas las referencias [GET]</a></li>
+      <li><a href="#buscar-carrera-get" id="markdown-toc-buscar-carrera-get">Buscar carrera [GET]</a></li>
+      <li><a href="#extraer-instituciones-get" id="markdown-toc-extraer-instituciones-get">Extraer instituciones [GET]</a></li>
+      <li><a href="#extraer-todas-las-carreras-get" id="markdown-toc-extraer-todas-las-carreras-get">Extraer todas las carreras [GET]</a></li>
+      <li><a href="#enviar-notificación-get" id="markdown-toc-enviar-notificación-get">Enviar notificación [GET]</a></li>
+      <li><a href="#scraping-get" id="markdown-toc-scraping-get">Scraping [GET]</a></li>
+      <li><a href="#scrapping-e-mail-get" id="markdown-toc-scrapping-e-mail-get">Scrapping e-mail [GET]</a></li>
+      <li><a href="#extraer-referencia-de-precios-get" id="markdown-toc-extraer-referencia-de-precios-get">Extraer referencia de precios [GET]</a></li>
+      <li><a href="#pagar-post" id="markdown-toc-pagar-post">Pagar [POST]</a></li>
+      <li><a href="#procesar-pago-put" id="markdown-toc-procesar-pago-put">Procesar pago [PUT]</a></li>
+      <li><a href="#extraer-progreso-de-un-colegio-get" id="markdown-toc-extraer-progreso-de-un-colegio-get">Extraer progreso de un colegio [GET]</a></li>
+      <li><a href="#extraer-preguntas-de-un-colegio-get" id="markdown-toc-extraer-preguntas-de-un-colegio-get">Extraer preguntas de un colegio [GET]</a></li>
+      <li><a href="#extraer-todo-get" id="markdown-toc-extraer-todo-get">Extraer todo [GET]</a></li>
+      <li><a href="#inscribir-a-un-estudiante-post" id="markdown-toc-inscribir-a-un-estudiante-post">Inscribir a un estudiante [POST]</a></li>
+      <li><a href="#extraer-usuario-activo-post" id="markdown-toc-extraer-usuario-activo-post">Extraer usuario activo [POST]</a></li>
+    </ol>
+  </li>
+  <li><a href="#crm-api" id="markdown-toc-crm-api">CRM Api</a>    <ol>
+      <li><a href="#test-express" id="markdown-toc-test-express">Test express</a></li>
+      <li><a href="#test-premium" id="markdown-toc-test-premium">Test premium</a></li>
+    </ol>
+  </li>
+</ol>
+
+</details>
+
+<!--  -->
+      <h1 id="cuadro-informativo">
+        
+        
+          <a href="#cuadro-informativo" class="anchor-heading" aria-labelledby="cuadro-informativo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Cuadro informativo
+        
+        
+      </h1>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Tecnología</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tecnología principal</td>
+      <td>Node JS</td>
+    </tr>
+    <tr>
+      <td>Framewok</td>
+      <td>Express</td>
+    </tr>
+    <tr>
+      <td>Documentos de trabajo</td>
+      <td>Typescript</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h1 id="declaración-de-las-variables-de-entorno">
+        
+        
+          <a href="#declaración-de-las-variables-de-entorno" class="anchor-heading" aria-labelledby="declaración-de-las-variables-de-entorno"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Declaración de las variables de entorno
+        
+        
+      </h1>
+    
+<p>Las variaibles de entorno se encuentran en los documentos “<code class="language-plaintext highlighter-rouge">.env</code>”. Para que funcionen en un entorno back-end en Node JS se debe seguien el siguiente procedimiento:</p>
+<ol>
+  <li>Declarar las variables en el documento <code class="language-plaintext highlighter-rouge">.env</code>
+    <img src="https://cdn.discordapp.com/attachments/955522800918085684/1022156594936565811/unknown.png" alt="My helpful screenshot" /></li>
+  <li>Hacer conocer a Node JS la existencia las variables de entorno, esto se hace en el documento en el que se utilizarán las variables.
+    <img src="https://cdn.discordapp.com/attachments/955522800918085684/1013792240067420261/unknown.png" alt="My helpful screenshot" /></li>
+  <li>Ya podemos utilizar las variables de entorno en cualquier documento <code class="language-plaintext highlighter-rouge">.ts</code> o <code class="language-plaintext highlighter-rouge">.js</code>.
+    <img src="https://cdn.discordapp.com/attachments/955522800918085684/1013792103102423050/unknown.png" alt="My helpful screenshot" />
+&lt;!– 
+El contenido de las variables de entorno se muestran a continuación:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-.env" data-lang=".env">    PORT=2000
+    MESSAGE=HelloWorldNow
+
+    # DATA BASE CONFIGS
+    DB_DIALECT=mysql
+    DB_NAME=XXXX-XXXX-XXXX
+    DB_USER_NAME=XXXX-XXXX-XXXX
+    DB_PASSWORD=XXXX-XXXX-XXXX
+    DB_HOST=XXXX-XXXX-XXXX
+
+    MODEL_PATH=/core/domain/models
+    TOKEN_SECRET=XXXX-XXXX-XXXX
+    WEB=https://queestudiar.la
+    SERVICE_WEB=http://localhost:2300
+    QUEESTUDIAR_ID=XXXX-XXXX-XXXX
+
+
+    # SUPLIERS SERVICES
+    # usil
+    USIL_AUTHORIZATION_VALUE=eShVmYq3t6w9y$B&amp;E)H@McQfTjWnZr4u7x!A%C*F-JaNdRgUkXp2s5v8y/B?E(G+
+    USIL_AUTHORIZATION_KEY=X-API-KEY
+    USIL_SERVICE_WEB=https://paneldigital.usil.edu.pe
+
+    # twilio
+    TWILIO_ACCOUNT_SID=XXXX-XXXX-XXXX
+    TWILIO_AUTH_TOKEN=XXXX-XXXX-XXXX
+    TWILIO_PHONE=XXXX-XXXX-XXXX
+
+    # activeCampaign
+    COMPAIGN_AUTHORIZATION_VALUE=1014f73aedf1c6d4e34e74170127e8791aea3cb093879d6ca40946d3be05d85b873de714
+    COMPAIGN_AUTHORIZATION_KEY=Api-Token
+    COMPAIGN_SERVICE_WEB=https://lazarosmayra76669.api-us1.com
+
+    # aws
+    SNS_ACCESS_ID=XXXX-XXXX-XXXX
+    SNS_SECRET_ACCESS_KEY=XXXX-XXXX-XXXX
+    SNS_REGION=us-west-2
+    SES_ACCESS_ID=XXXX-XXXX-XXXX
+    SES_SECRET_ACCESS_KEY=XXXX-XXXX-XXXX
+    SES_REGION=us-west-2
+    SES_EMAIL=admin@queestudiar.la
+
+    # facebook
+    FACEBOOK_SERVICE_WEB=https://graph.facebook.com
+
+    # google
+    GOOGLE_SERVICE_WEB=https://www.googleapis.com
+
+
+    # PAYMENTS
+    # mercadopago
+    MERCADOPAGO_CLIENT_ID=XXXX-XXXX-XXXX
+    MERCADOPAGO_CLIENT_SECRET=XXXX-XXXX-XXXX</code></pre></figure>
+
+<p>–&gt;
+<!--  --></p>
+      <h1 id="variables-de-entorno">
+        
+        
+          <a href="#variables-de-entorno" class="anchor-heading" aria-labelledby="variables-de-entorno"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Variables de entorno
+        
+        
+      </h1>
+    
+      <h2 id="variables-de-entorno-del-sistema-queestudiar">
+        
+        
+          <a href="#variables-de-entorno-del-sistema-queestudiar" class="anchor-heading" aria-labelledby="variables-de-entorno-del-sistema-queestudiar"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Variables de entorno del sistema queestudiar
+        
+        
+      </h2>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Variables</th>
+      <th>Valor</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DB_DIALECT</td>
+      <td>mysql</td>
+      <td>Motor de la base de datos utilizado</td>
+    </tr>
+    <tr>
+      <td>DB_NAME</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>Nombre de la base de datos</td>
+    </tr>
+    <tr>
+      <td>DB_USER_NAME</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>Nombre de usuario de BD</td>
+    </tr>
+    <tr>
+      <td>DB_PASSWORD</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>Contraseña de la BD</td>
+    </tr>
+    <tr>
+      <td>DB_HOST</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>Host de la BD</td>
+    </tr>
+    <tr>
+      <td>MODEL_PATH</td>
+      <td>/core/domain/models</td>
+      <td>Ruta de la ubicación de los archivos modelo en este proyecto</td>
+    </tr>
+    <tr>
+      <td>TOKEN_SECRET</td>
+      <td>appkj55kjfglk4j5lkjfg$fgkj4{}[f]df</td>
+      <td>Código de JWT</td>
+    </tr>
+    <tr>
+      <td>WEB</td>
+      <td>https://queestudiar.la  (Dependiendo de la url actual de la web)</td>
+      <td>Web de queestudiar</td>
+    </tr>
+    <tr>
+      <td>SERVICE_WEB</td>
+      <td>http://localhost:2300 (dependendo de la url local)</td>
+      <td>URL localhost</td>
+    </tr>
+    <tr>
+      <td>QUEESTUDIAR_ID</td>
+      <td>2f994bc7-39c1-4d8d-9dfa-d58fdfd9af8</td>
+      <td>ID de configuración de queestudiar</td>
+    </tr>
+    <tr>
+      <td>USIL_AUTHORIZATION_VALUE</td>
+      <td>eShVmYq3t6w9y$B&amp;E)H@McQfTjWnZr4u7x!A%C*F-JaNdRgUkXp2s5v8y/B?E(G+</td>
+      <td>Valor de configuración con USIL</td>
+    </tr>
+    <tr>
+      <td>USIL_AUTHORIZATION_KEY</td>
+      <td>X-API-KEY</td>
+      <td>Valor de configuración con USIL</td>
+    </tr>
+    <tr>
+      <td>USIL_SERVICE_WEB</td>
+      <td>https://paneldigital.usil.edu.pe</td>
+      <td>Valor de configuración con USIL</td>
+    </tr>
+    <tr>
+      <td>TWILIO_ACCOUNT_SID</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>SID del servicio de Twilio</td>
+    </tr>
+    <tr>
+      <td>TWILIO_AUTH_TOKEN</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>Token del servicio de Twilio</td>
+    </tr>
+    <tr>
+      <td>TWILIO_PHONE</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>Teléfono del servicio de Twilio</td>
+    </tr>
+    <tr>
+      <td>COMPAIGN_AUTHORIZATION_VALUE</td>
+      <td>1014f73aedf1c6d4e34e74170127e8791aea3cb093879d6ca40946d3be05d85b873de714</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>COMPAIGN_AUTHORIZATION_KEY</td>
+      <td>Api-Token</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>COMPAIGN_SERVICE_WEB</td>
+      <td>https://lazarosmayra76669.api-us1.com</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>SNS_ACCESS_ID</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>Configuración SNS de AWS</td>
+    </tr>
+    <tr>
+      <td>SNS_SECRET_ACCESS_KEY</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>Configuración SNS de AWS</td>
+    </tr>
+    <tr>
+      <td>SNS_REGION</td>
+      <td>us-west-2</td>
+      <td>Configuración SNS de AWS</td>
+    </tr>
+    <tr>
+      <td>SES_ACCESS_ID</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>Configuración SES de AWS</td>
+    </tr>
+    <tr>
+      <td>SES_SECRET_ACCESS_KEY</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>Configuración SES de AWS</td>
+    </tr>
+    <tr>
+      <td>SES_REGION</td>
+      <td>us-west-2</td>
+      <td>Configuración SES de AWS</td>
+    </tr>
+    <tr>
+      <td>SES_EMAIL</td>
+      <td>admin@queestudiar.la</td>
+      <td>Configuración SES de AWS</td>
+    </tr>
+    <tr>
+      <td>FACEBOOK_SERVICE_WEB</td>
+      <td>https://graph.facebook.com</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>GOOGLE_SERVICE_WEB</td>
+      <td>https://www.googleapis.com</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MERCADOPAGO_CLIENT_ID</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>Configuración de acceso a mercadopago</td>
+    </tr>
+    <tr>
+      <td>MERCADOPAGO_CLIENT_SECRET</td>
+      <td>XXXX-XXXX-XXXX</td>
+      <td>Configuración de acceso a mercadopago</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h2 id="variables-de-entorno-para-el-crm-con-usil">
+        
+        
+          <a href="#variables-de-entorno-para-el-crm-con-usil" class="anchor-heading" aria-labelledby="variables-de-entorno-para-el-crm-con-usil"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Variables de entorno para el CRM con USIL
+        
+        
+      </h2>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Variables</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ID_CAMPANA_CRM_EXPRESS_USIL</td>
+      <td>625</td>
+    </tr>
+    <tr>
+      <td>HUB_CPROGRAMA_CRM_EXPRESS_USIL</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>INTEGRACION_CRM_EXPRESS_USIL</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CAMPO_2_CRM_EXPRESS_USIL</td>
+      <td>1337</td>
+    </tr>
+    <tr>
+      <td>CAMPO_3_CRM_EXPRESS_USIL</td>
+      <td>TTCP-1</td>
+    </tr>
+    <tr>
+      <td>CAMPO_4_CRM_EXPRESS_USIL</td>
+      <td>‘TCP pauta’</td>
+    </tr>
+    <tr>
+      <td>DOWNLOADED_CRM_EXPRESS_USIL</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>TEXTO_2_CRM_EXPRESS_USIL</td>
+      <td>confirmado</td>
+    </tr>
+    <tr>
+      <td>VERIFIED_PHONE_CRM_EXPRESS_USIL</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>REFERENCE_STATE_CRM_EXPRESS_USIL</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class="table-wrapper"><table>
+  <tbody>
+    <tr>
+      <td>ID_CAMPANA_CRM_EXPRESS_USIL_PARAGUAY</td>
+      <td>849</td>
+    </tr>
+    <tr>
+      <td>HUB_CPROGRAMA_CRM_EXPRESS_USIL_PARAGUAY</td>
+      <td>243</td>
+    </tr>
+    <tr>
+      <td>INTEGRACION_HUB_CRM_EXPRESS_USIL_PARAGUAY</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>INTEGRACION_CRM_EXPRESS_USIL_PARAGUAY</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>CAMPO_2_CRM_EXPRESS_USIL_PARAGUAY</td>
+      <td>’’</td>
+    </tr>
+    <tr>
+      <td>CAMPO_3_CRM_EXPRESS_USIL_PARAGUAY</td>
+      <td>’’</td>
+    </tr>
+    <tr>
+      <td>CAMPO_4_CRM_EXPRESS_USIL_PARAGUAY</td>
+      <td>’’</td>
+    </tr>
+    <tr>
+      <td>DOWNLOADED_CRM_EXPRESS_USIL_PARAGUAY</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>TEXTO_2_CRM_EXPRESS_USIL_PARAGUAY</td>
+      <td>confirmado</td>
+    </tr>
+    <tr>
+      <td>VERIFIED_PHONE_CRM_EXPRESS_USIL_PARAGUAY</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>REFERENCE_STATE_CRM_EXPRESS_USIL_PARAGUAY</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class="table-wrapper"><table>
+  <tbody>
+    <tr>
+      <td>ID_CAMPANA_CRM_PREMIUM_USIL</td>
+      <td>683</td>
+    </tr>
+    <tr>
+      <td>INSTITUCION_PROCEDENCIA_CAMPANA_CRM_USIL</td>
+      <td>QUEESTUDIAR</td>
+    </tr>
+    <tr>
+      <td>HUB_CPROGRAMA_CRM_PREMIUM_USIL</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>INTEGRACION_CRM_PREMIUM_USIL</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>TEXTO_2_CRM_PREMIUM_USIL</td>
+      <td>’’</td>
+    </tr>
+    <tr>
+      <td>CAMPO_2_CRM_PREMIUM_USIL</td>
+      <td>1285</td>
+    </tr>
+    <tr>
+      <td>CAMPO_3_CRM_PREMIUM_USIL</td>
+      <td>‘TQE Colegios 2022-01’</td>
+    </tr>
+    <tr>
+      <td>CAMPO_4_CRM_PREMIUM_USIL</td>
+      <td>‘QE Colegios 2022’</td>
+    </tr>
+    <tr>
+      <td>DOWNLOADED_CRM_PREMIUM_USIL</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>UTM_CONTENT_CRM_COMPLETED</td>
+      <td>TEST-COMPLETADO</td>
+    </tr>
+    <tr>
+      <td>UTM_CONTENT_CRM_INCOMPLETED</td>
+      <td>TEST-INCOMPLETO</td>
+    </tr>
+  </tbody>
+</table></div>
+      <h1 id="consultas">
+        
+        
+          <a href="#consultas" class="anchor-heading" aria-labelledby="consultas"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> CONSULTAS
+        
+        
+      </h1>
+    
+      <h2 id="loguin-post">
+        
+        
+          <a href="#loguin-post" class="anchor-heading" aria-labelledby="loguin-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Loguin [POST]
+        
+        
+      </h2>
+    
+<p>La ruta en <strong>producción</strong> es la siguiente:
+<code class="language-plaintext highlighter-rouge">https://service.qeestudiar.com/metric</code></p>
+
+<p>La ruta en <strong>modo de desarollo</strong> es la siguiente:
+<code class="language-plaintext highlighter-rouge">http://localhost:2000/metric</code></p>
+
+<p>La notación para el acceso a cualquiera de las rutas será de la siguiente namera: <code class="language-plaintext highlighter-rouge">"{host}/"</code></p>
+      <h2 id="loguin-post-1">
+        
+        
+          <a href="#loguin-post-1" class="anchor-heading" aria-labelledby="loguin-post-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Loguin [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/auth/login</code></p>
+      <h2 id="registro-post">
+        
+        
+          <a href="#registro-post" class="anchor-heading" aria-labelledby="registro-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Registro [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/auth/register</code></p>
+      <h2 id="verificar-número-de-celular-post">
+        
+        
+          <a href="#verificar-número-de-celular-post" class="anchor-heading" aria-labelledby="verificar-número-de-celular-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Verificar número de celular [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/auth/verify-number</code></p>
+      <h2 id="guardar-contraseña-post">
+        
+        
+          <a href="#guardar-contraseña-post" class="anchor-heading" aria-labelledby="guardar-contraseña-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Guardar contraseña [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/auth/recover</code></p>
+      <h2 id="extraer-contraseña-get">
+        
+        
+          <a href="#extraer-contraseña-get" class="anchor-heading" aria-labelledby="extraer-contraseña-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer contraseña [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/auth/recover</code></p>
+      <h2 id="verificar-contraseña-post">
+        
+        
+          <a href="#verificar-contraseña-post" class="anchor-heading" aria-labelledby="verificar-contraseña-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Verificar contraseña [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/auth/recover/validate</code></p>
+      <h2 id="loguin-social-post">
+        
+        
+          <a href="#loguin-social-post" class="anchor-heading" aria-labelledby="loguin-social-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Loguin social [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/auth/social/:social</code></p>
+      <h2 id="register-v2-post">
+        
+        
+          <a href="#register-v2-post" class="anchor-heading" aria-labelledby="register-v2-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Register V2 [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/v2/auth/register</code></p>
+      <h2 id="extraer-atributos-de-un-estudiante-get">
+        
+        
+          <a href="#extraer-atributos-de-un-estudiante-get" class="anchor-heading" aria-labelledby="extraer-atributos-de-un-estudiante-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer atributos de un estudiante [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/student/attribute</code></p>
+      <h2 id="extraer-carreras-filtradas-get">
+        
+        
+          <a href="#extraer-carreras-filtradas-get" class="anchor-heading" aria-labelledby="extraer-carreras-filtradas-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer carreras filtradas [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/student/careers-filter</code></p>
+      <h2 id="enroll-post">
+        
+        
+          <a href="#enroll-post" class="anchor-heading" aria-labelledby="enroll-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Enroll [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/student/enroll</code></p>
+      <h2 id="enroll-get">
+        
+        
+          <a href="#enroll-get" class="anchor-heading" aria-labelledby="enroll-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Enroll [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/student/enroll</code></p>
+      <h2 id="ectraer-perfil-de-un-estudiante-post">
+        
+        
+          <a href="#ectraer-perfil-de-un-estudiante-post" class="anchor-heading" aria-labelledby="ectraer-perfil-de-un-estudiante-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Ectraer perfil de un estudiante [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/student/:studentId</code></p>
+      <h2 id="actualizar-data-de-un-estudiante-put">
+        
+        
+          <a href="#actualizar-data-de-un-estudiante-put" class="anchor-heading" aria-labelledby="actualizar-data-de-un-estudiante-put"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Actualizar data de un estudiante [PUT]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/student</code></p>
+      <h2 id="agregar-atributo-a-un-estudiante-post">
+        
+        
+          <a href="#agregar-atributo-a-un-estudiante-post" class="anchor-heading" aria-labelledby="agregar-atributo-a-un-estudiante-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Agregar atributo a un estudiante [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/student/:studentId/attribute</code></p>
+      <h2 id="extraer-la-guía-vocacional-get">
+        
+        
+          <a href="#extraer-la-guía-vocacional-get" class="anchor-heading" aria-labelledby="extraer-la-guía-vocacional-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer la guía vocacional [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational</code></p>
+      <h2 id="extraer-todos-los-atributos-get">
+        
+        
+          <a href="#extraer-todos-los-atributos-get" class="anchor-heading" aria-labelledby="extraer-todos-los-atributos-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer todos los atributos [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/personality/attribute</code></p>
+      <h2 id="buscar-institución-get">
+        
+        
+          <a href="#buscar-institución-get" class="anchor-heading" aria-labelledby="buscar-institución-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Buscar institución [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/professional</code></p>
+      <h2 id="extraer-personalidad-get">
+        
+        
+          <a href="#extraer-personalidad-get" class="anchor-heading" aria-labelledby="extraer-personalidad-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer personalidad [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/personality/:type</code></p>
+      <h2 id="extraer-inteligencia-get">
+        
+        
+          <a href="#extraer-inteligencia-get" class="anchor-heading" aria-labelledby="extraer-inteligencia-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer inteligencia [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/intelligences</code></p>
+      <h2 id="extraer-preguntas-de-personalidad-get">
+        
+        
+          <a href="#extraer-preguntas-de-personalidad-get" class="anchor-heading" aria-labelledby="extraer-preguntas-de-personalidad-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer preguntas de personalidad [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/questions/personality</code></p>
+      <h2 id="extraer-último-resultado-get">
+        
+        
+          <a href="#extraer-último-resultado-get" class="anchor-heading" aria-labelledby="extraer-último-resultado-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer último resultado [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/last-result</code></p>
+      <h2 id="extraer-último-resultado-de-talento-get">
+        
+        
+          <a href="#extraer-último-resultado-de-talento-get" class="anchor-heading" aria-labelledby="extraer-último-resultado-de-talento-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer último resultado de talento [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/last-result-talent</code></p>
+      <h2 id="extraer-preguntas-get">
+        
+        
+          <a href="#extraer-preguntas-get" class="anchor-heading" aria-labelledby="extraer-preguntas-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer preguntas [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/questions/:vocationalId</code></p>
+      <h2 id="extraer-resultados-de-progreso-get">
+        
+        
+          <a href="#extraer-resultados-de-progreso-get" class="anchor-heading" aria-labelledby="extraer-resultados-de-progreso-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer resultados de progreso [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/progress/result</code></p>
+      <h2 id="actualizar-referencia-completa-get">
+        
+        
+          <a href="#actualizar-referencia-completa-get" class="anchor-heading" aria-labelledby="actualizar-referencia-completa-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Actualizar referencia completa [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/progress/:vocationalId/reference</code></p>
+      <h2 id="actualizar-progreso-vocacional-complero-get">
+        
+        
+          <a href="#actualizar-progreso-vocacional-complero-get" class="anchor-heading" aria-labelledby="actualizar-progreso-vocacional-complero-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Actualizar progreso vocacional complero [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/progress/:vocationalId</code></p>
+      <h2 id="extraer-datos-personales-de-progreso-institucional-get">
+        
+        
+          <a href="#extraer-datos-personales-de-progreso-institucional-get" class="anchor-heading" aria-labelledby="extraer-datos-personales-de-progreso-institucional-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer datos personales de progreso institucional [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/progress/personality/:id</code></p>
+      <h2 id="extraer-datos-de-progreso-get">
+        
+        
+          <a href="#extraer-datos-de-progreso-get" class="anchor-heading" aria-labelledby="extraer-datos-de-progreso-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer datos de progreso [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/progress/:vocationalId/public</code></p>
+      <h2 id="extraer-datos-de-progreso--personalget">
+        
+        
+          <a href="#extraer-datos-de-progreso--personalget" class="anchor-heading" aria-labelledby="extraer-datos-de-progreso--personalget"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer datos de progreso  personal[GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/progress/:vocationalId</code></p>
+      <h2 id="extraer-atributo-vovacional-get">
+        
+        
+          <a href="#extraer-atributo-vovacional-get" class="anchor-heading" aria-labelledby="extraer-atributo-vovacional-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer atributo vovacional [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/vocations-attributes</code></p>
+      <h2 id="extraer-progreso-get">
+        
+        
+          <a href="#extraer-progreso-get" class="anchor-heading" aria-labelledby="extraer-progreso-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer progreso [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/vocational/progress</code></p>
+      <h2 id="enviar-información-post">
+        
+        
+          <a href="#enviar-información-post" class="anchor-heading" aria-labelledby="enviar-información-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Enviar información [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/membership/information</code></p>
+      <h2 id="activar-membresías-de-escuelas-get">
+        
+        
+          <a href="#activar-membresías-de-escuelas-get" class="anchor-heading" aria-labelledby="activar-membresías-de-escuelas-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Activar membresías de escuelas [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/membership/school</code></p>
+      <h2 id="verificar-código-de-colegio-get">
+        
+        
+          <a href="#verificar-código-de-colegio-get" class="anchor-heading" aria-labelledby="verificar-código-de-colegio-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Verificar código de colegio [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/membership/verification</code></p>
+      <h2 id="actualizar-estudiante-post">
+        
+        
+          <a href="#actualizar-estudiante-post" class="anchor-heading" aria-labelledby="actualizar-estudiante-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Actualizar estudiante [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/data-update/student</code></p>
+      <h2 id="extraer-lista-get">
+        
+        
+          <a href="#extraer-lista-get" class="anchor-heading" aria-labelledby="extraer-lista-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer lista [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/school</code></p>
+      <h2 id="validar-alianza-get">
+        
+        
+          <a href="#validar-alianza-get" class="anchor-heading" aria-labelledby="validar-alianza-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Validar alianza [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/school/alliance/:allianceId</code></p>
+      <h2 id="buscar-estudiante-get">
+        
+        
+          <a href="#buscar-estudiante-get" class="anchor-heading" aria-labelledby="buscar-estudiante-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Buscar estudiante [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/school/student</code></p>
+      <h2 id="configuraciónvocacional-put">
+        
+        
+          <a href="#configuraciónvocacional-put" class="anchor-heading" aria-labelledby="configuraciónvocacional-put"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Configuraciónvocacional [PUT]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/school/vocational/config</code></p>
+      <h2 id="extraer-último-resultado-get-1">
+        
+        
+          <a href="#extraer-último-resultado-get-1" class="anchor-heading" aria-labelledby="extraer-último-resultado-get-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer último resultado [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/school/vocational/last-result</code></p>
+      <h2 id="extraer-dashborad-de-institución-get">
+        
+        
+          <a href="#extraer-dashborad-de-institución-get" class="anchor-heading" aria-labelledby="extraer-dashborad-de-institución-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer dashborad de institución [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/school/dashboard/institution</code></p>
+      <h2 id="extraer-dashboard-de-carreras-get">
+        
+        
+          <a href="#extraer-dashboard-de-carreras-get" class="anchor-heading" aria-labelledby="extraer-dashboard-de-carreras-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer dashboard de carreras [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/school/dashboard/career</code></p>
+      <h2 id="lista-de-usuarios-get">
+        
+        
+          <a href="#lista-de-usuarios-get" class="anchor-heading" aria-labelledby="lista-de-usuarios-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lista de usuarios [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/school/:id/user</code></p>
+      <h2 id="crear-usuario-post">
+        
+        
+          <a href="#crear-usuario-post" class="anchor-heading" aria-labelledby="crear-usuario-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Crear usuario [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/school/:id/user</code></p>
+      <h2 id="crear-código-de-escuelas-post">
+        
+        
+          <a href="#crear-código-de-escuelas-post" class="anchor-heading" aria-labelledby="crear-código-de-escuelas-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Crear código de escuelas [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/school/:id/school-code</code></p>
+      <h2 id="buscar-institución-get-1">
+        
+        
+          <a href="#buscar-institución-get-1" class="anchor-heading" aria-labelledby="buscar-institución-get-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Buscar institución [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution</code></p>
+      <h2 id="buscar-estudiante-get-1">
+        
+        
+          <a href="#buscar-estudiante-get-1" class="anchor-heading" aria-labelledby="buscar-estudiante-get-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Buscar estudiante [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/student</code></p>
+      <h2 id="extraer-carreras-de-instituciones-get">
+        
+        
+          <a href="#extraer-carreras-de-instituciones-get" class="anchor-heading" aria-labelledby="extraer-carreras-de-instituciones-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer carreras de instituciones [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/sitemap/institution/careers</code></p>
+      <h2 id="extraer-carreras-get">
+        
+        
+          <a href="#extraer-carreras-get" class="anchor-heading" aria-labelledby="extraer-carreras-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer carreras [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/careers</code></p>
+      <h2 id="actualizar-institución-put">
+        
+        
+          <a href="#actualizar-institución-put" class="anchor-heading" aria-labelledby="actualizar-institución-put"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Actualizar institución [PUT]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution</code></p>
+      <h2 id="agregar-carreras-post">
+        
+        
+          <a href="#agregar-carreras-post" class="anchor-heading" aria-labelledby="agregar-carreras-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Agregar carreras [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/career/:careerId</code></p>
+      <h2 id="actualizar-carreras-put">
+        
+        
+          <a href="#actualizar-carreras-put" class="anchor-heading" aria-labelledby="actualizar-carreras-put"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Actualizar carreras [PUT]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/career/:careerId</code></p>
+      <h2 id="borrar-carreras-delete">
+        
+        
+          <a href="#borrar-carreras-delete" class="anchor-heading" aria-labelledby="borrar-carreras-delete"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Borrar carreras [DELETE]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/career/:careerId</code></p>
+      <h2 id="extraer-carreras-get-1">
+        
+        
+          <a href="#extraer-carreras-get-1" class="anchor-heading" aria-labelledby="extraer-carreras-get-1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer carreras [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/career/:careerId</code></p>
+      <h2 id="agregar-curriculum-de-carrera-por-institución-post">
+        
+        
+          <a href="#agregar-curriculum-de-carrera-por-institución-post" class="anchor-heading" aria-labelledby="agregar-curriculum-de-carrera-por-institución-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Agregar curriculum de carrera por institución [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/career/:careerId/curriculum</code></p>
+      <h2 id="extraer-curriculum-de-carrera-por-institución-get">
+        
+        
+          <a href="#extraer-curriculum-de-carrera-por-institución-get" class="anchor-heading" aria-labelledby="extraer-curriculum-de-carrera-por-institución-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer curriculum de carrera por institución [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/career/:careerId/curriculum</code></p>
+      <h2 id="eliminar-curriculum-de-carrera-delete">
+        
+        
+          <a href="#eliminar-curriculum-de-carrera-delete" class="anchor-heading" aria-labelledby="eliminar-curriculum-de-carrera-delete"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Eliminar curriculum de carrera [DELETE]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/career/:careerId/curriculum/:curriculumId</code></p>
+      <h2 id="agregar-modalidad-post">
+        
+        
+          <a href="#agregar-modalidad-post" class="anchor-heading" aria-labelledby="agregar-modalidad-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Agregar modalidad [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/modality</code></p>
+      <h2 id="borrar-modalidad-delete">
+        
+        
+          <a href="#borrar-modalidad-delete" class="anchor-heading" aria-labelledby="borrar-modalidad-delete"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Borrar modalidad [DELETE]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/modality/:modalityId</code></p>
+      <h2 id="borrar-localización-get">
+        
+        
+          <a href="#borrar-localización-get" class="anchor-heading" aria-labelledby="borrar-localización-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Borrar localización [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/location/:locationId</code></p>
+      <h2 id="agregar-localización-post">
+        
+        
+          <a href="#agregar-localización-post" class="anchor-heading" aria-labelledby="agregar-localización-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Agregar localización [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/location</code></p>
+      <h2 id="extraer-inscripción-get">
+        
+        
+          <a href="#extraer-inscripción-get" class="anchor-heading" aria-labelledby="extraer-inscripción-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer inscripción [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/leads</code></p>
+      <h2 id="exytaer-inscrición-a-conferencia-get">
+        
+        
+          <a href="#exytaer-inscrición-a-conferencia-get" class="anchor-heading" aria-labelledby="exytaer-inscrición-a-conferencia-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Exytaer inscrición a conferencia [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/leads-conference</code></p>
+      <h2 id="extraer-detalles-de-modalidad-get">
+        
+        
+          <a href="#extraer-detalles-de-modalidad-get" class="anchor-heading" aria-labelledby="extraer-detalles-de-modalidad-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer detalles de modalidad [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/:username/modality/:id</code></p>
+      <h2 id="extraer-perfil-get">
+        
+        
+          <a href="#extraer-perfil-get" class="anchor-heading" aria-labelledby="extraer-perfil-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer perfil [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/:username</code></p>
+      <h2 id="extraer-localización-get">
+        
+        
+          <a href="#extraer-localización-get" class="anchor-heading" aria-labelledby="extraer-localización-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer localización [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/:username/location</code></p>
+      <h2 id="extraer-carreras-get-2">
+        
+        
+          <a href="#extraer-carreras-get-2" class="anchor-heading" aria-labelledby="extraer-carreras-get-2"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer carreras [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/:username/career</code></p>
+      <h2 id="extraer-modalidad-get">
+        
+        
+          <a href="#extraer-modalidad-get" class="anchor-heading" aria-labelledby="extraer-modalidad-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer modalidad [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/:username/modality</code></p>
+      <h2 id="extraer-modalidad-por-id-get">
+        
+        
+          <a href="#extraer-modalidad-por-id-get" class="anchor-heading" aria-labelledby="extraer-modalidad-por-id-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer modalidad por id [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/:username/career/:slug</code></p>
+      <h2 id="enviar-notificaciones-express-post">
+        
+        
+          <a href="#enviar-notificaciones-express-post" class="anchor-heading" aria-labelledby="enviar-notificaciones-express-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Enviar notificaciones express [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/notification/express</code></p>
+      <h2 id="enviar-notificaciones-sms-post">
+        
+        
+          <a href="#enviar-notificaciones-sms-post" class="anchor-heading" aria-labelledby="enviar-notificaciones-sms-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Enviar notificaciones SMS [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/notification</code></p>
+      <h2 id="estado-de-las-notificaciones-get">
+        
+        
+          <a href="#estado-de-las-notificaciones-get" class="anchor-heading" aria-labelledby="estado-de-las-notificaciones-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Estado de las notificaciones [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/status-notification/:referenceId</code></p>
+      <h2 id="validar-código-de-teléfono-get">
+        
+        
+          <a href="#validar-código-de-teléfono-get" class="anchor-heading" aria-labelledby="validar-código-de-teléfono-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Validar código de teléfono [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/notification/validate</code></p>
+      <h2 id="extraer-todas-las-referencias-get">
+        
+        
+          <a href="#extraer-todas-las-referencias-get" class="anchor-heading" aria-labelledby="extraer-todas-las-referencias-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer todas las referencias [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/institution/notification/reference</code></p>
+      <h2 id="buscar-carrera-get">
+        
+        
+          <a href="#buscar-carrera-get" class="anchor-heading" aria-labelledby="buscar-carrera-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Buscar carrera [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/career/search</code></p>
+      <h2 id="extraer-instituciones-get">
+        
+        
+          <a href="#extraer-instituciones-get" class="anchor-heading" aria-labelledby="extraer-instituciones-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer instituciones [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/career/:slug</code></p>
+      <h2 id="extraer-todas-las-carreras-get">
+        
+        
+          <a href="#extraer-todas-las-carreras-get" class="anchor-heading" aria-labelledby="extraer-todas-las-carreras-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer todas las carreras [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/career</code></p>
+      <h2 id="enviar-notificación-get">
+        
+        
+          <a href="#enviar-notificación-get" class="anchor-heading" aria-labelledby="enviar-notificación-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Enviar notificación [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api//cron/notification/phone</code></p>
+      <h2 id="scraping-get">
+        
+        
+          <a href="#scraping-get" class="anchor-heading" aria-labelledby="scraping-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Scraping [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/cron/scrapping</code></p>
+      <h2 id="scrapping-e-mail-get">
+        
+        
+          <a href="#scrapping-e-mail-get" class="anchor-heading" aria-labelledby="scrapping-e-mail-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Scrapping e-mail [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/cron/scrapping-email</code></p>
+      <h2 id="extraer-referencia-de-precios-get">
+        
+        
+          <a href="#extraer-referencia-de-precios-get" class="anchor-heading" aria-labelledby="extraer-referencia-de-precios-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer referencia de precios [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/cron/update-price-reference</code></p>
+      <h2 id="pagar-post">
+        
+        
+          <a href="#pagar-post" class="anchor-heading" aria-labelledby="pagar-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Pagar [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/payment</code></p>
+      <h2 id="procesar-pago-put">
+        
+        
+          <a href="#procesar-pago-put" class="anchor-heading" aria-labelledby="procesar-pago-put"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Procesar pago [PUT]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/payment</code></p>
+      <h2 id="extraer-progreso-de-un-colegio-get">
+        
+        
+          <a href="#extraer-progreso-de-un-colegio-get" class="anchor-heading" aria-labelledby="extraer-progreso-de-un-colegio-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer progreso de un colegio [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/school/student/:studentId/vocational/progress/:vocationalId</code></p>
+      <h2 id="extraer-preguntas-de-un-colegio-get">
+        
+        
+          <a href="#extraer-preguntas-de-un-colegio-get" class="anchor-heading" aria-labelledby="extraer-preguntas-de-un-colegio-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer preguntas de un colegio [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/school/student/:studentId/vocational/questions/:vocationalId</code></p>
+      <h2 id="extraer-todo-get">
+        
+        
+          <a href="#extraer-todo-get" class="anchor-heading" aria-labelledby="extraer-todo-get"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer todo [GET]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/conference</code></p>
+      <h2 id="inscribir-a-un-estudiante-post">
+        
+        
+          <a href="#inscribir-a-un-estudiante-post" class="anchor-heading" aria-labelledby="inscribir-a-un-estudiante-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Inscribir a un estudiante [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/conference/student</code></p>
+      <h2 id="extraer-usuario-activo-post">
+        
+        
+          <a href="#extraer-usuario-activo-post" class="anchor-heading" aria-labelledby="extraer-usuario-activo-post"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Extraer usuario activo [POST]
+        
+        
+      </h2>
+    
+<p>Ruta: <code class="language-plaintext highlighter-rouge">{host}/api/mailing/activecampaign/blog</code></p>
+      <h1 id="crm-api">
+        
+        
+          <a href="#crm-api" class="anchor-heading" aria-labelledby="crm-api"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> CRM Api
+        
+        
+      </h1>
+    
+
+<p>Para utilizar esta api se necesita la siguiente ruta:</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">/api/institution/notification/crm</code></li>
+</ol>
+
+<p>Y como unico dato de entrada se utilizará la autenticación del usuario.</p>
+      <h2 id="test-express">
+        
+        
+          <a href="#test-express" class="anchor-heading" aria-labelledby="test-express"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Test express
+        
+        
+      </h2>
+    
+<p>Para hacer un test express se necesita como datos de entrada:</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">institutionId</code>: (string)</li>
+  <li><code class="language-plaintext highlighter-rouge">referenceId</code>: (string)</li>
+  <li><code class="language-plaintext highlighter-rouge">notificationVerified</code>: (boolean)</li>
+</ol>
+
+<p>Esos datos serán los argumentos de la función.
+En primer lugar se verificará la existencia de la referencia pasada como argumento, si no existe se procederá a enviar un error en la consulta, si existe se procederá con el siguiente paso.
+Si el <code class="language-plaintext highlighter-rouge">institutionId</code> enviado es de USIL o USIL Paraguay, se procederá con la elaboración del resultado y guardado de los datos en la tabla Reference.</p>
+      <h2 id="test-premium">
+        
+        
+          <a href="#test-premium" class="anchor-heading" aria-labelledby="test-premium"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Test premium
+        
+        
+      </h2>
+    
+
+<p>Para hacer un test express se necesita como datos de entrada:</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">auth</code>: (object)</li>
+</ol>
+
+<p>Ese dato será el argumento del <code class="language-plaintext highlighter-rouge">sponsorId</code> que debe estar dentro del objeto de autenticación. El <code class="language-plaintext highlighter-rouge">sponsorId</code> es el ID de la institución, en este caso el único a ser tomado en cuenta será el ID de la USIL.</p>
+
+<p>Si el <code class="language-plaintext highlighter-rouge">institutionId</code> enviado es de USIL, se procederá con la elaboración del resultado y guardado de los datos en la tabla Student.</p>
+
+        
+
+        
+          <hr>
+          <h2 class="text-delta">Table of contents</h2>
+          <ul>
+          </ul>
+        
+
+        
+        
+
+      </div>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+
