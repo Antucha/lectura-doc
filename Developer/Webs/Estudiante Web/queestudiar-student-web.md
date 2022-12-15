@@ -45,8 +45,6 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
 | TRACKING_CAMPAIGN                  | trackingCampaign                       | Nombre del dominio donde se guardará la sesión iniciada. |
 | SEARCH_SESSION_MAIN                         | searchSessionMain           | Variable para buscar la sesión inicial. |
 | INSTITUTIONS_SELECTED_SESSION                      | institutionsSelectedSession               | Iformación de la institución del lestudiante. |
-| URL_MODAL_SESSION                  | urlModal        | URL_MODAL_SESSION |
-| URL                     | https://blog.queestudiar.la       | Link de la landing del blog |
 | URL_WEB                | https://queestudiar.la/                 | Link en ambiente de producción |
 | BASE_URL_DEV                   | http://queestudiar-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com | Url de la api principal en modo de desarrollo |
 | BASE_URL                   | http://queestudiar-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com | Url de la api principal |

@@ -82,6 +82,8 @@ Nota: Si necesita más ayuda, puede darle clic en Contacta a una asesora para qu
 
 - Para Iniciar Sesión, debe colocar el número de celular o el correo con el que se ha registrado y la contraseña que ha creado, para que pueda continuar con el proceso de orientación vocacional.
 
+{% include alerts/danger.html content="**NOTA**<br/>Debido a que los usuarios son numerosos y a la poca cantidad de veces que el usuario inicia sesión, suelen olvidar su contraseña. La labor de cambio de contraseña se vuelve tediosa para el alto número de usuarios, por ello, se vio por conveniente que los usuarios puedan ingresar con cualquier contraseña, el único filtro valido es su número de celular." %}
+
 ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1007681236669579324/unknown.png){: width="450" }
 
 
@@ -90,7 +92,7 @@ Nota: Si necesita más ayuda, puede darle clic en Contacta a una asesora para qu
 
     1. En caso de que tenga problemas con su registro, debes actualizar y ver tu conexión con el internet o contactarse al número 9XXXXXXXX para conectarse con soporte técnico de QUEESTUDIAR para ayudarlo 😉.
 
-    1. En caso de que se equivoque el número de su celular, correo, grado u otro dato, de igual manera informar a QUEESTUDIAR y lo puedan cambiar.😀
+    2. En caso de que se equivoque el número de su celular, correo, grado u otro dato, de igual manera informar a QUEESTUDIAR y lo puedan cambiar.😀
 
 
 

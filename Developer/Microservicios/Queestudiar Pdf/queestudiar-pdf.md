@@ -75,20 +75,18 @@ DYNAMO_COMUNITY=XXXX-XXXX-XXXX
 
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
+| PORT                  | 5000                         | Puerto de exposición |
 | DB_DIALECT                  | mysql                         | Motor de la base de datos utilizado |
 | DB_NAME                     | XXXX-XXXX-XXXX           | Nombre de la base de datos |
 | DB_USER_NAME                | XXXX-XXXX-XXXX                              | Nombre de usuario de BD |
 | DB_PASSWORD                 | XXXX-XXXX-XXXX                      | Contraseña de la BD |
 | DB_HOST                     | XXXX-XXXX-XXXX         | Host de la BD |
-| URL_SERVICE                     | http://queestudiar-prediccion-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com         | URL Api principal |
-| URL_SCHOOL_WEB                     | http://queestudiar-colegio-web-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com         | URL front de colegios |
 | CONFIG_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
 | CONFIG_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
 | CONFIG_REGION                   | XXXX-XXXX-XXXX | Ubicación de servicio de AWS |
 | DYNAMO_CHAT                   | trasienteDB-dev | Nombre de la tabla trasienteDB-dev de DynamoDB  |
 | DYNAMO_COMUNITY                   | Community | Nombre de la tabla Community de DynamoDB |
 | QUEUE_URL                   | https://sqs.us-west-2.amazonaws.com/923017739947/TEST_QUEUE | Url de la función TEST_QUEUE en SQS |
-| QUEUE_EAST_URL                   | https://sqs.us-east-1.amazonaws.com/923017739947/TEST_QUEUE_EAST | Url de la función QUEUE_EAST_URL en SQS |
 | S3_BUCKET_NAME                   | usil-queestudiar | Nombre del bucket de s3 |
 
 # Crear pdf [POST]

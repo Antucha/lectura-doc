@@ -38,12 +38,11 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
 
 | Variables                   | Valor                                 | Descripción |
 | -----------                 | -----------                           | ----------- |
-| LOGIN_SESSION                | userSession                           | Nombre de la variable de sesión almacenada como cookie |
 | SESSION_URL                  | .queestudiar.la                       | Nombre del dominio donde se guardará la sesión iniciada. |
+| SCHOOL_PLATFORM_URL                  | <http://queestudiar-colegio-web-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com>                      | URL de la plataforma de colegio |
+| BASE_URL_METRIC                  | <http://queestudiar-metricas-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com>                      | URL de la api de métricas |
 | BASE_URL                     | https://service.qeestudiar.com        | Link del servicio a consumir en esta web |
 | BASE_URL_LOCAL                | http://localhost:2000                 | Link en ambiente local |
-| ASSETS_URL                   | https://d10kixcrv010ns.cloudfront.net | -- |
-| GOOGLE_MAPS_KEY                   | XXXX-XXXX-XXXX | Key del servicio de google maps |
-| GOOGLE_MAPS_LIBRARIES                   | places | -- |
 | S3_BUCKET_URL                   | https://usil-queestudiar.s3.amazonaws.com | url del bucket de s3 |
+| PORT                   | 5000 | Puerto de exposición |
 
