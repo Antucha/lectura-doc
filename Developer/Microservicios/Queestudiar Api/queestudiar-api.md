@@ -128,8 +128,6 @@ El contenido de las variables de entorno se muestran a continuación:
 | SES_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | Configuración SES de AWS |
 | SES_REGION                   | us-west-2 | Configuración SES de AWS |
 | SES_EMAIL                   | admin@queestudiar.la | Configuración SES de AWS |
-| FACEBOOK_SERVICE_WEB                   | https://graph.facebook.com | -- |
-| GOOGLE_SERVICE_WEB                   | https://www.googleapis.com | -- |
 | MERCADOPAGO_CLIENT_ID                   | XXXX-XXXX-XXXX | Configuración de acceso a mercadopago |
 | MERCADOPAGO_CLIENT_SECRET                   | XXXX-XXXX-XXXX | Configuración de acceso a mercadopago |
 

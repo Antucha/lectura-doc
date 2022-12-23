@@ -67,13 +67,13 @@ Como ejemplo, crearemos un administrador general para la plataforma, es decir, e
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1040720462205948054/unknown.png)
 
    
-<!--     | Nombre                | Description | Descargable |
+    | Nombre                | Description | Descargable |
     | -----------           | ----------- | ----------- |
     | BigDataProcess        | -       | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/BigDataProcess/2022-09-09-20-23-41/3c5888cb-1873-441c-8545-529863560d3f) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/BigDataProcess/2022-09-09-20-23-41/49afcbdc-0d99-45c3-b699-a2121096c0b0) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/BigDataProcess/2022-09-09-20-23-41/c5678587-1164-4dee-9e5e-4beb6efdafc8) - [Link4](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/BigDataProcess/2022-09-09-20-23-41/e70351e5-a75e-48d4-aec5-8d497afb700c)|
     | CalendlyNotifcation   | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/CalendlyNotifcation/2022-09-09-20-37-50/5f17d09d-45e2-4773-9991-f5902d336637) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/CalendlyNotifcation/2022-09-09-20-37-50/6ac554b2-87b9-4926-a17c-28c541bb7f10) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/CalendlyNotifcation/2022-09-09-20-37-50/805d695e-415b-4ac7-875b-2db54a662c0e)        |
     | MessageNotifcation    | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/XXXX-XXXX-XXXXTest/2022-09-09-20-30-27/1c0bbe05-3449-4f3c-a5ed-0df985379c80) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/XXXX-XXXX-XXXXTest/2022-09-09-20-30-27/2559b389-2ac3-4f1d-bab5-cfce5132f265) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/XXXX-XXXX-XXXXTest/2022-09-09-20-30-27/43f35a73-b9ca-4a54-94f9-93d0dfa948c0) - [Link4](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/XXXX-XXXX-XXXXTest/2022-09-09-20-30-27/c2915a46-8b45-41cf-9626-183c7569c32e)        |
     | pdfmanager            | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/copia_dynamo_export/pdfmanager/2022-09-09-20-43-45/44c4d65d-826a-4ac5-aa1c-076c1409d69a)       |
- -->
+
 ### BigDataProcess
   Esta tabla contiene los siguientes campos:
 
