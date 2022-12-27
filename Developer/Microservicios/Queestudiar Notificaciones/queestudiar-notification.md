@@ -85,8 +85,8 @@ Las variaibles de entorno se encuentran en los documentos "`.env`". Para que fun
 | BIG_DATA_PROCESS                   | BigDataTest | Nombre de la tabla BigDataTest de DynamoDB |
 | DYNAMO_MSG_NOTIFICATION                   | MessageNotifcation | Nombre de la tabla MessageNotifcation de DynamoDB |
 | DYNAMO_BALANCE_NOTIFICATION                   | BalanceNotification | Nombre de la tabla BalanceNotification de DynamoDB |
-| TWILIO_SID | AC36591f835de012f136676899aad5fe75 | Id del servicio de twilio |
-| TWILIO_TOKEN |313d3fc537517e01e92331966f6a421d  | Token del servicio de twilio |
+| TWILIO_SID | XXXX-XXXX-XXXX | Id del servicio de twilio |
+| TWILIO_TOKEN |XXXX-XXXX-XXXX  | Token del servicio de twilio |
 
 # Extraer calendario [POST]
 Ruta: `{host}/notification/calendly`
