@@ -91,17 +91,59 @@ En el panel de códigos de los colegios se podrá ver los códigos con su respec
 ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/992188290558075051/unknown.png)
 
 
+# Crear colegio
 
+1. Para Crear Colegios nuevos que no están en la base de datos desde el Dashboard de Usil:
+   1. Se debe ingresar al Dashboard en la pestaña “ADMINISTRADOR”
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057315356630339624/image.png)
+   2. Dar Clic en CREAR COLEGIO
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057316045129515008/image.png)
+   3. Va a aparecer un cuadro para ingresar los datos del colegio:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057316368145465465/image.png)
+   4. Primero colocar el nombre de colegio que se va a crear:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057316894568370196/image.png)
+   5. Si es un colegio Corporativo, seleccionar al que pertenece, sino dejar en blanco:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057317455363584080/image.png)
+   6. Ingresar Región, Provincia, Distrito y Dirección exacta al que pertenece (la Latitud del colegio y la Longitud de colegio va a aparecer de manera automática):
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057318000212070482/image.png)
+   7. Luego de colocar todos los datos del colegio a crear, Dar clic en CREAR:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057318290592120873/image.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
+2. PARA CREAR COLEGIO CORPORATIVO:
+   1. Dar clic en colegio CREAR CORPORATIVO:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057319659629719562/image.png)
+   2. Colocar los datos para Crear Colegio Corporativo:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057319814210801704/image.png)
+   3. Se debe ingresar el nombre exacto del colegio corporativo, la razón social del corporativo puedes colocar el mismo nombre y el número de RUC, un número cualquiera en caso de que no quieres colocar el RUC:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057319966615015444/image.png)
+   4. Dar clic en “CREAR CORPORATIVO”
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057320120256569535/image.png)
+3. EDITAR COLEGIOS YA CREADOS
+   1. Se debe ingresar al Dashboard en la pestaña “ADMINISTRADOR”
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057335831670562946/image.png)
+   2. Vas a encontrar la lista o se puede usar el “Busca colegio” para encontrar el colegio. Dar clic en “EDITAR” en el colegio a modificar:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057335891363909765/image.png)
+   3. Va a aparecer un cuadro para que puedas modificar el nombre del colegio, dirección, distrito, provincia o departamento:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057336100613537833/image.png)
+   4. Luego de haber modificado los datos del colegio, dar clic en “ACTUALIZAR COLEGIO”
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057336152136372325/image.png)
+   5. Si deseas eliminar el colegio, solo dar clic en “ELIMINAR COLEGIO”, Siguiendo los pasos anteriores:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057336206796537907/image.png)
+4. PARA ELIMINAR ESTUDIANTES, MODIFICAR NÚMERO DE CELULAR O CORREO ELECTRÓNICA DE ESTUDIANTE Y ELIMINAR EL PROCESO DE ESTUDIANTE DEL DASHBOARD DE COLEGIO:
+   1. Desde el Dashboard de Usil, ir a la Opción de “COLEGIO” y dar clic en la pestaña de “COLEGIO”:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057337715068239922/image.png)
+   2. Puedes buscar por página o escribir en el buscador el nombre del colegio para ingresar directamente al Dashboard de Colegio:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057337793862438932/image.png)
+   3. Para editar datos de estudiante:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057337854872797255/image.png)
+   4. Se abrirá un cuadro para que puedas modificar correo, celular y DNI. Por último, das clic en “GUARDAR”
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057337978374062160/image.png)
+   5. Si deseas borrar estudiantes, Dar clic en “Borrar estudiante”
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057338064617361479/image.png)
+   6. Si un estudiante desea volver a realizar el proceso OV Premium, dar clic en “Eliminar todo el proceso”:
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057338119944413224/image.png)
+   7. Luego de dar clic, te van a preguntar si estás seguro en eliminar el proceso de estudiante, si la respuesta es positiva, das clic en “Sí, ESTOY SEGURO(A)”
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057338273665646662/image.png)
+5. SI QUIERES ELIMINAR ESTUDIANTES DEL DASHBOARD DEL AÑO ANTERIOR:
+   1. Debes dar clic en “ELIMINAR ALUMNOS DEL 2022” (los datos van a seguir en el CRM)
+        ![My helpful screenshot](https://cdn.discordapp.com/attachments/986727585381752863/1057338341550473286/image.png)
