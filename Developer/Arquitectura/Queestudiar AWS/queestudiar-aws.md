@@ -71,7 +71,9 @@ Como ejemplo, crearemos un administrador general para la plataforma, es decir, e
     | MessageNotifcation    | -        |
     | pdfmanager            | -        |
     | DownloadPdf            | -        | -->
-1. La fora de importar los datos a la tabla será mediante Pipeline de AWS. La configuración general debe ser la siguiente, para cada tabla a importar:
+    NOTA: En una carpeta en S3, para cada tabla, subir los archivos descargables inicados como Link en la tabla.
+
+1. La forma de importar los datos a la tabla será mediante Pipeline de AWS. La configuración general debe ser la siguiente, para cada tabla a importar:
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1040720402604892251/unknown.png)
   En el "Input S3 folder" puse el directorio de la carpeta donde están todos los archivos con la data, claro que para eso, los archivos deberían haberse subido a una carpeta en S3:
   ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1040720462205948054/unknown.png)
