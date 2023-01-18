@@ -174,60 +174,382 @@ El contenido de las variables de entorno se muestran a continuación:
 
 # CONSULTAS
 
-## Loguin [POST]
-La ruta en **producción** es la siguiente:
-`https://service.qeestudiar.com/metric`
-
-
-La ruta en **modo de desarollo** es la siguiente:
-`http://localhost:2000/metric`
-
-La notación para el acceso a cualquiera de las rutas será de la siguiente namera: `"{host}/"`
+**Base Url:** http://queestudiar-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com
 
 ## Loguin [POST]
 Ruta: `{host}/api/auth/login`
 
+Auth required : NO
+
+Permissions required : None
+### Request
+**type: body**
+
+{% highlight json %}
+  {
+    "user": "Janeexample.com",
+    "password": "123456",
+    "role": "user",
+    "id": "213"
+  }
+{% endhighlight %}
 ## Registro [POST]
 Ruta: `{host}/api/auth/register`
 
+Auth required : NO
+
+Permissions required : None
+### Request
+**type: body**
+
+{% highlight json %}
+  {
+    "user": "Janeexample.com",
+    "password": "123456",
+    "role": "user",
+    "id": "213",
+    "name": "Rosa",
+    "surname": "Merino",
+    "graduationYear": 2023,
+    "gender": "M",
+    "payedCareer": "Yo mismo",
+    "whereStudy": "",
+    "email": "rosa.merino@ezample.com",
+    "allianceId": "123564",
+    "surnameFather": "Merino",
+    "surnameMother": "Salas",
+    "day": "01",
+    "month": "02",
+    "year": "2023",
+    "grade": "5",
+    "section": "A1",
+    "email": "alumno@exaple.com",
+    "schoolId": "fds13-fgfsd-321fd",
+    "code": "214562",
+    "campaign": "",
+    "studentType": "",
+    "document": "79581635",
+  }
+{% endhighlight %}
+
 ## Verificar número de celular [POST]
-Ruta: `{host}/api/auth/verify-number`
+Route: `{host}/api/auth/verify-number`
+
+Auth required: NO
+
+Permissions required: None
+
+### Request
+**Type: Body**
+
+{% highlight json %}
+{
+    "user": "Janeexample.com",
+}
+{% endhighlight %}
 
 ## Guardar contraseña [POST]
-Ruta: `{host}/api/auth/recover`
+Route: `{host}/api/auth/recover`
 
+Auth required: NO
+
+Permissions required: None
+
+### Request
+**Type: Body**
+
+{% highlight json %}
+{
+    "email": "jane.example@gmail.com",
+}
+{% endhighlight %}
 ## Extraer contraseña [GET]
-Ruta: `{host}/api/auth/recover`
+Route: `{host}/api/auth/recover`
 
+Auth required: NO
+
+Permissions required: None
+
+### Request
+**Type: Query**
+
+{% highlight json %}
+{
+    "token": "somerandomtoken123",
+}
+{% endhighlight %}
 ## Verificar contraseña [POST]
-Ruta: `{host}/api/auth/recover/validate`
+Route: `{host}/api/auth/recover/validate`
 
-## Loguin social [POST]
-Ruta: `{host}/api/auth/social/:social`
+Auth required: NO
+
+Permissions required: None
+
+### Request
+**Type: Body**
+
+{% highlight json %}
+{
+    "password": "newpassword",
+    "token": "somerandomtoken123",
+}
+{% endhighlight %}
 
 ## Register V2 [POST]
-Ruta: `{host}/api/v2/auth/register`
+Route: `{host}/api/v2/auth/register`
 
+Auth required: NO
+
+Permissions required: None
+
+### Request
+**Type: Body**
+
+{% highlight json %}
+{
+    "user": "Janeexample.com",
+    "password": "123456",
+    "role": "user",
+    "name": "Rosa",
+    "surname": "Merino",
+    "graduationYear": 2023,
+    "gender": "M",
+    "payedCareer": "Yo mismo",
+    "whereStudy": "",
+    "email": "rosa.merino@ezample.com",
+    "lat": "-34.603722",
+    "lng": "-58.381592",
+    "country":"Argentina",
+    "city":"Buenos Aires",
+    "route":"Avenida de Mayo",
+    "streetNumber":"1300",
+    "formattedAddress":"Avenida de Mayo 1300, Buenos Aires, Argentina",
+    "rangePrice":"$20000 - $30000",
+    "careers":"Informatica, Matematica",
+    "campaign":"",
+    "studentType":"",
+    "objective":"",
+    "allianceId": "123564",
+    "schoolId":"fds13-fgfsd-321fd"
+}
+{% endhighlight %}
 ## Extraer atributos de un estudiante [GET]
-Ruta: `{host}/api/student/attribute`
+Route: `{host}/api/student/attribute`
+
+Auth required: YES
+
+Permissions required: None
+
+### Request
+**Type: Query**
+
+{% highlight json %}
+{
+    "vocationalGuidanceId": "123456789"
+}
+{% endhighlight %}
+
+### Headers
+
+| header key                   | header value	                                 | description |
+| -----------                 | -----------                           | ----------- |
+| Authorization                  | Bearer AKfycbyF7II                       | Seguridad con token de duración de 4 meses |
 
 ## Extraer carreras filtradas [GET]
-Ruta: `{host}/api/student/careers-filter`
+Route: `{host}/api/student/careers-filter`
+
+Auth required: YES
+
+Permissions required: None
+
+### Request
+**Type: None**
+
+### Headers
+
+| header key                   | header value	                                 | description |
+| -----------                 | -----------                           | ----------- |
+| Authorization                  | Bearer AKfycbyF7II                       | Seguridad con token de duración de 4 meses |
 
 ## Enroll [POST]
-Ruta: `{host}/api/student/enroll`
+Route: `{host}/api/student/enroll`
+
+Auth required: YES
+
+Permissions required: None
+
+### Request
+**Type: Body**
+
+{% highlight json %}
+{
+    "careerId":"123456",
+    "institutionId":"789012",
+    "action":"enroll"
+}
+{% endhighlight %}
+
+### Headers
+
+| header key                   | header value	                                 | description |
+| -----------                 | -----------                           | ----------- |
+| Authorization                  | Bearer AKfycbyF7II                       | Seguridad con token de duración de 4 meses |
 
 ## Enroll [GET]
-Ruta: `{host}/api/student/enroll`
+Route: `{host}/api/student/enroll`
+
+Auth required: YES
+
+Permissions required: None
+
+### Request
+**Type: Query**
+
+{% highlight json %}
+{
+    "careerId":"123456",
+    "institutionId":"789012"
+}
+{% endhighlight %}
+
+### Headers
+
+| header key                   | header value                                | description |
+| -----------                 | -----------                           | ----------- |
+| Authorization                  | Bearer AKfycbyF7II                       | Seguridad con token de duración de 4 meses |
 
 ## Ectraer perfil de un estudiante [POST]
-Ruta: `{host}/api/student/:studentId`
+Route: `{host}/api/student/:studentId`
+
+Auth required: Optional
+
+Permissions required: None
+
+### Request
+**Type: Param**
+
+{% highlight json %}
+{
+    "studentId": "123456"
+}
+{% endhighlight %}
+
+### Headers
+
+| header key                   | header value	                                 | description |
+| -----------                 | -----------                           | ----------- |
+| Authorization                  | Bearer AKfycbyF7II                       | Seguridad con token de duración de 4 meses (Optional) |
 
 ## Actualizar data de un estudiante [PUT]
-Ruta: `{host}/api/student`
+Route: `{host}/api/student`
+
+Auth required: YES
+
+Permissions required: None
+
+### Request
+**Type: Body**
+
+{% highlight json %}
+{
+    "name": "John",
+    "surname": "Doe",
+    "email": "johndoe@example.com",
+    "role": "student",
+    "password": "123456",
+    "phone": "1234567890",
+    "gender": "M",
+    "type": "",
+    "payedInstitution": "",
+    "whereStudy": "",
+    "rangePrice": "",
+    "graduationYear": "",
+    "career": ""
+}
+{% endhighlight %}
+
+### Headers
+
+| header key                   | header value	                                 | description |
+| -----------                 | -----------                           | ----------- |
+| Authorization                  | Bearer AKfycbyF7II                       | Seguridad con token de duración de 4 meses |
 
 ## Agregar atributo a un estudiante [POST]
-Ruta: `{host}/api/student/:studentId/attribute`
+Route: `{host}/api/student/:studentId/attribute`
+
+Auth required: YES
+
+Permissions required: None
+
+### Request
+
+{% highlight json %}
+{
+    "name": "attributes",
+    "attributes": [
+        "attribute1",
+        "attribute2"
+    ],
+    "careers": [
+        "career1",
+        "career2"
+    ],
+    "careersNot": [
+        "career3",
+        "career4"
+    ],
+    "vocationalGuidanceId":"123456789"
+}
+{% endhighlight %}
+
+## Extraer perfil de estudiante [GET]
+Route: `{host}/api/student`
+
+Auth required: YES
+
+| header key                   | header value	                                 | description |
+| -----------                 | -----------                           | ----------- |
+| Authorization                  | Bearer AKfycbyF7II                       | Seguridad con token de duración de 4 meses |
+
+Permissions required: None
+
+### Request
+**Type: Query**
+
+{% highlight json %}
+{
+    "studentId": "123456789"
+}
+{% endhighlight %}
+
+## Guardar carreras de preferencia [POST]
+Route: `{host}/api/student/preference-career/:studentId`
+
+Auth required: YES
+
+| header key                   | header value	                                 | description |
+| -----------                 | -----------                           | ----------- |
+| Authorization                  | Bearer AKfycbyF7II                       | Seguridad con token de duración de 4 meses |
+
+Permissions required: None
+
+### Request
+**Type: Query**
+
+{% highlight json %}
+{
+"careers": [
+    {
+    "careerId": "123456789",
+    "isPreferred": true
+    },
+    {
+    "careerId": "987654321",
+    "isPreferred": false
+    }
+  ]
+}
+{% endhighlight %}
 
 ## Extraer la guía vocacional [GET]
 Ruta: `{host}/api/vocational`
