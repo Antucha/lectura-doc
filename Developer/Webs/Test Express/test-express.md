@@ -90,7 +90,7 @@ has_children: true
               if (![Queestudiar.INTEREST, Queestudiar.PERSONALITY].includes(this.type)) 
                 return alert("Tipo de test invÃƒÂ¡lido."), "";
               this.validateReference();
-              let e = "https://orientacion.queestudiar.la/embed/" + 
+              let e = "http://queestudiar-estudiante-web-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com/embed/" + //Cambiar este dominio con el dominio de la plataforma de estudiantes que se desee probar dependiendo del ambiente que se desee probar 
                     this.type + "/" + 
                     this.institutionCode + 
                     "?key=" + 
