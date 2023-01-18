@@ -18,8 +18,12 @@ has_children: true
 </details>
 
 # INSTRUCCIONES:
+
+{% include alerts/danger.html content="**NOTA**<br/>Se está utilizando la url http://queestudiar-estudiante-web-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com perteneciente a la plataforma de estudiantes en el ambiente de testing. Este dominio deberá cambiarse por el dominio del ambiente que desee probarse." %}
+
 1. Guaedar el siguiente [script](https://d10kixcrv010ns.cloudfront.net/cdnjs/v2/script-min.js){:target="_blank"} en un documento `.js` en S3 de AWS en modo público.
-   
+
+
     {% highlight js %}
       class Queestudiar {
           constructor() {
@@ -90,7 +94,7 @@ has_children: true
               if (![Queestudiar.INTEREST, Queestudiar.PERSONALITY].includes(this.type)) 
                 return alert("Tipo de test invÃƒÂ¡lido."), "";
               this.validateReference();
-              let e = "https://orientacion.queestudiar.la/embed/" + 
+              let e = "http://queestudiar-estudiante-web-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com/embed/" + //Cambiar este dominio con el dominio de la plataforma de estudiantes que se desee probar dependiendo del ambiente que se desee probar 
                     this.type + "/" + 
                     this.institutionCode + 
                     "?key=" + 
