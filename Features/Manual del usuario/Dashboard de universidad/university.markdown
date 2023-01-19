@@ -67,17 +67,17 @@ nav_order: 2
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1010291605137260595/unknown.png)
 
 1. Para crear, activar colegio y código son los siguientes:
-    1. Colocar el nombre de colegio, dar clic en el ícono de “lupa”, para que pueda cargar el nombre(s) del colegio y dar clic en “IR”
+    1. Colocar el nombre de colegio, dar clic en el ícono de “lupa”, para que pueda cargar el nombre(s) del colegio y dar clic en “IR”:
         ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1010292465225441400/unknown.png)
-    1. Para poder crear usuario del colegio, colocar en las barras en blanco, Nombre completo del Psicólogo(a), email y crear un password, dar clic en “CREAR USUARIO”
+    2. Para poder crear usuario del colegio, colocar en las barras en blanco, Nombre completo del Psicólogo(a), email y crear un password, dar clic en “CREAR USUARIO”
         ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1010292821858721792/unknown.png)
-    1. También vas a poder modificar y/o cambiar la contraseña, eliminar y editar el correo.
+    3. También vas a poder modificar y/o cambiar la contraseña, eliminar y editar el correo.
         ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1010293040176435312/unknown.png)
-    1. En la parte “Código de colegio” podrás crear y activar, colocando fecha de inicio y fecha final, por último dar clic en “CREAR”.
+    4. En la parte “Código de colegio” podrás crear y activar, colocando fecha de inicio y fecha final, por último dar clic en “CREAR”.
         ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1010293284851171368/unknown.png)
-    1. También se podrá desactivar código, seleccionas una fecha actual para finalizar y das clic en “Guardar”.
+    5. También se podrá desactivar código, seleccionas una fecha actual para finalizar y das clic en “Guardar”.
         ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1010293507073769552/unknown.png)
-
+{% include alerts/danger.html content="**NOTA**<br/>Recordar que se debe crear Administrador para colegios exclusivamente corporativos. Si el colegio no es un corporativo, se debe crear un Psicólogo"%}
 
 # Modificar las credenciales de los psicólogos
 

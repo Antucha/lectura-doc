@@ -30,6 +30,14 @@ nav_order: 3
 | DATA_PERSONALITY_PLK                  | lib/models/dataStandardizePersonality.pkl                                 | Directorio del documento dataStandardizePersonality.pkl   |
 | DATA_VOCATION_PLK                  | lib/models/dataStandardizeVocation.pkl                                 | Directorio del documento dataStandardizeVocation.pkl  |
 
+
+# Instalar las dependencias
+Se debe correr el siguiente comando: `python3 build_model.py`
+
+# Iniciar la app
+Se debe correr el siguiente comando: `python3 app.py`
+
+
 # Generar predicción [POST]
 Ruta: `{host}/predict/personality`
 
