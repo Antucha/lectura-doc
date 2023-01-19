@@ -563,29 +563,423 @@ Ruta: `{host}/api/vocational/professional`
 ## Extraer personalidad [GET]
 Ruta: `{host}/api/vocational/personality/:type`
 
-## Extraer inteligencia [GET]
+Auth required: No
+### Request
+**Type: params**
+
+{% highlight json %}
+  {
+    "type": "infj"
+  }
+{% endhighlight %}
+
+1. `type`: Código del tipo de personalidad.
+
+### Response
+
+{% highlight json %}
+{
+    "code": 200,
+    "message": "Se obtuvo la personalidad correctamente",
+    "data": {
+        "id": "10ab3dbd-6e39-4114-875f-acac87319104",
+        "type": "infj",
+        "description_type": "personality",
+        "category": "diplomatic",
+        "categoryEs": "Diplomático",
+        "title": "El consejero",
+        "image": "infj-advocate.svg",
+        "description": "Estás motivado a hacer una diferencia positiva en el mundo. Deseas mejorar la vida de los demás, hasta es probable que luches por eso. Confías en tu fuerte intuición, funcionas mejor cuando tomas decisiones basadas en tu corazón en lugar de la lógica. Necesitas tiempo para que tu creatividad fluya libremente y te permita soñar en grande. Los rasgos idealistas que tiene tu personalidad pueden revelar tus altas expectativas tanto para ti mismo como para otros, lo que no siempre es útil.",
+        "shortDescription": "Callados y místicos; sin embargo, inspiradores e idealistas incansables.",
+        "characters": [
+            {
+                "name": "Martin Luther King",
+                "movie": null,
+                "image": "diplomats_INFJ_martin_luther_king.svg"
+            }
+        ],
+        "attributes": [
+            {
+                "id": "04ecb349-ac6c-4c2c-ba6b-42f66053c5a7",
+                "name": "Creativo"
+            }
+        ]
+    }
+}
+{% endhighlight %}
+
+1. `id`: Id de la personalidad.
+2. `type`: Código de la personalidad.
+3. `description_type`: El tipo de personalidad.
+3. `category`: Categoría de la personalidad.
+4. `categoryEs`: Categoría de la personalidad en español.
+5. `title`: Título de la personalidad.
+6. `image`: Imagen representativa de la personalidad.
+7. `description`: Descripción de la personalidad.
+8. `characters`: Lista de personalidades famosas con la misma personalidad.
+9. `atributes`: Lista de atributos con de la personalidad.
+
+## Extraer inteligencias [GET]
 Ruta: `{host}/api/vocational/intelligences`
+
+### Response
+**Type: params**
+
+{% highlight json %}
+{
+    "code": 200,
+    "message": "Se obtuvo la lista de Inteligencias ",
+    "data": {
+        "descriptions": [
+            {
+                "id": "007dc673-60b1-446e-be0f-48ae1f4eba10",
+                "type": "visual",
+                "description_type": "intelligence",
+                "category": "Inteligencia",
+                "title": "Visual Espacial y Artístico",
+                "image": "visual-intelligence.png",
+                "description": "Presentas ideas en 3D. Observas el mundo y los objetos desde diferentes perspectivas. Posees la habilidad para manipular o crear imágenes mentales para resolver problemas, percibir detalles, dibujar o confeccionar esbozos y ver con precisión. Las personas que tienen tu inteligencia espacial suelen ser artistas, fotógrafos, arquitectos, diseñadores, publicistas o escultores.",
+                "shortDescription": ""
+            },
+            {
+                "id": "1de5aba0-c8c7-4e4a-b20e-239bd10b747a",
+                "type": "people",
+                "description_type": "intelligence",
+                "category": "Inteligencia",
+                "title": "Interpersonal",
+                "image": "people-intelligence.png",
+                "description": "Tienes la habilidad de llevarte bien o relacionarte con otras personas. La inteligencia interpersonal conlleva a interactuar con los demás de manera eficiente, porque eres capaz de entender, empatizar y comunicarte muy bien. Disciernes las emociones y las intenciones de los demás. Eso te permite interpretar las palabras y gestos o los objetivos y las metas de otras personas. Los políticos, los profesores o los actores son aventajados en este tipo de inteligencia.",
+                "shortDescription": ""
+            }
+        ]
+    }
+}
+{% endhighlight %}
+
+1. `descriptions`: Lista de tipos de inteligencia.
 
 ## Extraer preguntas de personalidad [GET]
 Ruta: `{host}/api/vocational/questions/personality`
 
+### Response
+**Type: params**
+
+{% highlight json %}
+{
+    "code": 200,
+    "message": "Se obtuvo la lista de Inteligencias ",
+    "data": [
+        {
+            "id": "01081937-678f-11e9-82db-12136491b65a",
+            "vocationalGuidanceId": "48e96300-adeb-48fa-b1d3-a221fc451ae3",
+            "name": null,
+            "itemJson": {
+                "text1": "Hacer listas",
+                "text2": "Dependo de mi memoria",
+                "title": "En tus planes y diferentes actividades, ¿sueles hacer una lista o dependes de tu memoria?"
+            },
+            "description": null,
+            "image": "free.png",
+            "identifierValue": "Q1",
+            "checked": false
+        }
+      ]
+    }
+}
+{% endhighlight %}
+
+1. La respuesta es una lista de las preguntas del módulo de personalidad.
+
 ## Extraer último resultado [GET]
 Ruta: `{host}/api/vocational/last-result`
+
+Auth required: YES
+
+| header key                   | header value	                                 | description |
+| -----------                 | -----------                           | ----------- |
+| Authorization                  | Bearer AKfycbyF7II                       | Seguridad con token de duración de 4 meses |
+
+### Response
+**Type: params**
+
+{% highlight json %}
+{
+    "code": 200,
+    "message": "Se obtuvo la informacion correctamente",
+    "data": {
+        "careerMatches": [
+            {
+                "career": "b6d959b7-99f8-4604-9418-3361bcb54387",
+                "percentage": 12,
+                "name": "sociología",
+                "large_description": "Carrera donde se atiende a las experiencias de vida individuales para que, partiendo de lo unitario se llegue a una percepción colectiva de lo que sucede. Se brindan herramientas para que los procedimientos se lleven a cabo con la mayor objetividad posible. Interpretarás estadísticas y resultados de encuestas de opinión eficientemente. Necesitarás ser una persona investigadora, analítica, flexible."
+            }
+        ],
+        "decisionTimeCareers": [
+            {
+                "title": "Tus Cualidades vs Carreras",
+                "criteria_title": "Tus Cualidades",
+                "type": "qualities",
+                "description": "<ul><li>Creativo</li><li>Reflexivo</li><li>Leal</li><li>Principios firmes</li><li>Idealista</li></ul>",
+                "career_name": "Cinematografía",
+                "career_description": "<p><span >El estudiante se especializará en cinematografía, pero también te podrá innovar en lo narrativo, el desarrollo audiovisual y la producción de contenidos multi pantalla</span></p>",
+                "career_id": "9191f6a7-9250-4cdd-8765-2844cccb1498",
+                "score": 3,
+                "final_score": 11,
+                "color": "#7060f4",
+                "is_evaluated": true,
+                "criteria": [
+                    {
+                        "type": "vocation",
+                        "score": 5
+                    },
+                    {
+                        "type": "qualities",
+                        "score": 3
+                    },
+                    {
+                        "type": "abilities",
+                        "score": 3
+                    }
+                ],
+                "percentage": 55
+            }
+        ]
+    }
+}
+{% endhighlight %}
+
+1. `careerMatches`: Lista de carreras a las que el usuario es apto.
+2. `decisionTimeCareers`: Lista de los resultados de la comparación entre las cualidades de el usuario con las carreras a las que es apto.
+
 
 ## Extraer último resultado de talento [GET]
 Ruta: `{host}/api/vocational/last-result-talent`
 
-## Extraer preguntas [GET]
+## Extraer preguntas de una actividad vocacional [GET]
 Ruta: `{host}/api/vocational/questions/:vocationalId`
+
+### Request
+**Type: params**
+
+{% highlight json %}
+  {
+    "vocationalId": "s12a3-dsad21-dsa246"
+  }
+{% endhighlight %}
+### Response
+
+{% highlight json %}
+{
+    "code": 200,
+    "message": "Se listo las preguntas correctamente",
+    "data": [
+        {
+            "id": "11e66b6b-ad90-4eef-b99a-6838cc88861b",
+            "vocationalGuidanceId": "3c38680d-7ce0-43ff-8179-4958b980e049",
+            "name": "Ser reconocido por la gente",
+            "itemJson": "Unexpected end of JSON input",
+            "description": "Tener reconocimiento de la gente",
+            "image": "reconocido.png",
+            "identifierValue": null,
+            "checked": false
+        },
+        {
+            "id": "1711e74d-03c6-4bb9-aa04-5f0d1f0ef3bc",
+            "vocationalGuidanceId": "3c38680d-7ce0-43ff-8179-4958b980e049",
+            "name": "Anteponer mi vida personal a la profesional",
+            "itemJson": "Unexpected end of JSON input",
+            "description": null,
+            "image": "life.png",
+            "identifierValue": null,
+            "checked": false
+        }
+      ]
+    }
+}
+{% endhighlight %}
+
+1. La respuesta es una lista de las preguntas de módulo que se pasa como ID.
 
 ## Extraer resultados de progreso [GET]
 Ruta: `{host}/api/vocational/progress/result`
 
+Auth required: YES
+
+| header key                   | header value	                                 | description |
+| -----------                 | -----------                           | ----------- |
+| Authorization                  | Bearer AKfycbyF7II                       | Seguridad con token de duración de 4 meses |
+
+### Response
+
+{% highlight json %}
+{
+    "code": 200,
+    "message": "Se obtuvo la informacion correctamente",
+    "data": {
+        "6122993f-d1c6-4196-aaf0-00666f4ed686": {
+            "result": null
+        },
+        "3c38680d-7ce0-43ff-8179-4958b980e049": {
+            "result": [
+                {
+                    "id": "2063ab42-70ef-4e22-af47-e016a2e5453f",
+                    "vocationalGuidanceId": "3c38680d-7ce0-43ff-8179-4958b980e049",
+                    "name": "Trabajar al aire libre",
+                    "itemJson": "Unexpected end of JSON input",
+                    "description": null,
+                    "image": "free.png",
+                    "identifierValue": null,
+                    "checked": false
+                }
+            ]
+        },
+        "48e96300-adeb-48fa-b1d3-a221fc451ae3": {
+            "result": {
+                "personalityType": "INFJ",
+                "calculated": [
+                    {
+                        "score": 23,
+                        "typeIndicator": "I",
+                        "percentage": 6.25
+                    }
+                ]
+            }
+        }
+      }
+    }
+}
+{% endhighlight %}
+
+1. La respuesta un obtejo que contiene como propiedades los ID de cada proceso vocacional, ellos, al mismo tiempo, son objetos conteniendo los resultados que obtuvo el estudiante en ese módulo, si no tiene resultados, el resultado será un `null`.
+
 ## Actualizar referencia completa [GET]
 Ruta: `{host}/api/vocational/progress/:vocationalId/reference`
 
-## Actualizar progreso vocacional complero [GET]
+## Extraer progreso vocacional completo [GET]
 Ruta: `{host}/api/vocational/progress/:vocationalId`
+
+Auth required: YES
+
+| header key                   | header value	                                 | description |
+| -----------                 | -----------                           | ----------- |
+| Authorization                  | Bearer AKfycbyF7II                       | Seguridad con token de duración de 4 meses |
+
+Permissions required: None
+
+### Request
+**Type: params**
+
+{% highlight json %}
+{
+"vocationalId": "s12a3-dsad21-dsa246"
+}
+{% endhighlight %}
+
+1. `type`: Id de la actividad a desarrollar.
+
+### Response
+**Type: params**
+
+{% highlight json %}
+{
+{
+    "code": 200,
+    "message": "Se obtuvo la informacion correctamente",
+    "data": {
+        "id": "a4ffd190-f2f9-11ec-a20e-afaad72d1d5b",
+        "studentId": "0e57a981-f2f8-11ec-ba79-ef794d69bf3c",
+        "vocationalGuidanceId": "e8689d51-6802-4386-91eb-2dc98796e328",
+        "responseResult": {
+            "like": [
+                {
+                    "id": "c73c75fe-8d06-4197-8525-0d78ac933c6f",
+                    "slug": "comunicacion-y-diseno-grafico",
+                    "name": "Comunicación y diseño gráfico",
+                    "description": "Carrera en la que aplicarás conocimientos de arte, comunicación y marketing para transmitir ideas que conecten con el público a través de texto e imágenes y con la ayuda de softwares y diversas técnicas. Necesitarás ser una persona creativa, detallista y estratega. ",
+                    "like": true,
+                    "curricula": [],
+                    "suggestion": [],
+                    "careerWorkfield": [
+                        {
+                            "id": "96bb0cec-80af-4d8c-a0d0-b256c6659990",
+                            "careerId": "c73c75fe-8d06-4197-8525-0d78ac933c6f",
+                            "name": "Consultoras de imagen y comunicación",
+                            "image": null,
+                            "description": "",
+                            "createdAt": "2021-07-30T22:39:49.000Z"
+                        }
+                    ],
+                    "careerSpecialties": [
+                        {
+                            "id": "792bce04-35a4-43c4-b064-9cb65e475754",
+                            "careerId": "c73c75fe-8d06-4197-8525-0d78ac933c6f",
+                            "name": "Periodismo",
+                            "image": null,
+                            "description": "",
+                            "createdAt": "2021-07-30T22:37:39.000Z"
+                        }
+                    ],
+                    "discardByPerson": false,
+                    "notSuggestion": [],
+                    "selected": true
+                }
+            ],
+            "dislike": []
+        },
+        "processedResult": null,
+        "finalResult": {
+            "like": [
+                {
+                    "id": "c73c75fe-8d06-4197-8525-0d78ac933c6f",
+                    "slug": "comunicacion-y-diseno-grafico",
+                    "name": "Comunicación y diseño gráfico",
+                    "description": "Carrera en la que aplicarás conocimientos de arte, comunicación y marketing para transmitir ideas que conecten con el público a través de texto e imágenes y con la ayuda de softwares y diversas técnicas. Necesitarás ser una persona creativa, detallista y estratega. ",
+                    "like": true,
+                    "curricula": [],
+                    "suggestion": [],
+                    "careerWorkfield": [
+                        {
+                            "id": "96bb0cec-80af-4d8c-a0d0-b256c6659990",
+                            "careerId": "c73c75fe-8d06-4197-8525-0d78ac933c6f",
+                            "name": "Consultoras de imagen y comunicación",
+                            "image": null,
+                            "description": "",
+                            "createdAt": "2021-07-30T22:39:49.000Z"
+                        }
+                    ],
+                    "careerSpecialties": [
+                        {
+                            "id": "792bce04-35a4-43c4-b064-9cb65e475754",
+                            "careerId": "c73c75fe-8d06-4197-8525-0d78ac933c6f",
+                            "name": "Periodismo",
+                            "image": null,
+                            "description": "",
+                            "createdAt": "2021-07-30T22:37:39.000Z"
+                        }
+                    ],
+                    "discardByPerson": false,
+                    "notSuggestion": [],
+                    "selected": true
+                }
+            ],
+            "dislike": []
+        },
+        "state": "1",
+        "createdAt": "2022-06-23T13:37:37.000Z"
+    }
+}
+}
+{% endhighlight %}
+
+1. `id`: Id de la carrera
+2. `studentId`: ID del estudiante
+3. `vocationalGuidanceId`: ID de la actividad en desarrollo.
+3. `responseResult`: La respuesta a la actividad realizada, en ese caso, una lista(arreglo) de las carreras seleccionadas por el estudiante. Las carreras están agrupadas en carreras que le gustaron(`like`) al estudiante y carreras que no le gustaron(`dislike`) al estudiante. Aquí se guarda la respuesta inicial del estudiante.
+4. `finalResult`: Lista actualizada del `responseResult`.
+5. `state`: estado del registro en BD.
+6. `createdAt`: fecha de creación del registro en BD.
+
 
 ## Extraer datos personales de progreso institucional [GET]
 Ruta: `{host}/api/vocational/progress/personality/:id`
@@ -593,8 +987,55 @@ Ruta: `{host}/api/vocational/progress/personality/:id`
 ## Extraer datos de progreso [GET]
 Ruta: `{host}/api/vocational/progress/:vocationalId/public`
 
-## Extraer datos de progreso  personal[GET]
+## Actualizar respuestas para alguna actividad en específico datos de progreso  personal[PUT]
 Ruta: `{host}/api/vocational/progress/:vocationalId`
+
+
+Auth required: YES
+
+| header key                   | header value	                                 | description |
+| -----------                 | -----------                           | ----------- |
+| Authorization                  | Bearer AKfycbyF7II                       | Seguridad con token de duración de 4 meses |
+
+Permissions required: None
+
+### Request
+**Type: body**
+
+{% highlight json %}
+{
+    "data":{
+      "responseResult":[
+         {
+            "title":"Tus Cualidades vs Carreras",
+            "criteria_title":"Tus Cualidades",
+            "type":"qualities",
+            "description":"<ul><li>Creativo</li><li>Reflexivo</li><li>Leal</li><li>Principios firmes</li><li>Idealista</li></ul>",
+            "career_name":"Comunicación y diseño gráfico",
+            "career_description":"Carrera en la que aplicarás conocimientos de arte, comunicación y marketing para transmitir ideas que conecten con el público a través de texto e imágenes y con la ayuda de softwares y diversas técnicas. Necesitarás ser una persona creativa, detallista y estratega. ",
+            "career_id":"c73c75fe-8d06-4197-8525-0d78ac933c6f",
+            "score":3,
+            "final_score":0,
+            "color":"#7060f4",
+            "is_evaluated":true
+         }
+      ],
+      "finalAnsware":true
+   }
+}
+{% endhighlight %}
+
+1. `responseResult`: Una lista de carreras que se necesita actualizar.
+
+### Response
+**Type: params**
+
+{% highlight json %}
+  {
+    "code": 200,
+    "message": "Se coloco tu respuesta correctamente"
+  }
+{% endhighlight %}
 
 ## Extraer atributo vovacional [GET]
 Ruta: `{host}/api/vocational/vocations-attributes`
