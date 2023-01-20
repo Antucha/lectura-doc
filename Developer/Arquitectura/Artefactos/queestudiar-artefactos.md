@@ -52,7 +52,23 @@ has_children: true
 |Amazon Simple Queue Service                    | SQS                         |  Para intercambiar información confidencial entre aplicaciones mediante cifrado del lado del servidor (SSE) para cifrar todos los cuerpos de mensajes. |
 
 
+# Prioridad para despliegue
 
+| Prioridad | Nombre              | Tipo    | Detalle                                           |
+|-----------|---------------------|---------|--------------------------------------------------------|
+| 1         | S3 Carpetas, PDFS   | Store   | Utilizas por api principal y PDF                    |
+| 2         | MYSQL RDS           | DB      | Utilizado por API principal y metricas              |
+| 3         | Dynamo DB           | DB      | Lo utiliza métricas y API principal                 |
+| 4         | Recomendación       | api     | No depende de ningun otro artefacto                |
+| 5         | Notificación        | api     | No depende de ningun otro artefacto                |
+| 6         | Métricas            | api     | No depende de ningun otro artefacto                |
+| 7         | QEUE Lambda         | Lambda  | Lambda actualizar variables manual                 |
+| 8         | QEUE SQS            | sqs     | Creación del Link SQS, utilizado por Generado de PDF|
+| 9         | Generador de PDF    | api     | Solo depende de QEUE para enviar colas, link SQS    |
+| 10        | Api principal       | api     | Api principal, utilizada por otras Api's y web     |
+| 11        | Frontend Estudiante | web     | Utiliza las mayorías de las apis                    |
+| 12        | Frontend Colegios   | web     | Utiliza las mayorías de las apis                    |
+| 13        | Frontend USIL       | web     | Utiliza algunas apis                                |
 
 
 
