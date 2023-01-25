@@ -21,3 +21,4 @@ nav_order: 2
 | CONFIG_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
 | CONFIG_REGION                   | XXXX-XXXX-XXXX | Ubicación de servicio de AWS |
 | PDF_FOLDER_S3                   | XXXX-XXXX-XXXX | Carpeta en s3 donde se guardarán los pdfs |
+| QUEESTUDIAR_BUCKET_S3                   | queestudiar-usil | Nombre del BUCKET s3 |
