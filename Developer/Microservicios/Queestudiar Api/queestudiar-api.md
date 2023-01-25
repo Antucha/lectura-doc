@@ -112,9 +112,6 @@ El contenido de las variables de entorno se muestran a continuación:
 | WEB                     | https://queestudiar.la  (Dependiendo de la url actual de la web)       | Web de queestudiar |
 | SERVICE_WEB                | http://localhost:2300 (dependendo de la url local)                 | URL localhost |
 | QUEESTUDIAR_ID                   | 2f994bc7-39c1-4d8d-9dfa-d58fdfd9af8 | ID de configuración de queestudiar |
-| USIL_AUTHORIZATION_VALUE                   | eShVmYq3t6w9y$B&E)H@McQfTjWnZr4u7x!A%C*F-JaNdRgUkXp2s5v8y/B?E(G+ | Valor de configuración con USIL |
-| USIL_AUTHORIZATION_KEY                   | X-API-KEY | Valor de configuración con USIL |
-| USIL_SERVICE_WEB                   | https://paneldigital.usil.edu.pe | Valor de configuración con USIL |
 | TWILIO_ACCOUNT_SID                   | XXXX-XXXX-XXXX | SID del servicio de Twilio |
 | TWILIO_AUTH_TOKEN                   | XXXX-XXXX-XXXX | Token del servicio de Twilio|
 | TWILIO_PHONE                   | XXXX-XXXX-XXXX | Teléfono del servicio de Twilio |
