@@ -191,6 +191,257 @@ El contenido de las variables de entorno se muestran a continuación:
 El documento que utiliza estas variables es el siguiente.
 * `NotificationResultService.ts`;
 
+## Código relacionado al CRM
+
+### Emvío de información al CRM con TEST EXPRESS y USIL PARAGUAY
+
+{% highlight js %}
+    public async sendExpressTestData(id, referenceId, notificationVerified = false) {
+        console.log('entro aquiii')
+        console.log(id, referenceId, notificationVerified)
+        await this.verifyInstitution(id)
+        const REFERENCE:Reference = await this.referenceRepository.getOneByReferenceId(referenceId)
+        if (!REFERENCE) {
+            ErrorCustom.generate(notFound('No existe la referencia'))
+        }
+        const SEND_VERIFY = (REFERENCE.state == '1' && !notificationVerified)
+        // const SEND_VERIFY = false
+        if (!SEND_VERIFY) {
+            switch (id) {
+                case InstitutionNetwork.USIL:
+                    try {
+                        console.log('usil data service')
+                        // Todo: Cambiar cuando sea Holland. Crear un swithch, derrepente.
+                        const RESULT_BUILT = await this.buildResult(REFERENCE, VocationalType.PROFESSIONAL_INTEREST)
+                        const RESULT_CAREER_STRING = []
+                        RESULT_BUILT.careers.map((c) => {
+                            RESULT_CAREER_STRING.push(c.name)
+                        })
+
+                        const dataParamsService = {
+                            ID_CAMPANA: process.env.ID_CAMPANA_CRM_EXPRESS_USIL,
+                            UPID_HISTORICO: REFERENCE.referenceId,
+                            TEXTO: ObjectArrayToString.convert(RESULT_BUILT),
+                            CORREO_PROSPECTO: REFERENCE.email,
+                            hub_cprograma: process.env.HUB_CPROGRAMA_CRM_EXPRESS_USIL,
+                            INTEGRACION_CRM: process.env.INTEGRACION_CRM_EXPRESS_USIL,
+                            campo_2: process.env.CAMPO_2_CRM_EXPRESS_USIL,
+                            campo_3: process.env.CAMPO_3_CRM_EXPRESS_USIL,
+                            campo_4: process.env.CAMPO_4_CRM_EXPRESS_USIL,
+                            comodin_1: RESULT_CAREER_STRING.join(", "),
+                            DOWNLOADED_CRM: process.env.DOWNLOADED_CRM_EXPRESS_USIL
+                        }
+                        
+                        if (notificationVerified) {
+                            // dataParamsService['DOWNLOADED_CRM'] = 0
+                            dataParamsService['CELULAR_PROSPECTO'] = REFERENCE.phone
+                            dataParamsService['TEXTO_2'] = process.env.TEXTO_2_CRM_EXPRESS_USIL
+                            REFERENCE.verifiedPhone = process.env.VERIFIED_PHONE_CRM_EXPRESS_USIL
+                        }
+                        console.log('dataParamsService')
+                        console.log(dataParamsService)
+                        await this.sendResult(dataParamsService)
+                        REFERENCE.state = process.env.REFERENCE_STATE_CRM_EXPRESS_USIL
+                        await REFERENCE.save()
+                    } catch (e) {
+                        console.log('error proveedor insttucon usil')
+                        console.log(e)
+                    }
+                    break
+                case InstitutionNetwork.USIL_PARAGUAY:
+                    console.log('start -- usil paraguay  data service')
+                    // Todo:
+                    const RESULT_BUILT = await this.buildResult(REFERENCE, VocationalType.PERSONALITY)
+                    const RESULT_CAREER_STRING = []
+                    RESULT_BUILT.careers.map((c) => {
+                        RESULT_CAREER_STRING.push(c.name)
+                    })
+                    const dataParamsService = {
+                        ID_CAMPANA: process.env.ID_CAMPANA_CRM_EXPRESS_USIL_PARAGUAY,
+                        UPID_HISTORICO: REFERENCE.referenceId,
+                        TEXTO: ObjectArrayToString.convert(RESULT_BUILT),
+                        CORREO_PROSPECTO: REFERENCE.email,
+                        hub_cprograma: process.env.HUB_CPROGRAMA_CRM_EXPRESS_USIL_PARAGUAY,
+                        INTEGRAR_HUB: process.env.INTEGRACION_HUB_CRM_EXPRESS_USIL_PARAGUAY,
+                        INTEGRACION_CRM: process.env.INTEGRACION_CRM_EXPRESS_USIL_PARAGUAY,
+                        campo_2: process.env.CAMPO_2_CRM_EXPRESS_USIL_PARAGUAY,
+                        campo_3: process.env.CAMPO_3_CRM_EXPRESS_USIL_PARAGUAY,
+                        campo_4: process.env.CAMPO_4_CRM_EXPRESS_USIL_PARAGUAY,
+                        comodin_1: RESULT_CAREER_STRING.join(", ")
+                    }
+
+                    if (notificationVerified) {
+                        dataParamsService['DOWNLOADED'] = process.env.DOWNLOADED_CRM_EXPRESS_USIL_PARAGUAY
+                        // dataParamsService['DOWNLOADED_CRM'] = 0
+                        dataParamsService['CELULAR_PROSPECTO'] = REFERENCE.phone
+                        dataParamsService['TEXTO_2'] = process.env.TEXTO_2_CRM_EXPRESS_USIL_PARAGUAY
+                        REFERENCE.verifiedPhone = process.env.VERIFIED_PHONE_CRM_EXPRESS_USIL_PARAGUAY
+                    }
+                    console.log(dataParamsService)
+                    console.log('end -- usil paraguay  data service')
+                    await this.sendResult(dataParamsService)
+                    REFERENCE.state = process.env.REFERENCE_STATE_CRM_EXPRESS_USIL_PARAGUAY
+                    await REFERENCE.save()
+                    break
+            }
+        }
+
+        return REFERENCE
+    }
+{% endhighlight %}
+
+En este CRM se envían datos que vienen de las variables de entorno y otos extraidos de la base de datos, esto últimos son:
+* `RESULT_CAREER_STRING`: Un arreglo que almacena las carreras aptas para el estudiante.
+* `referenceId`: El ud de la referencia del usuario.
+* `email`: El email del usuario.
+* `phone`: Teléfono del usuario.
+
+### Emvío de información al CRM con TEST EXPRESS y USIL PARAGUAY
+
+{% highlight js %}
+    public getGrade (graduationYear) {
+        const currentYear = new Date().getFullYear()
+        const different = graduationYear - currentYear
+
+        const grade = 5 - different
+
+        let result = ''
+
+        switch (grade) {
+            case 5:
+                result = 'Estoy en 5to de secundaria'
+                break
+            case 4:
+            case 3:
+                result = 'Estoy en 4to o 3ro de secundaria'
+                break
+            default:
+                result = 'Otro grado o ya termino'
+                break
+        }
+
+        return result
+    }
+
+    public async sendSchoolData (auth: AuthInterface) {
+        console.log('auth: ', auth)
+        if (auth.sponsorId) {
+            switch (auth.sponsorId) {
+                case InstitutionNetwork.USIL:
+                    try {
+
+                        console.log('usil data service school')
+                        const SCHOOL:School = await this.schoolRepository.getById(auth.schoolId)
+                        const vocationalProgress:VocationalProgress = await this.vocationalProgressRepository.findByStudentIdAndVocationalGuidanceId(auth.studentId, VocationalType.FINAL_RESULT)
+                        const vocationalProgressDecisionTime:VocationalProgress = await this.vocationalProgressRepository.findByStudentIdAndVocationalGuidanceId(auth.studentId, VocationalType.DECISION_TIME)
+                        const vocationlProgressResultFinalArray = []
+
+                        let codeCareer = ''
+                        let interestCareers = ''
+
+                        if (vocationalProgress) {
+                            const vocationlProgressResultFinal = JSON.parse(vocationalProgress.finalResult)
+                            const vocationlProgressResultFinalDecisionTime:any = JSON.parse(vocationalProgressDecisionTime.responseResult)
+                            
+                            const vocationalDecisionTimeArray = []
+                            vocationlProgressResultFinal.careersMatch.map((career, index) => {
+                                if (index < 3) {
+                                    vocationlProgressResultFinalArray.push(career.name)
+                                }
+                            })
+
+                            vocationlProgressResultFinalDecisionTime.map((career, index) => {
+                                if (index == 0) {
+                                    codeCareer = CodeCareerUsil.getCodeByCareerId(career.career_id)
+                                    interestCareers = career.career_name
+                                }
+                            })
+                        }
+                        
+
+                        console.log('******************* Parametro colegio premium usil ***************************');
+                        console.log(auth.studentId);
+
+                        const dataParamsService = {
+                            ID_CAMPANA: process.env.ID_CAMPANA_CRM_PREMIUM_USIL,
+                            INSTITUCION_PROCEDENCIA: process.env.INSTITUCION_PROCEDENCIA_CAMPANA_CRM_USIL,//nombre del colegio
+                            COLEGIO: SCHOOL.name,
+                            DISTRITO_PROSPECTO: SCHOOL.district + ' - ' + SCHOOL.province, //distrito del colegio
+                            ANIO_ESTUDIOS: this.getGrade(auth.graduationYear),
+                            CODIGO_CARRERA: codeCareer,
+                            CARRERA_INTERES: interestCareers,
+                            hub_mensaje: vocationlProgressResultFinalArray.join(' - '),//carreras recomendadas
+                            CELULAR_PROSPECTO: auth.phone,
+                            CORREO_PROSPECTO: auth.email,
+                            NOMBRES_PROSPECTO: auth.name,
+                            APATERNO_PROSPECTO: auth.surnameFather,
+                            AMATERNO_PROSPECTO: auth.surnameMother,
+                            hub_cprograma: process.env.HUB_CPROGRAMA_CRM_PREMIUM_USIL,
+                            INTEGRACION_CRM: process.env.INTEGRACION_CRM_PREMIUM_USIL,
+                            TEXTO_2: process.env.TEXTO_2_CRM_PREMIUM_USIL,//etiqueta
+                            campo_2: process.env.CAMPO_2_CRM_PREMIUM_USIL,
+                            campo_3: process.env.CAMPO_3_CRM_PREMIUM_USIL,
+                            campo_4: process.env.CAMPO_4_CRM_PREMIUM_USIL,
+                            DNI_PROSPECTO: auth.document?auth.document:'',
+                            DOWNLOADED_CRM: process.env.DOWNLOADED_CRM_PREMIUM_USIL,
+                        }
+
+                        const GET_STUDENT: Student = await this.studentRepository.getById(auth.studentId)
+
+                        if (vocationlProgressResultFinalArray.length > 0) {
+                            dataParamsService['hub_mensaje'] =  vocationlProgressResultFinalArray.join(' - ')
+                            dataParamsService['CARRERA_INTERES'] = interestCareers
+                            dataParamsService['CODIGO_CARRERA'] = codeCareer
+                            dataParamsService['utm_content'] = process.env.UTM_CONTENT_CRM_COMPLETED
+                        } else {
+                            dataParamsService['utm_content'] = process.env.UTM_CONTENT_CRM_INCOMPLETED
+                        }
+
+                        if (GET_STUDENT.allianceId) {
+                            dataParamsService['UPID_HISTORICO'] = GET_STUDENT.allianceId
+                        }
+
+                        console.log(dataParamsService)
+                        const DATA_PARAMS_SERVICE = await this.sendResult(dataParamsService)
+                        console.log('** DATA_PARAMS_SERVICE **')
+                        console.log(DATA_PARAMS_SERVICE)
+                        
+                        const GET_UPID_HISTORY_SERVICE = (DATA_PARAMS_SERVICE) ? DATA_PARAMS_SERVICE['ID_HISTORICO'] : null;
+                        console.log('GET_UPID_HISTORY_SERVICE')
+                        console.log(GET_UPID_HISTORY_SERVICE)
+                        if (! GET_STUDENT.allianceId) {
+                            GET_STUDENT.allianceId = GET_UPID_HISTORY_SERVICE
+                            await GET_STUDENT.save()
+                        }
+                        
+                    } catch (e) {
+                        console.log('error proveedor institutcion usil colegio')
+                        console.log(e)
+                    }
+                    break
+            }
+        }
+
+        return {
+            status: 'success'
+        }
+    }
+{% endhighlight %}
+
+En este CRM se envían datos que vienen de las variables de entorno y otos extraidos de la base de datos, esto últimos son:
+* `email`: El email del usuario.
+* `phone`: Teléfono del usuario.
+* `schoolId`: ID del colegio del estudiante.
+* `district`: Distrito donde vive el estudiante.
+* `province`: Provincia donde vide el estudiante.
+* `graduationYear`: Año de graduación del estudiante.
+* `codeCareer`: Código de la carrera del estudiante.
+* `interestCareers`: Carreras de interés del usuario.
+* `name`: Nombre del estudiante.
+* `surnameFather`: Apellido paterno del estudiante.
+* `surnameMother`: Apellido materno del estudiante.
+* `document`: DNI del estudiante.
+
 
 # CONSULTAS
 
