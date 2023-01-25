@@ -134,6 +134,7 @@ El contenido de las variables de entorno se muestran a continuación:
 
 ## Variables de entorno para el CRM con USIL
 
+### Variables de entorno para el CRM con TEST EXPRESS
 
 | Variables                   | Valor                                 |
 | -----------                 | -----------                           |
@@ -148,6 +149,10 @@ El contenido de las variables de entorno se muestran a continuación:
 | VERIFIED_PHONE_CRM_EXPRESS_USIL                  | 1                         |
 | REFERENCE_STATE_CRM_EXPRESS_USIL                  | 1                         |
 
+### Variables de entorno para el CRM con TEST EXPRESS con USIL PARAGUAY
+
+| Variables                   | Valor                                 |
+| -----------                 | -----------                           |
 | ID_CAMPANA_CRM_EXPRESS_USIL_PARAGUAY                  | 849                         |
 | HUB_CPROGRAMA_CRM_EXPRESS_USIL_PARAGUAY                  | 243                         |
 | INTEGRACION_HUB_CRM_EXPRESS_USIL_PARAGUAY                  | 1                         |
@@ -160,6 +165,10 @@ El contenido de las variables de entorno se muestran a continuación:
 | VERIFIED_PHONE_CRM_EXPRESS_USIL_PARAGUAY                  | 1                         |
 | REFERENCE_STATE_CRM_EXPRESS_USIL_PARAGUAY                  | 1                         |
 
+### Variables de entorno para el CRM con TEST PREMIUM 
+
+| Variables                   | Valor                                 |
+| -----------                 | -----------                           |
 | ID_CAMPANA_CRM_PREMIUM_USIL                  | 683                         |
 | INSTITUCION_PROCEDENCIA_CAMPANA_CRM_USIL                  | QUEESTUDIAR                         |
 | HUB_CPROGRAMA_CRM_PREMIUM_USIL                  | 1                         |
@@ -171,6 +180,19 @@ El contenido de las variables de entorno se muestran a continuación:
 | DOWNLOADED_CRM_PREMIUM_USIL                  | 0                         |
 | UTM_CONTENT_CRM_COMPLETED                  | TEST-COMPLETADO                         |
 | UTM_CONTENT_CRM_INCOMPLETED                  | TEST-INCOMPLETO                         |
+
+### Variables de entorno para el CRM con TEST PREMIUM 
+
+| Variables                   | Valor                                 | Descripción |
+| -----------                 | -----------                           | ----------- |
+| USIL_AUTHORIZATION_VALUE                   | eShVmYq3t6w9y$B&E)H@McQfTjWnZr4u7x!A%C*F-JaNdRgUkXp2s5v8y/B?E(G+ | Valor de configuración con USIL para conectarse al CRM Dynamics y envía resultado de OV Premium y Test Express - por confirmar con Juan Sandoval. |
+| USIL_AUTHORIZATION_KEY                   | X-API-KEY | Valor de configuración con USIL para conectarse al CRM Dynamics y envía resultado de OV Premium y Test Express - por confirmar con Juan Sandoval. |
+| USIL_SERVICE_WEB                   | https://paneldigital.usil.edu.pe | Valor de configuración con USIL para conectarse al CRM Dynamics y envía resultado de OV Premium y Test Express - por confirmar con Juan Sandoval. |
+## Documentos relacionados al CRM
+
+El documento que utiliza estas variables es el siguiente.
+* `NotificationResultService.ts`;
+
 
 # CONSULTAS
 
