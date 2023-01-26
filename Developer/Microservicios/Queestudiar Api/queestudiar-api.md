@@ -128,6 +128,7 @@ El contenido de las variables de entorno se muestran a continuación:
 | MERCADOPAGO_CLIENT_ID                   | XXXX-XXXX-XXXX | Configuración de acceso a mercadopago |
 | MERCADOPAGO_CLIENT_SECRET                   | XXXX-XXXX-XXXX | Configuración de acceso a mercadopago |
 
+# CRM Api
 
 ## Variables de entorno para el CRM con USIL
 
@@ -447,6 +448,30 @@ En este CRM se envían datos que vienen de las variables de entorno y otos extra
 
 **Base Url:** http://queestudiar-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com
 
+Para utilizar esta api se necesita la siguiente ruta:
+  1. `/api/institution/notification/crm`
+
+Y como unico dato de entrada se utilizará la autenticación del usuario.
+
+
+## Test express
+Para hacer un test express se necesita como datos de entrada:
+  1. `institutionId`: (string)
+  2. `referenceId`: (string)
+  1. `notificationVerified`: (boolean)
+  
+Esos datos serán los argumentos de la función.
+En primer lugar se verificará la existencia de la referencia pasada como argumento, si no existe se procederá a enviar un error en la consulta, si existe se procederá con el siguiente paso.
+Si el `institutionId` enviado es de USIL o USIL Paraguay, se procederá con la elaboración del resultado y guardado de los datos en la tabla Reference. 
+
+## Test premium
+
+Para hacer un test express se necesita como datos de entrada:
+  1. `auth`: (object)
+
+Ese dato será el argumento del `sponsorId` que debe estar dentro del objeto de autenticación. El `sponsorId` es el ID de la institución, en este caso el único a ser tomado en cuenta será el ID de la USIL.
+
+Si el `institutionId` enviado es de USIL, se procederá con la elaboración del resultado y guardado de los datos en la tabla Student. 
 ## Loguin [POST]
 Ruta: `{host}/api/auth/login`
 
@@ -1485,33 +1510,4 @@ Ruta: `{host}/api/conference/student`
 ## Extraer usuario activo [POST]
 Ruta: `{host}/api/mailing/activecampaign/blog`
 
-
-
-
-# CRM Api
-
-Para utilizar esta api se necesita la siguiente ruta:
-  1. `/api/institution/notification/crm`
-
-Y como unico dato de entrada se utilizará la autenticación del usuario.
-
-
-## Test express
-Para hacer un test express se necesita como datos de entrada:
-  1. `institutionId`: (string)
-  2. `referenceId`: (string)
-  1. `notificationVerified`: (boolean)
-  
-Esos datos serán los argumentos de la función.
-En primer lugar se verificará la existencia de la referencia pasada como argumento, si no existe se procederá a enviar un error en la consulta, si existe se procederá con el siguiente paso.
-Si el `institutionId` enviado es de USIL o USIL Paraguay, se procederá con la elaboración del resultado y guardado de los datos en la tabla Reference. 
-
-## Test premium
-
-Para hacer un test express se necesita como datos de entrada:
-  1. `auth`: (object)
-
-Ese dato será el argumento del `sponsorId` que debe estar dentro del objeto de autenticación. El `sponsorId` es el ID de la institución, en este caso el único a ser tomado en cuenta será el ID de la USIL.
-
-Si el `institutionId` enviado es de USIL, se procederá con la elaboración del resultado y guardado de los datos en la tabla Student. 
 
