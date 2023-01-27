@@ -89,9 +89,8 @@ MERCADOPAGO_CLIENT_SECRET=''
 | CONFIG_ACCESS_KEY_ID                   | XXXX-XXXX-XXXX | AccessKeyId de AWS |
 | CONFIG_SECRET_ACCESS_KEY                   | XXXX-XXXX-XXXX | SecretAccessKeyId de AWS |
 | CONFIG_REGION                   | XXXX-XXXX-XXXX | Ubicación de servicio de AWS |
-| BIG_DATA_PROCESS                   | BigDataProcess | Nombre de la tabla BigDataProcess de DynamoDB |
-| SMS_NOTIFICATION                   | MessageNotifcation | Nombre de la tabla MessageNotifcation de DynamoDB |
-| TEST_PROCCESS_TABLE_BD                   | PruebaProcesos | Nombre de la tabla PruebaProcesos de DynamoDB |
+| DYNAMO_BIG_DATA_PROCESS                   | BigDataProcess | Nombre de la tabla BigDataProcess de DynamoDB |
+| DYNAMO_MSG_NOTIFICATION                   | MessageNotifcation | Nombre de la tabla MessageNotifcation de DynamoDB |
 | SMS_PREMIUM                   | https://api.whatsapp.com/send?phone=51981208222&text=Hola!%20Realic%C3%A9%20el%20Test%20de%20Orientaci%C3%B3n%20Vocacional%20QE%20USIL.%20Deseo%20tener%20m%C3%A1s%20informaci%C3%B3n | SMS predeterminado para estudiantes premium |
 | SMS_EXPRESS                   | https://api.whatsapp.com/send?phone=51981208222&text=Hola!%20Realic%C3%A9%20el%20Test%20de%20Orientaci%C3%B3n%20Vocacional%20USIL.%20Deseo%20tener%20m%C3%A1s%20informaci%C3%B3n | SMS predeterminado para estudiantes express |
 
