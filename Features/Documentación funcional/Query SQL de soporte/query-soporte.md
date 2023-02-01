@@ -324,8 +324,32 @@ where s.created_at > '2022-01-01 00:00:00'  -- and '2021-01-01 00:00:00'
 {% endhighlight %}
 
 
+# Obtener alumnos del año pasado de un colegio en particular
 
+{% highlight sql %} 
+select u.* from user u 
+inner join student s on u.id = s.user_id 
+where u.state = '1'
+and s.school_id = '0bec6720-c601-11e9-9971-9f263e112bc7'
+and u.created_at < '2022-01-01 16:16:17'
+order by s.created_at desc;
+{% endhighlight %}
 
+* Se debe reemplazar el `school_id` por el `id` del colegio que se quiere consultar.
+
+# Descativar alumnos del año pasado de un colegio en particular
+
+{% highlight sql %} 
+update user u 
+inner join student s on u.id = s.user_id 
+set u.state = '0'
+where u.state = '1'
+and s.school_id = '0bec6720-c601-11e9-9971-9f263e112bc7'
+and u.created_at < '2022-01-01 16:16:17';
+{% endhighlight %}
+
+* Se debe reemplazar el `school_id` por el `id` del colegio que se quiere consultar.
+* Se debe reemplazar el `u.created_at` por fa fecha a partir de la cual se quiere elminar de forma lógica a los estudiantes.
 
 
 
