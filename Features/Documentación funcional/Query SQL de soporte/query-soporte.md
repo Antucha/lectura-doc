@@ -352,6 +352,18 @@ and u.created_at < '2022-01-01 16:16:17';
 * Se debe reemplazar el `u.created_at` por fa fecha a partir de la cual se quiere elminar de forma lógica a los estudiantes.
 
 
+# Descativar alumnos del año pasado de todos los colegios
+
+{% highlight sql %} 
+update user u 
+inner join student s on u.id = s.user_id 
+set u.state = '0'
+where u.state = '1'
+and u.created_at < '2022-01-01 16:16:17';
+{% endhighlight %}
+
+* Se debe reemplazar el `u.created_at` por fa fecha a partir de la cual se quiere elminar de forma lógica a los estudiantes.
+
 
 
 
