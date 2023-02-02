@@ -62,13 +62,12 @@ has_children: true
 | 4         | Recomendación       | api     | No depende de ningun otro artefacto                |               |
 | 5         | Notificación        | api     | No depende de ningun otro artefacto                |               |
 | 6         | Métricas            | api     | No depende de ningun otro artefacto                |               |
-| 7         | QEUE SQS            | sqs     | Creación del Link SQS, utilizado por Generado de PDF|  [Link 1](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20sqs%20pdf/#forma-de-despliegue-autom%C3%A1tica){:target="_blank"}             |
-| 8         | QEUE Lambda         | Lambda  | Lambda actualizar variables manual                 |   [Link 1](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20sqs%20pdf/#forma-de-despliegue-autom%C3%A1tica){:target="_blank"}             |
-| 9         | Generador de PDF    | api     | Solo depende de QEUE para enviar colas, link SQS    |               |
-| 10        | Api principal       | api     | Api principal, utilizada por otras Api's y web     |               |
-| 11        | Frontend Estudiante | web     | Utiliza las mayorías de las apis                    |               |
-| 12        | Frontend Colegios   | web     | Utiliza las mayorías de las apis                    |               |
-| 13        | Frontend USIL       | web     | Utiliza algunas apis                                |               |
+| 7         | QEUE Lambda         | Lambda  | Lambda actualizar variables manual                 |   [Link 1](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20sqs%20pdf/#forma-de-despliegue-autom%C3%A1tica){:target="_blank"}             |
+| 8         | Generador de PDF    | api     | Solo depende de QEUE para enviar colas, link SQS    |               |
+| 9        | Api principal       | api     | Api principal, utilizada por otras Api's y web     |               |
+| 10        | Frontend Estudiante | web     | Utiliza las mayorías de las apis                    |               |
+| 11        | Frontend Colegios   | web     | Utiliza las mayorías de las apis                    |               |
+| 12        | Frontend USIL       | web     | Utiliza algunas apis                                |               |
 
 
 
