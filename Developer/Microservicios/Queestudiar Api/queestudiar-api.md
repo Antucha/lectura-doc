@@ -444,6 +444,30 @@ En este CRM se envían datos que vienen de las variables de entorno y otos extra
 * `document`: DNI del estudiante.
 
 
+
+## AWS SES
+
+Este servicio se utiliza para la automatización del envío de correos.
+Las variables de entorno relacionados a este servicio son las siguientes:
+* `SES_ACCESS_ID`
+* `SES_SECRET_ACCESS_KEY`
+* `SES_REGION`
+* `SES_EMAIL`
+
+El documento que utiliza estas variables es el archivo `NotificationResultFactory.ts`.
+Puede consultar la siguiente [documentación](https://aws.amazon.com/es/ses/){:target="_blank"} para entender el detalle de uso de este servicio.
+
+## AWS SNS
+
+Este servicio se utiliza para la automatización del envío de mensajes de texto.
+Las variables de entorno relacionados a este servicio son las siguientes:
+* `SNS_ACCESS_ID`
+* `SNS_SECRET_ACCESS_KEY`
+* `SNS_REGION`
+
+El documento que utiliza estas variables es el archivo `AuthenticationFactory.ts`.
+Puede consultar la siguiente [documentación](https://aws.amazon.com/es/sns/){:target="_blank"} para entender el detalle de uso de este servicio.
+
 # CONSULTAS
 
 **Base Url:** http://queestudiar-api-test-924cbc13d3c4341b.us-east-1.elasticbeanstalk.com
