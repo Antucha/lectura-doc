@@ -56,7 +56,8 @@ nav_order: 2
     1. **Estudiantes:** La lista de base de datos de estudiantes de todos los colegios que han realizado el Proceso OV Prémium del año actual (2022).
         ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1010290462051020862/unknown.png)
 
-1. En el menú “Análisis de Instituciones en mente” es el resultado de estudiantes que escriben y mencionan, las instituciones que tienen en mente al momento de registrarse al Proceso OV Prémium.
+1. En el menú “Análisis de Instituciones en mente” es el resultado de estudiantes que escriben y mencionan, las instituciones que tienen en mente al momento de registrarse al Proceso OV Prémium. Cabe señalar que solo se podrán mostrar las instituciones preferidas por los estudiantes que aparecen en [esta lista](https://cdn.discordapp.com/attachments/1066686580703633469/1070931556828446761/Universidades_listas){:target="_blank"}.
+
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1010290678170923068/unknown.png)
     ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1010290866906206238/unknown.png)
 
