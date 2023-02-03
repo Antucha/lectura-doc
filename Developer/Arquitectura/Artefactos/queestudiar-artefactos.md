@@ -58,7 +58,6 @@ has_children: true
 |-----------|---------------------|---------|--------------------------------------------------------|---------------|
 | 1         | S3 Carpetas, PDFS   | Store   | Utilizas por api principal y PDF                    |  [Link 1](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20sqs%20pdf/#aws-s3){:target="_blank"} - [Link 2](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20aws/#bucket-s3){:target="_blank"}            |
 | 2         | MYSQL RDS           | DB      | Utilizado por API principal y metricas              |  [Link 1](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20bd/){:target="_blank"}             |
-| 2         | MYSQL RDS           | DB      | Utilizado por API principal y metricas              |  [Link 1](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20bd/){:target="_blank"}             |
 | 3         | Actualizar la tabla de carreras           | DB      | Lo utiliza métricas y API principal                 |  [Link 1](https://drive.google.com/drive/u/5/folders/1EtcgWaoNTANT8QSWHsRtULYsqW4-8SOO){:target="_blank"}             |
 | 4         | Recomendación       | api     | No depende de ningun otro artefacto                |               |
 | 5         | Notificación        | api     | No depende de ningun otro artefacto                |               |
