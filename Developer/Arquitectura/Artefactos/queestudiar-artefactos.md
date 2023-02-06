@@ -59,15 +59,16 @@ has_children: true
 | 1         | S3 Carpetas, PDFS   | Store   | Utilizas por api principal y PDF                    |  [Link 1](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20sqs%20pdf/#aws-s3){:target="_blank"} - [Link 2](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20aws/#bucket-s3){:target="_blank"}            |
 | 2         | MYSQL RDS           | DB      | Utilizado por API principal y metricas              |  [Link 1](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20bd/){:target="_blank"}             |
 | 3         | Actualizar la tabla de carreras           | DB      | Lo utiliza métricas y API principal                 |  [Link 1](https://drive.google.com/drive/u/5/folders/1EtcgWaoNTANT8QSWHsRtULYsqW4-8SOO){:target="_blank"}             |
-| 4         | Recomendación       | api     | No depende de ningun otro artefacto                |               |
-| 5         | Notificación        | api     | No depende de ningun otro artefacto                |               |
-| 6         | Métricas            | api     | No depende de ningun otro artefacto                |               |
-| 7         | QUEUE Lambda         | Lambda  | Lambda actualizar variables manual                 |   [Link 1](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20sqs%20pdf/#forma-de-despliegue-autom%C3%A1tica){:target="_blank"}             |
-| 8         | Generador de PDF    | api     | Solo depende de QEUE para enviar colas, link SQS    |               |
-| 9        | Api principal       | api     | Api principal, utilizada por otras Api's y web     |               |
-| 10        | Frontend Estudiante | web     | Utiliza las mayorías de las apis                    |               |
-| 11        | Frontend Colegios   | web     | Utiliza las mayorías de las apis                    |               |
-| 12        | Frontend USIL       | web     | Utiliza algunas apis                                |               |
+| 4         | Subir las tablas a DynamoDB           | DynamoDB      | Lo utiliza métricas y API principal, API de notificación                 |  [Link 1](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20aws/#carga-de-datos-dynamodb){:target="_blank"}             |
+| 6         | Recomendación       | api     | No depende de ningun otro artefacto                |               |
+| 6         | Notificación        | api     | No depende de ningun otro artefacto                |               |
+| 7         | Métricas            | api     | No depende de ningun otro artefacto                |               |
+| 8         | QUEUE Lambda         | Lambda  | Lambda actualizar variables manual                 |   [Link 1](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20sqs%20pdf/#forma-de-despliegue-autom%C3%A1tica){:target="_blank"}             |
+| 9         | Generador de PDF    | api     | Solo depende de QEUE para enviar colas, link SQS    |               |
+| 10        | Api principal       | api     | Api principal, utilizada por otras Api's y web     |               |
+| 11        | Frontend Estudiante | web     | Utiliza las mayorías de las apis                    |               |
+| 12        | Frontend Colegios   | web     | Utiliza las mayorías de las apis                    |               |
+| 13        | Frontend USIL       | web     | Utiliza algunas apis                                |               |
 
 
 
