@@ -124,7 +124,7 @@ Finalmente, la cola de sqs tendrá una URL, eso se colocará como variable de en
 Este proyecto y otros más necesitan recursos de AWS S3, para ello necesitamos subir esos recursos (imágenes) a un bucket de S3 realizando los siguientes pasos.
 
 1. Crear un bucket para el proyecto queestudiar con el nombre `queestudiar`, si ya lo tiene, contunúe al siguiente paso.
-2. Descomprimir e importar los siguientes [archivos](https://drive.google.com/file/d/1R3ykcBoYh6R2PanPsuDZyfQwSKzndnFQ/view?usp=sharing){:target="_blank"} dentro del directorio principal del Bucket `queestudiar`.
+2. Descomprimir e importar los siguientes [archivos](https://drive.google.com/drive/u/5/folders/1p3nn5AAYnxyZnF4FPP7UwMsUQwUZmLqD){:target="_blank"} dentro del directorio principal del Bucket `queestudiar`.
    1. Descomprimir el archivo `image.tar.gz`, descomprimirlo, dentro hay una carpeta `image`, subir esa carpeta al bucket `usil-queestudiar` de S3.
    2. Descomprimir el archivo `assets.zip`, descomprimirlo, dentro hay una carpeta `assets`, subir esa carpeta al bucket `usil-queestudiar` de S3.
    3. Descomprimir el archivo `assets-hbs.tar.gz`, descomprimirlo, dentro hay una carpeta `assets-hbs`, subir esa carpeta al bucket `usil-queestudiar` de S3.
