@@ -66,9 +66,11 @@ has_children: true
 | 8         | QUEUE Lambda         | Lambda  | Lambda actualizar variables manual                 |   [Link 1](https://beamish-cascaron-ae4c37.netlify.app/queestudiar%20sqs%20pdf/#forma-de-despliegue-autom%C3%A1tica){:target="_blank"}             |
 | 9         | Generador de PDF    | api     | Solo depende de QEUE para enviar colas, link SQS    |               |
 | 10        | Api principal       | api     | Api principal, utilizada por otras Api's y web     |               |
-| 11        | Frontend Estudiante | web     | Utiliza las mayorías de las apis                    |               |
-| 12        | Frontend Colegios   | web     | Utiliza las mayorías de las apis                    |               |
+| 11        | Frontend Estudiante | web     | Utiliza la mayorías de las apis                    |               |
+| 12        | Frontend Colegios   | web     | Utiliza la mayorías de las apis                    |               |
 | 13        | Frontend USIL       | web     | Utiliza algunas apis                                |               |
+| 13        | Queestudiar Web       | web     | No utiliza ningún servicio                                |               |
+| 13        | Test Express       | CDN     | Utiliza el un archivo `.js` que debe ser subido a S3                                |   [Link 1](https://beamish-cascaron-ae4c37.netlify.app/test%20express/#instrucciones){:target="_blank"}            |
 
 
 
