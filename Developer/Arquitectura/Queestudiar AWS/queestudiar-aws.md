@@ -60,7 +60,7 @@ Como ejemplo, crearemos un administrador general para la plataforma, es decir, e
     | CalendlyNotifcation   | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/CalendlyNotifcation/2023-01-13-17-46-59/_SUCCESS) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/CalendlyNotifcation/2023-01-13-17-46-59/21d240d1-1ffc-4f0f-993a-ec19a7b9954e) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/CalendlyNotifcation/2023-01-13-17-46-59/71292149-a2df-4225-8ce1-2bd3721bb393) - [Link4](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/CalendlyNotifcation/2023-01-13-17-46-59/8cb2f416-903d-4452-a18a-f5df20bb72e3) - [Link5](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/CalendlyNotifcation/2023-01-13-17-46-59/manifest)        |
     | MessageNotifcation    | -        |  [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/MessageNotifcation/2023-01-13-17-46-23/_SUCCESS) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/MessageNotifcation/2023-01-13-17-46-23/1496ea6f-0241-4a8e-a88e-6999329ea26f) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/MessageNotifcation/2023-01-13-17-46-23/196c2d7b-ade2-4077-8568-c0e7ed7753be) - [Link4](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/MessageNotifcation/2023-01-13-17-46-23/1f488763-fd9e-4727-85cb-5e6b42b3dc87) - [Link5](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/MessageNotifcation/2023-01-13-17-46-23/f73f0a30-8eed-49f3-9965-a6b4b4376fcf) - [Link6](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/MessageNotifcation/2023-01-13-17-46-23/manifest)       |
     | pdfmanager            | -        | - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/pdfmanager/2023-01-13-17-30-51/_SUCCESS) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/pdfmanager/2023-01-13-17-30-51/d009e4e6-d745-44d5-b550-cbcde3a4503a) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/pdfmanager/2023-01-13-17-30-51/manifest)        |    
-    | DownloadPdf            | -        |  - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/DownloadPdf/2023-01-13-17-45-28/_SUCCESS) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/DownloadPdf/2023-01-13-17-45-28/33e5d59d-8584-4466-8027-5461ce3584e7) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/DownloadPdf/2023-01-13-17-45-28/659dcb12-00d1-49ac-9ab4-69388aebb137) - [Link4](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/DownloadPdf/2023-01-13-17-45-28/c9fe64c1-3640-4cbb-85a7-f7540307f096) - [Link5](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/DownloadPdf/2023-01-13-17-45-28/manifest)       |
+    | DownloadPdf            | -        |  - [Link1](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/pdfmanager/2023-01-13-17-30-51/_SUCCESS) - [Link2](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/pdfmanager/2023-01-13-17-30-51/d009e4e6-d745-44d5-b550-cbcde3a4503a) - [Link3](https://queestudiar.s3.us-west-2.amazonaws.com/ultimo_traspaso/pdfmanager/2023-01-13-17-30-51/manifest)      |
 
 <!-- [Link1]() - [Link2]() - [Link3]() - [Link4]() - [Link5]() - [Link6]() - [Link7]() - [Link8]() - [Link9]() - [Link10]() -->
 
@@ -194,15 +194,17 @@ Como ejemplo, crearemos un administrador general para la plataforma, es decir, e
   Esta tabla contiene los siguientes campos:
 
   {% highlight sql %} 
-  psychologyId (String)
-  date (String)
+  studentId (String)
+  order (String)
   groupId  (String)
+  name  (String)
+  psychologyId (String)
   status (Number)
-  studentId  (String)
+  year  (Number)
   {% endhighlight %}
 
   1. Información general:
-    ![My helpful screenshot](https://cdn.discordapp.com/attachments/955522800918085684/1039925691338199130/image.png)
+    ![My helpful screenshot](https://cdn.discordapp.com/attachments/1066686580703633469/1073357414566469732/image.png)
 
 <!-- Los pasos finales para importar los datos de a la cuenta amazon son;
 1. Descargar los documentos de datos indicados en la tabla como "Link". La tabla que tenga más de dos o más descargables es por que se particionaron los datos almacenados para el tratamiento más ligero de los mismos.
