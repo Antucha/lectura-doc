@@ -203,3 +203,10 @@ Parámetros requeridos
           }
 
       {% endhighlight %}
+
+## Agregar nueva institución
+
+Para agregar 1 institución adicional que use test express, se tiene que editar un dato de la tabla **institution**  
+- Busca en la tabla **institution**   el nombre de la institución que quieres editar, por ejemplo  `select * from institution where name like '%paraguay%';`
+- Verificar que exista la institución y copiar su **id** para que lo puedas actualizar o puedes agragar una nueva.
+- Una vez que tienes un resultado, tienes la columna **test_product**, por defecto es **0**, significa que no puede ser usado con producto test express, pero si se quiere que la institución pueda utilizar test epxress se tiene que **cambiar por valor a 1**.  `update institution set test_product = 1 where id = '42bf2a5f-2167-11eb-903e-027ec83d3421';`
