@@ -987,7 +987,7 @@ Ruta: `{host}/api/vocational/questions/personality`
 {% highlight json %}
 {
     "code": 200,
-    "message": "Se obtuvo la lista de Inteligencias ",
+    "message": "Se listo las preguntas de personalidad correctamente",
     "data": [
         {
             "id": "01081937-678f-11e9-82db-12136491b65a",
